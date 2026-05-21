@@ -1,0 +1,2 @@
+experiment,features,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std
+B_Test15_LSA,Stat(63) + Dom + LSA(20 Conceitos),0.6724637681159422,0.03380261968026259,0.40331154684095855,0.01681793035026797

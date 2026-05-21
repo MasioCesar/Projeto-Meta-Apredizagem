@@ -1,0 +1,2 @@
+experiment,features,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std
+B_Test12_MLP,Stat(63) + Dom + Sem + MLP Neural Network,0.6478260869565217,0.08519964322724095,0.40017920401287543,0.07312120694430159

@@ -1,0 +1,2 @@
+experiment,features,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std
+B_Test14_GB_Control,Stat(63) + GB_Tuned (Grupo de Controle Puro),0.672463768115942,0.04357477211122579,0.5625748003695723,0.1265420137279132

@@ -1,0 +1,2 @@
+experiment,features,base_classifiers_considered,datasets_used,n_statistical_features,n_semantic_max_features,target_classes,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std,f1_weighted_mean,f1_weighted_std,n_splits
+B,Statistical + semantic meta-features,"DecisionTree, LogisticRegression, Perceptron",116,63,300,"DecisionTree, LogisticRegression, Perceptron",0.6721014492753623,0.03698492798601403,0.4170409982174689,0.043723655305860365,0.6359893048128343,0.039936460137808244,5

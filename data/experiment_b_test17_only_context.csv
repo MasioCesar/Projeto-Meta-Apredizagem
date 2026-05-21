@@ -1,0 +1,2 @@
+experiment,features,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std
+B_Test17_Only_Context,Semântica (20) + Domínio (ZERO ESTATÍSTICA),0.5945652173913043,0.060284454886356725,0.3559209820974527,0.06070618555735355

@@ -1,0 +1,2 @@
+experiment,features,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std
+B_Test6_Combo_1_5,Domain + GB + 20 TF-IDF,0.6713768115942029,0.0958852014371998,0.48848403716367034,0.02661157827815451

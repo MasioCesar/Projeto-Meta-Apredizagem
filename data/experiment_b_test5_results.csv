@@ -1,0 +1,2 @@
+experiment,features,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std
+B_Test5_GradientBoosting,Stat + Semantic,0.6630434782608695,0.05412999825212491,0.47936311000827125,0.04906338060393738

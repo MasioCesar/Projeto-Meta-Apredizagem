@@ -1,0 +1,5 @@
+Algoritmo,Total Real (Gabarito),Acertos Exp A (S/ Texto),Acertos Teste 1 (C/ Texto),Ganho de Acertos
+DecisionTree,33,13,14,1
+LogisticRegression,75,61,65,4
+Perceptron,8,0,0,0
+TOTAL GERAL,116,74,79,5

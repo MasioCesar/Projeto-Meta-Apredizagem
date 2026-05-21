@@ -1,0 +1,2 @@
+experiment,features,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std
+B_Test8_Stat_Domain_Only,Stat (63) + Domain (No Semantic),0.6644927536231885,0.04393480113398293,0.4017845117845118,0.05662951341894767

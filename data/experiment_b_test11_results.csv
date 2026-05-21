@@ -1,0 +1,2 @@
+experiment,features,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std
+B_Test11_Tuning,Stat(63) + Dom + Sem + GB_Tuned,0.6891304347826087,0.045392636995263254,0.5022577965848265,0.060652936359050676

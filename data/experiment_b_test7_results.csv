@@ -1,0 +1,2 @@
+experiment,features,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std
+B_Test7_Best_Version,Domain + GB + 20 TF-IDF + SelectKBest(40),0.680072463768116,0.09959221624108885,0.4854817440623892,0.06639125399875503

@@ -1,0 +1,2 @@
+experiment,features,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std
+B_Test13_Tuning_RF,Stat(63) + Dom + Sem + RF_Tuned,0.6804347826086956,0.06133363469419951,0.42437165775401076,0.05857167503449761

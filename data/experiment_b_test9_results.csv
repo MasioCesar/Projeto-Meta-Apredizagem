@@ -1,0 +1,2 @@
+experiment,features,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std
+B_Test9_Dynamic_Semantic,Stat (63) + Domain + GB + Dynamic Semantics,0.6797101449275362,0.12042074248023765,0.44578683387032536,0.0960481084949467

@@ -1,0 +1,234 @@
+did,dataset,stage,classifier,error
+1128,OVA_Breast,classifier_skipped,SVM,"Dataset grande demais para SVM: 1545 instâncias, 10935 features"
+1128,OVA_Breast,classifier_skipped,KNN,"Dataset grande demais para KNN: 1545 instâncias, 10935 features"
+1128,OVA_Breast,classifier_skipped,MLP,"Dataset grande demais para MLP: 1545 instâncias, 10935 features"
+1130,OVA_Lung,classifier_skipped,SVM,"Dataset grande demais para SVM: 1545 instâncias, 10935 features"
+1130,OVA_Lung,classifier_skipped,KNN,"Dataset grande demais para KNN: 1545 instâncias, 10935 features"
+1130,OVA_Lung,classifier_skipped,MLP,"Dataset grande demais para MLP: 1545 instâncias, 10935 features"
+1134,OVA_Kidney,classifier_skipped,SVM,"Dataset grande demais para SVM: 1545 instâncias, 10935 features"
+1134,OVA_Kidney,classifier_skipped,KNN,"Dataset grande demais para KNN: 1545 instâncias, 10935 features"
+1134,OVA_Kidney,classifier_skipped,MLP,"Dataset grande demais para MLP: 1545 instâncias, 10935 features"
+1145,AP_Breast_Colon,classifier_skipped,SVM,"Dataset grande demais para SVM: 630 instâncias, 10935 features"
+1145,AP_Breast_Colon,classifier_skipped,KNN,"Dataset grande demais para KNN: 630 instâncias, 10935 features"
+1145,AP_Breast_Colon,classifier_skipped,MLP,"Dataset grande demais para MLP: 630 instâncias, 10935 features"
+1158,AP_Breast_Kidney,dataset_processing,,"('Connection broken: IncompleteRead(8916916 bytes read, 36676294 more expected)', IncompleteRead(8916916 bytes read, 36676294 more expected))"
+1137,AP_Colon_Kidney,dataset_processing,,"HTTPSConnectionPool(host='openml.org', port=443): Max retries exceeded with url: /data/v1/download/54020/AP_Colon_Kidney.arff (Caused by NameResolutionError(""HTTPSConnection(host='openml.org', port=443): Failed to resolve 'openml.org' ([Errno 11001] getaddrinfo failed)""))"
+1165,AP_Breast_Ovary,dataset_processing,,"HTTPSConnectionPool(host='openml.org', port=443): Max retries exceeded with url: /data/v1/download/54048/AP_Breast_Ovary.arff (Caused by NameResolutionError(""HTTPSConnection(host='openml.org', port=443): Failed to resolve 'openml.org' ([Errno 11001] getaddrinfo failed)""))"
+1150,AP_Breast_Lung,dataset_processing,,"HTTPSConnectionPool(host='openml.org', port=443): Max retries exceeded with url: /data/v1/download/54033/AP_Breast_Lung.arff (Caused by NameResolutionError(""HTTPSConnection(host='openml.org', port=443): Failed to resolve 'openml.org' ([Errno 11001] getaddrinfo failed)""))"
+1148,AP_Breast_Uterus,dataset_processing,,"HTTPSConnectionPool(host='openml.org', port=443): Max retries exceeded with url: /data/v1/download/54031/AP_Breast_Uterus.arff (Caused by NameResolutionError(""HTTPSConnection(host='openml.org', port=443): Failed to resolve 'openml.org' ([Errno 11001] getaddrinfo failed)""))"
+1149,AP_Ovary_Kidney,dataset_processing,,"HTTPSConnectionPool(host='openml.org', port=443): Max retries exceeded with url: /data/v1/download/54032/AP_Ovary_Kidney.arff (Caused by NameResolutionError(""HTTPSConnection(host='openml.org', port=443): Failed to resolve 'openml.org' ([Errno 11001] getaddrinfo failed)""))"
+1127,AP_Breast_Omentum,dataset_processing,,"HTTPSConnectionPool(host='openml.org', port=443): Max retries exceeded with url: /data/v1/download/54010/AP_Breast_Omentum.arff (Caused by NameResolutionError(""HTTPSConnection(host='openml.org', port=443): Failed to resolve 'openml.org' ([Errno 11001] getaddrinfo failed)""))"
+1122,AP_Breast_Prostate,dataset_processing,,"HTTPSConnectionPool(host='openml.org', port=443): Max retries exceeded with url: /data/v1/download/54005/AP_Breast_Prostate.arff (Caused by NameResolutionError(""HTTPSConnection(host='openml.org', port=443): Failed to resolve 'openml.org' ([Errno 11001] getaddrinfo failed)""))"
+1126,AP_Colon_Lung,dataset_processing,,"HTTPSConnectionPool(host='openml.org', port=443): Max retries exceeded with url: /data/v1/download/54009/AP_Colon_Lung.arff (Caused by NameResolutionError(""HTTPSConnection(host='openml.org', port=443): Failed to resolve 'openml.org' ([Errno 11001] getaddrinfo failed)""))"
+1123,AP_Endometrium_Breast,dataset_processing,,"HTTPSConnectionPool(host='openml.org', port=443): Max retries exceeded with url: /data/v1/download/54006/AP_Endometrium_Breast.arff (Caused by NameResolutionError(""HTTPSConnection(host='openml.org', port=443): Failed to resolve 'openml.org' ([Errno 11001] getaddrinfo failed)""))"
+1163,AP_Lung_Kidney,dataset_processing,,"HTTPSConnectionPool(host='openml.org', port=443): Max retries exceeded with url: /data/v1/download/54046/AP_Lung_Kidney.arff (Caused by NameResolutionError(""HTTPSConnection(host='openml.org', port=443): Failed to resolve 'openml.org' ([Errno 11001] getaddrinfo failed)""))"
+1129,AP_Uterus_Kidney,dataset_processing,,"HTTPSConnectionPool(host='openml.org', port=443): Max retries exceeded with url: /data/v1/download/54012/AP_Uterus_Kidney.arff (Caused by NameResolutionError(""HTTPSConnection(host='openml.org', port=443): Failed to resolve 'openml.org' ([Errno 11001] getaddrinfo failed)""))"
+1147,AP_Omentum_Kidney,dataset_processing,,"HTTPSConnectionPool(host='openml.org', port=443): Max retries exceeded with url: /data/v1/download/54030/AP_Omentum_Kidney.arff (Caused by NameResolutionError(""HTTPSConnection(host='openml.org', port=443): Failed to resolve 'openml.org' ([Errno 11001] getaddrinfo failed)""))"
+1144,AP_Prostate_Kidney,dataset_processing,,"HTTPSConnectionPool(host='openml.org', port=443): Max retries exceeded with url: /data/v1/download/54027/AP_Prostate_Kidney.arff (Caused by NameResolutionError(""HTTPSConnection(host='openml.org', port=443): Failed to resolve 'openml.org' ([Errno 11001] getaddrinfo failed)""))"
+1140,AP_Ovary_Lung,classifier_skipped,SVM,"Dataset grande demais para SVM: 324 instâncias, 10935 features"
+1140,AP_Ovary_Lung,classifier_skipped,KNN,"Dataset grande demais para KNN: 324 instâncias, 10935 features"
+1140,AP_Ovary_Lung,classifier_skipped,MLP,"Dataset grande demais para MLP: 324 instâncias, 10935 features"
+1157,AP_Endometrium_Kidney,classifier_skipped,SVM,"Dataset grande demais para SVM: 321 instâncias, 10935 features"
+1157,AP_Endometrium_Kidney,classifier_skipped,KNN,"Dataset grande demais para KNN: 321 instâncias, 10935 features"
+1157,AP_Endometrium_Kidney,classifier_skipped,MLP,"Dataset grande demais para MLP: 321 instâncias, 10935 features"
+1136,AP_Lung_Uterus,classifier_skipped,SVM,"Dataset grande demais para SVM: 250 instâncias, 10935 features"
+1136,AP_Lung_Uterus,classifier_skipped,KNN,"Dataset grande demais para KNN: 250 instâncias, 10935 features"
+1136,AP_Lung_Uterus,classifier_skipped,MLP,"Dataset grande demais para MLP: 250 instâncias, 10935 features"
+1132,AP_Omentum_Lung,classifier_skipped,SVM,"Dataset grande demais para SVM: 203 instâncias, 10935 features"
+1132,AP_Omentum_Lung,classifier_skipped,KNN,"Dataset grande demais para KNN: 203 instâncias, 10935 features"
+1132,AP_Omentum_Lung,classifier_skipped,MLP,"Dataset grande demais para MLP: 203 instâncias, 10935 features"
+4134,Bioresponse,classifier_skipped,SVM,"Dataset grande demais para SVM: 3751 instâncias, 1776 features"
+4134,Bioresponse,classifier_skipped,KNN,"Dataset grande demais para KNN: 3751 instâncias, 1776 features"
+4134,Bioresponse,classifier_skipped,MLP,"Dataset grande demais para MLP: 3751 instâncias, 1776 features"
+151,electricity,classifier_skipped,SVM,"Dataset grande demais para SVM: 45312 instâncias, 8 features"
+151,electricity,classifier_skipped,KNN,"Dataset grande demais para KNN: 45312 instâncias, 8 features"
+151,electricity,classifier_skipped,MLP,"Dataset grande demais para MLP: 45312 instâncias, 8 features"
+46874,student_depression_dataset,classifier_skipped,SVM,"Dataset grande demais para SVM: 27901 instâncias, 16 features"
+46874,student_depression_dataset,classifier_skipped,KNN,"Dataset grande demais para KNN: 27901 instâncias, 16 features"
+46874,student_depression_dataset,classifier_skipped,MLP,"Dataset grande demais para MLP: 27901 instâncias, 16 features"
+46752,student_lifestyle_dataset,metafeature_extraction,,"""y"" is neither ""list"" nor ""np.array""."
+46752,student_lifestyle_dataset,classifier_evaluation,DecisionTree,only integer scalar arrays can be converted to a scalar index
+46752,student_lifestyle_dataset,classifier_evaluation,SVM,only integer scalar arrays can be converted to a scalar index
+46752,student_lifestyle_dataset,classifier_evaluation,KNN,only integer scalar arrays can be converted to a scalar index
+46752,student_lifestyle_dataset,classifier_evaluation,LogisticRegression,only integer scalar arrays can be converted to a scalar index
+46752,student_lifestyle_dataset,classifier_evaluation,Perceptron,only integer scalar arrays can be converted to a scalar index
+46752,student_lifestyle_dataset,classifier_evaluation,MLP,only integer scalar arrays can be converted to a scalar index
+43098,students_scores,metafeature_extraction,,"""y"" is neither ""list"" nor ""np.array""."
+43098,students_scores,classifier_evaluation,DecisionTree,only integer scalar arrays can be converted to a scalar index
+43098,students_scores,classifier_evaluation,SVM,only integer scalar arrays can be converted to a scalar index
+43098,students_scores,classifier_evaluation,KNN,only integer scalar arrays can be converted to a scalar index
+43098,students_scores,classifier_evaluation,LogisticRegression,only integer scalar arrays can be converted to a scalar index
+43098,students_scores,classifier_evaluation,Perceptron,only integer scalar arrays can be converted to a scalar index
+43098,students_scores,classifier_evaluation,MLP,only integer scalar arrays can be converted to a scalar index
+45748,StudentsPerformance,metafeature_extraction,,"""y"" is neither ""list"" nor ""np.array""."
+45748,StudentsPerformance,classifier_evaluation,DecisionTree,only integer scalar arrays can be converted to a scalar index
+45748,StudentsPerformance,classifier_evaluation,SVM,only integer scalar arrays can be converted to a scalar index
+45748,StudentsPerformance,classifier_evaluation,KNN,only integer scalar arrays can be converted to a scalar index
+45748,StudentsPerformance,classifier_evaluation,LogisticRegression,only integer scalar arrays can be converted to a scalar index
+45748,StudentsPerformance,classifier_evaluation,Perceptron,only integer scalar arrays can be converted to a scalar index
+45748,StudentsPerformance,classifier_evaluation,MLP,only integer scalar arrays can be converted to a scalar index
+46745,Advanced_IoT_Dataset,metafeature_extraction,,"""y"" is neither ""list"" nor ""np.array""."
+46745,Advanced_IoT_Dataset,classifier_evaluation,DecisionTree,only integer scalar arrays can be converted to a scalar index
+46745,Advanced_IoT_Dataset,classifier_evaluation,LogisticRegression,only integer scalar arrays can be converted to a scalar index
+46745,Advanced_IoT_Dataset,classifier_evaluation,Perceptron,only integer scalar arrays can be converted to a scalar index
+43890,law-school-admission-bianry,classifier_skipped,SVM,"Dataset grande demais para SVM: 20800 instâncias, 11 features"
+43890,law-school-admission-bianry,classifier_skipped,KNN,"Dataset grande demais para KNN: 20800 instâncias, 11 features"
+43890,law-school-admission-bianry,classifier_skipped,MLP,"Dataset grande demais para MLP: 20800 instâncias, 11 features"
+1461,bank-marketing,classifier_skipped,SVM,"Dataset grande demais para SVM: 45211 instâncias, 16 features"
+1461,bank-marketing,classifier_skipped,KNN,"Dataset grande demais para KNN: 45211 instâncias, 16 features"
+1461,bank-marketing,classifier_skipped,MLP,"Dataset grande demais para MLP: 45211 instâncias, 16 features"
+46502,Credit_Approval_Classification,metafeature_extraction,,"""y"" is neither ""list"" nor ""np.array""."
+46502,Credit_Approval_Classification,classifier_evaluation,DecisionTree,only integer scalar arrays can be converted to a scalar index
+46502,Credit_Approval_Classification,classifier_evaluation,SVM,only integer scalar arrays can be converted to a scalar index
+46502,Credit_Approval_Classification,classifier_evaluation,KNN,only integer scalar arrays can be converted to a scalar index
+46502,Credit_Approval_Classification,classifier_evaluation,LogisticRegression,only integer scalar arrays can be converted to a scalar index
+46502,Credit_Approval_Classification,classifier_evaluation,Perceptron,only integer scalar arrays can be converted to a scalar index
+46502,Credit_Approval_Classification,classifier_evaluation,MLP,only integer scalar arrays can be converted to a scalar index
+43595,Loan-Predication,metafeature_extraction,,"""y"" is neither ""list"" nor ""np.array""."
+43595,Loan-Predication,classifier_evaluation,DecisionTree,only integer scalar arrays can be converted to a scalar index
+43595,Loan-Predication,classifier_evaluation,SVM,only integer scalar arrays can be converted to a scalar index
+43595,Loan-Predication,classifier_evaluation,KNN,only integer scalar arrays can be converted to a scalar index
+43595,Loan-Predication,classifier_evaluation,LogisticRegression,only integer scalar arrays can be converted to a scalar index
+43595,Loan-Predication,classifier_evaluation,Perceptron,only integer scalar arrays can be converted to a scalar index
+43595,Loan-Predication,classifier_evaluation,MLP,only integer scalar arrays can be converted to a scalar index
+46526,Loan_Approval_Status_Classification,classifier_skipped,SVM,"Dataset grande demais para SVM: 45000 instâncias, 23 features"
+46526,Loan_Approval_Status_Classification,classifier_skipped,KNN,"Dataset grande demais para KNN: 45000 instâncias, 23 features"
+46526,Loan_Approval_Status_Classification,classifier_skipped,MLP,"Dataset grande demais para MLP: 45000 instâncias, 23 features"
+42477,default-of-credit-card-clients,classifier_skipped,SVM,"Dataset grande demais para SVM: 30000 instâncias, 23 features"
+42477,default-of-credit-card-clients,classifier_skipped,KNN,"Dataset grande demais para KNN: 30000 instâncias, 23 features"
+42477,default-of-credit-card-clients,classifier_skipped,MLP,"Dataset grande demais para MLP: 30000 instâncias, 23 features"
+46455,Credit_Card_Fraud_Classification,classifier_skipped,SVM,"Dataset grande demais para SVM: 28480 instâncias, 30 features"
+46455,Credit_Card_Fraud_Classification,classifier_skipped,KNN,"Dataset grande demais para KNN: 28480 instâncias, 30 features"
+46455,Credit_Card_Fraud_Classification,classifier_skipped,MLP,"Dataset grande demais para MLP: 28480 instâncias, 30 features"
+46605,differentiated_thyroid_cancer_recurrence,metafeature_extraction,,"""y"" is neither ""list"" nor ""np.array""."
+46605,differentiated_thyroid_cancer_recurrence,classifier_evaluation,DecisionTree,only integer scalar arrays can be converted to a scalar index
+46605,differentiated_thyroid_cancer_recurrence,classifier_evaluation,SVM,only integer scalar arrays can be converted to a scalar index
+46605,differentiated_thyroid_cancer_recurrence,classifier_evaluation,KNN,only integer scalar arrays can be converted to a scalar index
+46605,differentiated_thyroid_cancer_recurrence,classifier_evaluation,LogisticRegression,only integer scalar arrays can be converted to a scalar index
+46605,differentiated_thyroid_cancer_recurrence,classifier_evaluation,Perceptron,only integer scalar arrays can be converted to a scalar index
+46605,differentiated_thyroid_cancer_recurrence,classifier_evaluation,MLP,only integer scalar arrays can be converted to a scalar index
+37,diabetes,dataset_processing,,"HTTPSConnectionPool(host='openml.org', port=443): Max retries exceeded with url: /data/v1/download/37/diabetes.arff (Caused by NameResolutionError(""HTTPSConnection(host='openml.org', port=443): Failed to resolve 'openml.org' ([Errno 11001] getaddrinfo failed)""))"
+46601,Cirrhosis_Patient_Survival_Prediction,dataset_processing,,"HTTPSConnectionPool(host='openml.org', port=443): Max retries exceeded with url: /data/v1/download/22121294/Cirrhosis_Patient_Survival_Prediction.arff (Caused by NameResolutionError(""HTTPSConnection(host='openml.org', port=443): Failed to resolve 'openml.org' ([Errno 11001] getaddrinfo failed)""))"
+46733,diabetes_risk_prediction_dataset,metafeature_extraction,,"""y"" is neither ""list"" nor ""np.array""."
+46733,diabetes_risk_prediction_dataset,classifier_evaluation,DecisionTree,only integer scalar arrays can be converted to a scalar index
+46733,diabetes_risk_prediction_dataset,classifier_evaluation,SVM,only integer scalar arrays can be converted to a scalar index
+46733,diabetes_risk_prediction_dataset,classifier_evaluation,KNN,only integer scalar arrays can be converted to a scalar index
+46733,diabetes_risk_prediction_dataset,classifier_evaluation,LogisticRegression,only integer scalar arrays can be converted to a scalar index
+46733,diabetes_risk_prediction_dataset,classifier_evaluation,Perceptron,only integer scalar arrays can be converted to a scalar index
+46733,diabetes_risk_prediction_dataset,classifier_evaluation,MLP,only integer scalar arrays can be converted to a scalar index
+46600,maternal_health_risk,metafeature_extraction,,"""y"" is neither ""list"" nor ""np.array""."
+46600,maternal_health_risk,classifier_evaluation,DecisionTree,only integer scalar arrays can be converted to a scalar index
+46600,maternal_health_risk,classifier_evaluation,SVM,only integer scalar arrays can be converted to a scalar index
+46600,maternal_health_risk,classifier_evaluation,KNN,only integer scalar arrays can be converted to a scalar index
+46600,maternal_health_risk,classifier_evaluation,LogisticRegression,only integer scalar arrays can be converted to a scalar index
+46600,maternal_health_risk,classifier_evaluation,Perceptron,only integer scalar arrays can be converted to a scalar index
+46600,maternal_health_risk,classifier_evaluation,MLP,only integer scalar arrays can be converted to a scalar index
+46602,Predicting_Risk_Factors_of_Chronic_Kidney_Disease,metafeature_extraction,,"""y"" is neither ""list"" nor ""np.array""."
+46602,Predicting_Risk_Factors_of_Chronic_Kidney_Disease,classifier_evaluation,DecisionTree,only integer scalar arrays can be converted to a scalar index
+46602,Predicting_Risk_Factors_of_Chronic_Kidney_Disease,classifier_evaluation,SVM,only integer scalar arrays can be converted to a scalar index
+46602,Predicting_Risk_Factors_of_Chronic_Kidney_Disease,classifier_evaluation,KNN,only integer scalar arrays can be converted to a scalar index
+46602,Predicting_Risk_Factors_of_Chronic_Kidney_Disease,classifier_evaluation,LogisticRegression,only integer scalar arrays can be converted to a scalar index
+46602,Predicting_Risk_Factors_of_Chronic_Kidney_Disease,classifier_evaluation,Perceptron,only integer scalar arrays can be converted to a scalar index
+46602,Predicting_Risk_Factors_of_Chronic_Kidney_Disease,classifier_evaluation,MLP,only integer scalar arrays can be converted to a scalar index
+6,letter,classifier_skipped,SVM,"Dataset grande demais para SVM: 20000 instâncias, 16 features"
+6,letter,classifier_skipped,KNN,"Dataset grande demais para KNN: 20000 instâncias, 16 features"
+6,letter,classifier_skipped,MLP,"Dataset grande demais para MLP: 20000 instâncias, 16 features"
+32,pendigits,classifier_skipped,SVM,"Dataset grande demais para SVM: 10992 instâncias, 16 features"
+32,pendigits,classifier_skipped,KNN,"Dataset grande demais para KNN: 10992 instâncias, 16 features"
+32,pendigits,classifier_skipped,MLP,"Dataset grande demais para MLP: 10992 instâncias, 16 features"
+1459,artificial-characters,classifier_skipped,SVM,"Dataset grande demais para SVM: 10218 instâncias, 7 features"
+1459,artificial-characters,classifier_skipped,KNN,"Dataset grande demais para KNN: 10218 instâncias, 7 features"
+1459,artificial-characters,classifier_skipped,MLP,"Dataset grande demais para MLP: 10218 instâncias, 7 features"
+40926,CIFAR_10_small,classifier_skipped,SVM,"Dataset grande demais para SVM: 20000 instâncias, 3072 features"
+40926,CIFAR_10_small,classifier_skipped,KNN,"Dataset grande demais para KNN: 20000 instâncias, 3072 features"
+40926,CIFAR_10_small,classifier_skipped,MLP,"Dataset grande demais para MLP: 20000 instâncias, 3072 features"
+1478,har,classifier_skipped,SVM,"Dataset grande demais para SVM: 10299 instâncias, 561 features"
+1478,har,classifier_skipped,KNN,"Dataset grande demais para KNN: 10299 instâncias, 561 features"
+1478,har,classifier_skipped,MLP,"Dataset grande demais para MLP: 10299 instâncias, 561 features"
+1476,gas-drift,classifier_skipped,SVM,"Dataset grande demais para SVM: 13910 instâncias, 128 features"
+1476,gas-drift,classifier_skipped,KNN,"Dataset grande demais para KNN: 13910 instâncias, 128 features"
+1476,gas-drift,classifier_skipped,MLP,"Dataset grande demais para MLP: 13910 instâncias, 128 features"
+42178,telco-customer-churn,metafeature_extraction,,"""y"" is neither ""list"" nor ""np.array""."
+42178,telco-customer-churn,classifier_evaluation,DecisionTree,only integer scalar arrays can be converted to a scalar index
+42178,telco-customer-churn,classifier_evaluation,SVM,only integer scalar arrays can be converted to a scalar index
+42178,telco-customer-churn,classifier_evaluation,KNN,only integer scalar arrays can be converted to a scalar index
+42178,telco-customer-churn,classifier_evaluation,LogisticRegression,only integer scalar arrays can be converted to a scalar index
+42178,telco-customer-churn,classifier_evaluation,Perceptron,only integer scalar arrays can be converted to a scalar index
+42178,telco-customer-churn,classifier_evaluation,MLP,only integer scalar arrays can be converted to a scalar index
+1590,adult,classifier_skipped,SVM,"Dataset grande demais para SVM: 48842 instâncias, 14 features"
+1590,adult,classifier_skipped,KNN,"Dataset grande demais para KNN: 48842 instâncias, 14 features"
+1590,adult,classifier_skipped,MLP,"Dataset grande demais para MLP: 48842 instâncias, 14 features"
+1119,adult-census,classifier_skipped,SVM,"Dataset grande demais para SVM: 32561 instâncias, 14 features"
+1119,adult-census,classifier_skipped,KNN,"Dataset grande demais para KNN: 32561 instâncias, 14 features"
+1119,adult-census,classifier_skipped,MLP,"Dataset grande demais para MLP: 32561 instâncias, 14 features"
+44226,NewspaperChurn,metafeature_extraction,,"""y"" is neither ""list"" nor ""np.array""."
+44226,NewspaperChurn,classifier_evaluation,DecisionTree,only integer scalar arrays can be converted to a scalar index
+44226,NewspaperChurn,classifier_evaluation,LogisticRegression,only integer scalar arrays can be converted to a scalar index
+44226,NewspaperChurn,classifier_evaluation,Perceptron,only integer scalar arrays can be converted to a scalar index
+46371,Customer_Churn_Classification_Nominal,classifier_skipped,SVM,"Dataset grande demais para SVM: 35000 instâncias, 24 features"
+46371,Customer_Churn_Classification_Nominal,classifier_skipped,KNN,"Dataset grande demais para KNN: 35000 instâncias, 24 features"
+46371,Customer_Churn_Classification_Nominal,classifier_skipped,MLP,"Dataset grande demais para MLP: 35000 instâncias, 24 features"
+1457,amazon-commerce-reviews,classifier_skipped,SVM,"Dataset grande demais para SVM: 1500 instâncias, 10000 features"
+1457,amazon-commerce-reviews,classifier_skipped,KNN,"Dataset grande demais para KNN: 1500 instâncias, 10000 features"
+1457,amazon-commerce-reviews,classifier_skipped,MLP,"Dataset grande demais para MLP: 1500 instâncias, 10000 features"
+46652,news_channel,metafeature_extraction,,"""y"" is neither ""list"" nor ""np.array""."
+46652,news_channel,classifier_evaluation,DecisionTree,only integer scalar arrays can be converted to a scalar index
+46652,news_channel,classifier_evaluation,LogisticRegression,only integer scalar arrays can be converted to a scalar index
+46652,news_channel,classifier_evaluation,Perceptron,only integer scalar arrays can be converted to a scalar index
+46937,in_vehicle_coupon_recommendation,classifier_skipped,SVM,"Dataset grande demais para SVM: 12684 instâncias, 24 features"
+46937,in_vehicle_coupon_recommendation,classifier_skipped,KNN,"Dataset grande demais para KNN: 12684 instâncias, 24 features"
+46937,in_vehicle_coupon_recommendation,classifier_skipped,MLP,"Dataset grande demais para MLP: 12684 instâncias, 24 features"
+1158,AP_Breast_Kidney,classifier_skipped,SVM,"Dataset grande demais para SVM: 604 instâncias, 10935 features"
+1158,AP_Breast_Kidney,classifier_skipped,KNN,"Dataset grande demais para KNN: 604 instâncias, 10935 features"
+1158,AP_Breast_Kidney,classifier_skipped,MLP,"Dataset grande demais para MLP: 604 instâncias, 10935 features"
+1137,AP_Colon_Kidney,classifier_skipped,SVM,"Dataset grande demais para SVM: 546 instâncias, 10935 features"
+1137,AP_Colon_Kidney,classifier_skipped,KNN,"Dataset grande demais para KNN: 546 instâncias, 10935 features"
+1137,AP_Colon_Kidney,classifier_skipped,MLP,"Dataset grande demais para MLP: 546 instâncias, 10935 features"
+1165,AP_Breast_Ovary,classifier_skipped,SVM,"Dataset grande demais para SVM: 542 instâncias, 10935 features"
+1165,AP_Breast_Ovary,classifier_skipped,KNN,"Dataset grande demais para KNN: 542 instâncias, 10935 features"
+1165,AP_Breast_Ovary,classifier_skipped,MLP,"Dataset grande demais para MLP: 542 instâncias, 10935 features"
+1150,AP_Breast_Lung,classifier_skipped,SVM,"Dataset grande demais para SVM: 470 instâncias, 10935 features"
+1150,AP_Breast_Lung,classifier_skipped,KNN,"Dataset grande demais para KNN: 470 instâncias, 10935 features"
+1150,AP_Breast_Lung,classifier_skipped,MLP,"Dataset grande demais para MLP: 470 instâncias, 10935 features"
+1148,AP_Breast_Uterus,classifier_skipped,SVM,"Dataset grande demais para SVM: 468 instâncias, 10935 features"
+1148,AP_Breast_Uterus,classifier_skipped,KNN,"Dataset grande demais para KNN: 468 instâncias, 10935 features"
+1148,AP_Breast_Uterus,classifier_skipped,MLP,"Dataset grande demais para MLP: 468 instâncias, 10935 features"
+1149,AP_Ovary_Kidney,classifier_skipped,SVM,"Dataset grande demais para SVM: 458 instâncias, 10935 features"
+1149,AP_Ovary_Kidney,classifier_skipped,KNN,"Dataset grande demais para KNN: 458 instâncias, 10935 features"
+1149,AP_Ovary_Kidney,classifier_skipped,MLP,"Dataset grande demais para MLP: 458 instâncias, 10935 features"
+1127,AP_Breast_Omentum,classifier_skipped,SVM,"Dataset grande demais para SVM: 421 instâncias, 10935 features"
+1127,AP_Breast_Omentum,classifier_skipped,KNN,"Dataset grande demais para KNN: 421 instâncias, 10935 features"
+1127,AP_Breast_Omentum,classifier_skipped,MLP,"Dataset grande demais para MLP: 421 instâncias, 10935 features"
+1122,AP_Breast_Prostate,classifier_skipped,SVM,"Dataset grande demais para SVM: 413 instâncias, 10935 features"
+1122,AP_Breast_Prostate,classifier_skipped,KNN,"Dataset grande demais para KNN: 413 instâncias, 10935 features"
+1122,AP_Breast_Prostate,classifier_skipped,MLP,"Dataset grande demais para MLP: 413 instâncias, 10935 features"
+1126,AP_Colon_Lung,classifier_skipped,SVM,"Dataset grande demais para SVM: 412 instâncias, 10935 features"
+1126,AP_Colon_Lung,classifier_skipped,KNN,"Dataset grande demais para KNN: 412 instâncias, 10935 features"
+1126,AP_Colon_Lung,classifier_skipped,MLP,"Dataset grande demais para MLP: 412 instâncias, 10935 features"
+1123,AP_Endometrium_Breast,classifier_skipped,SVM,"Dataset grande demais para SVM: 405 instâncias, 10935 features"
+1123,AP_Endometrium_Breast,classifier_skipped,KNN,"Dataset grande demais para KNN: 405 instâncias, 10935 features"
+1123,AP_Endometrium_Breast,classifier_skipped,MLP,"Dataset grande demais para MLP: 405 instâncias, 10935 features"
+1163,AP_Lung_Kidney,classifier_skipped,SVM,"Dataset grande demais para SVM: 386 instâncias, 10935 features"
+1163,AP_Lung_Kidney,classifier_skipped,KNN,"Dataset grande demais para KNN: 386 instâncias, 10935 features"
+1163,AP_Lung_Kidney,classifier_skipped,MLP,"Dataset grande demais para MLP: 386 instâncias, 10935 features"
+1129,AP_Uterus_Kidney,classifier_skipped,SVM,"Dataset grande demais para SVM: 384 instâncias, 10935 features"
+1129,AP_Uterus_Kidney,classifier_skipped,KNN,"Dataset grande demais para KNN: 384 instâncias, 10935 features"
+1129,AP_Uterus_Kidney,classifier_skipped,MLP,"Dataset grande demais para MLP: 384 instâncias, 10935 features"
+1147,AP_Omentum_Kidney,classifier_skipped,SVM,"Dataset grande demais para SVM: 337 instâncias, 10935 features"
+1147,AP_Omentum_Kidney,classifier_skipped,KNN,"Dataset grande demais para KNN: 337 instâncias, 10935 features"
+1147,AP_Omentum_Kidney,classifier_skipped,MLP,"Dataset grande demais para MLP: 337 instâncias, 10935 features"
+1144,AP_Prostate_Kidney,classifier_skipped,SVM,"Dataset grande demais para SVM: 329 instâncias, 10935 features"
+1144,AP_Prostate_Kidney,classifier_skipped,KNN,"Dataset grande demais para KNN: 329 instâncias, 10935 features"
+1144,AP_Prostate_Kidney,classifier_skipped,MLP,"Dataset grande demais para MLP: 329 instâncias, 10935 features"
+40597,yeast,dataset_processing,,Number of requested targets 14 is not implemented.
+46745,Advanced_IoT_Dataset,classifier_skipped,SVM,"Dataset grande demais para SVM: 30000 instâncias, 13 features"
+46745,Advanced_IoT_Dataset,classifier_skipped,KNN,"Dataset grande demais para KNN: 30000 instâncias, 13 features"
+46745,Advanced_IoT_Dataset,classifier_skipped,MLP,"Dataset grande demais para MLP: 30000 instâncias, 13 features"
+40592,image,dataset_processing,,Number of requested targets 5 is not implemented.
+44226,NewspaperChurn,classifier_skipped,SVM,"Dataset grande demais para SVM: 15855 instâncias, 18 features"
+44226,NewspaperChurn,classifier_skipped,KNN,"Dataset grande demais para KNN: 15855 instâncias, 18 features"
+44226,NewspaperChurn,classifier_skipped,MLP,"Dataset grande demais para MLP: 15855 instâncias, 18 features"
+46652,news_channel,classifier_skipped,SVM,"Dataset grande demais para SVM: 20284 instâncias, 17 features"
+46652,news_channel,classifier_skipped,KNN,"Dataset grande demais para KNN: 20284 instâncias, 17 features"
+46652,news_channel,classifier_skipped,MLP,"Dataset grande demais para MLP: 20284 instâncias, 17 features"
+40594,reuters,dataset_processing,,Number of requested targets 7 is not implemented.
