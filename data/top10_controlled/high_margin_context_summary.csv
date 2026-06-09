@@ -1,0 +1,5 @@
+threshold,N,winners,f1_baseline,f1_context,delta_f1,pvals
+0.0,116,"{'LogisticRegression': np.int64(75), 'DecisionTree': np.int64(33), 'Perceptron': np.int64(8)}",0.4092564124385549,0.4085813673114525,-0.000675045127102275,"[np.float64(0.633), np.float64(0.616), np.float64(0.53)]"
+0.02,68,"{'LogisticRegression': np.int64(46), 'DecisionTree': np.int64(22)}",0.6315349421938298,0.6160674528797258,-0.01546748931410393,"[np.float64(0.189), np.float64(0.015), np.float64(0.188)]"
+0.03,59,"{'LogisticRegression': np.int64(38), 'DecisionTree': np.int64(21)}",0.6828150177136246,0.6751129667975643,-0.007702050916060202,"[np.float64(0.167), np.float64(0.879), np.float64(0.307)]"
+0.05,43,"{'LogisticRegression': np.int64(27), 'DecisionTree': np.int64(16)}",0.7313975191475192,0.7380081862581863,0.006610667110667114,"[np.float64(0.241), np.float64(0.089), np.float64(0.282)]"

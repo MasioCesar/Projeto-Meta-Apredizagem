@@ -17,8 +17,8 @@ from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
 BASE_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = BASE_DIR / "data"
 
-INPUT_METAFEATURES = DATA_DIR / "metafeatures_selected_datasets.csv"
-INPUT_MATRIX = DATA_DIR / "performance_matrix.csv"
+INPUT_METAFEATURES = DATA_DIR / __import__("os").environ.get("MAB_META", "metafeatures_selected_datasets.csv")
+INPUT_MATRIX = DATA_DIR / __import__("os").environ.get("MAB_PERF", "performance_matrix.csv")
 OUTPUT_RESULTS = DATA_DIR / "experiment_b_test22_domain_strategies.csv"
 
 
@@ -248,7 +248,14 @@ def load_data():
     df_meta = pd.read_csv(INPUT_METAFEATURES)
     performance_matrix = pd.read_csv(INPUT_MATRIX)
 
-    classifier_cols = ["DecisionTree", "LogisticRegression", "Perceptron"]
+    classifier_cols = [
+        "DecisionTree",
+        "KNN",
+        "LogisticRegression",
+        "MLP",
+        "Perceptron",
+        "SVM"
+    ]
     existing_classifier_cols = [col for col in classifier_cols if col in performance_matrix.columns]
 
     if not existing_classifier_cols:

@@ -1,0 +1,13 @@
+margin,dist,strategy,acc_mean,f1_macro_mean,f1_macro_std
+0.0,"{'simple_enough': np.int64(65), 'complex_worth': np.int64(51)}",baseline_stat_only,0.6734420289855072,0.66351842812159,0.07812206638899076
+0.0,"{'simple_enough': np.int64(65), 'complex_worth': np.int64(51)}",stat_plus_interaction,0.6682608695652174,0.6574646180018001,0.08377309544085194
+0.0,"{'simple_enough': np.int64(65), 'complex_worth': np.int64(51)}",stat_plus_modality_interaction,0.6743478260869565,0.6650756763942087,0.07619833466477402
+0.0,"{'simple_enough': np.int64(65), 'complex_worth': np.int64(51)}",stat_plus_mod_inter_clusters,0.6544565217391306,0.6445844458356704,0.09131222879456484
+0.01,"{'simple_enough': np.int64(87), 'complex_worth': np.int64(29)}",baseline_stat_only,0.7637681159420289,0.5983440088753839,0.08520230245454755
+0.01,"{'simple_enough': np.int64(87), 'complex_worth': np.int64(29)}",stat_plus_interaction,0.7698188405797102,0.6092374327351295,0.09207301327254327
+0.01,"{'simple_enough': np.int64(87), 'complex_worth': np.int64(29)}",stat_plus_modality_interaction,0.7681159420289854,0.612224938209345,0.08724550435405223
+0.01,"{'simple_enough': np.int64(87), 'complex_worth': np.int64(29)}",stat_plus_mod_inter_clusters,0.7671376811594203,0.6028896644926245,0.09126835952912292
+0.02,"{'simple_enough': np.int64(101), 'complex_worth': np.int64(15)}",baseline_stat_only,0.8740942028985508,0.4912697070371489,0.07840263784876218
+0.02,"{'simple_enough': np.int64(101), 'complex_worth': np.int64(15)}",stat_plus_interaction,0.8740579710144928,0.491260344306856,0.07847764352716884
+0.02,"{'simple_enough': np.int64(101), 'complex_worth': np.int64(15)}",stat_plus_modality_interaction,0.8731884057971014,0.4860388603644418,0.0710021376060032
+0.02,"{'simple_enough': np.int64(101), 'complex_worth': np.int64(15)}",stat_plus_mod_inter_clusters,0.8740579710144928,0.491260344306856,0.07847764352716884

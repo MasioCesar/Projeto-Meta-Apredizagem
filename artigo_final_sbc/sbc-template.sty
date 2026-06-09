@@ -1,0 +1,25 @@
+% Minimal SBC-like style file for local compilation.
+% If the official SBC style file is available, it can replace this file.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{sbc-template}[2026/05/27 Minimal SBC-compatible layout]
+
+\usepackage[a4paper,top=3.0cm,bottom=2.5cm,left=3.0cm,right=2.5cm]{geometry}
+\usepackage{times}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{authblk}
+
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+\setlength{\columnsep}{0.6cm}
+\onehalfspacing
+
+\titleformat{\section}{\normalfont\bfseries\large}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalfont\bfseries\normalsize}{\thesubsection.}{0.5em}{}
+\titleformat{\subsubsection}{\normalfont\bfseries\normalsize}{\thesubsubsection.}{0.5em}{}
+
+\renewcommand\Authfont{\normalsize}
+\renewcommand\Affilfont{\small}
+
+\newcommand{\email}[1]{\texttt{#1}}
+

@@ -44,3 +44,7 @@ desktop.ini
 *.tmp
 *.temp
 ~$*
+
+# Build artifacts (pacotes Overleaf) e cache de embeddings
+*.zip
+data/v2_desc_embeddings.npy

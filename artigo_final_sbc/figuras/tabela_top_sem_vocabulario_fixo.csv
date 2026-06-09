@@ -1,0 +1,9 @@
+rank,strategy,semantic_mode,domain_mode,accuracy_mean,f1_macro_mean,accuracy_percent,f1_macro_percent,result_file
+baseline,baseline_statistical_only_no_domain_score,none,none,0.6554347826086956,0.3987914862914863,65.54,39.88,data\top10_controlled\baseline.csv
+2,stat_plus_clusters_plus_domain_label_score_interaction,clusters_only,label_score_interaction,0.7242753623188405,0.4578835978835979,72.43,45.79,data\top10_controlled\02_clusters_domain_interaction.csv
+4,stat_plus_clusters_plus_domain_label_score,clusters_only,label_score,0.6985507246376812,0.4443830461477519,69.86,44.44,data\top10_controlled\04_clusters_domain_label_score.csv
+6,stat_plus_tags_plus_domain_label,tags_only,label,0.6985507246376811,0.4410675381263617,69.86,44.11,data\top10_controlled\06_tags_domain_label.csv
+7,stat_plus_tags_plus_domain_label_score_interaction,tags_only,label_score_interaction,0.6985507246376812,0.4408597883597883,69.86,44.09,data\top10_controlled\07_tags_domain_interaction.csv
+8,stat_plus_domain_label_score,none,label_score,0.6992753623188406,0.4404015646662705,69.93,44.04,data\top10_controlled\08_domain_label_score.csv
+9,stat_plus_tags_plus_domain_score,tags_only,score,0.7068840579710145,0.4400424412189118,70.69,44.0,data\top10_controlled\09_tags_domain_score.csv
+10,stat_plus_tags_clusters_plus_domain_score,tags_clusters,score,0.7068840579710145,0.4393503664091899,70.69,43.94,data\top10_controlled\10_tags_clusters_domain_score.csv
