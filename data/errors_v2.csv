@@ -1,0 +1,38 @@
+did,stage,error
+42141,clf_LogisticRegression,[WinError 1450] Não existem recursos de sistema suficientes para concluir o serviço solicitado
+42141,clf_Perceptron,[WinError 1450] Não existem recursos de sistema suficientes para concluir o serviço solicitado
+41871,dataset,SimpleImputer does not support data with dtype datetime64[us]. Please provide either a numeric array (with a floating po
+41873,dataset,SimpleImputer does not support data with dtype datetime64[us]. Please provide either a numeric array (with a floating po
+41878,dataset,SimpleImputer does not support data with dtype datetime64[us]. Please provide either a numeric array (with a floating po
+41877,dataset,SimpleImputer does not support data with dtype datetime64[us]. Please provide either a numeric array (with a floating po
+41898,dataset,SimpleImputer does not support data with dtype datetime64[us]. Please provide either a numeric array (with a floating po
+41881,dataset,SimpleImputer does not support data with dtype datetime64[us]. Please provide either a numeric array (with a floating po
+41886,dataset,SimpleImputer does not support data with dtype datetime64[us]. Please provide either a numeric array (with a floating po
+41885,dataset,SimpleImputer does not support data with dtype datetime64[us]. Please provide either a numeric array (with a floating po
+350,dataset,"factorize requires a Series, Index, ExtensionArray, np.ndarray or NumpyExtensionArray got list."
+41161,dataset,"('Connection broken: IncompleteRead(231369272 bytes read, 109080023 more expected)', IncompleteRead(231369272 bytes read"
+41159,clf_DecisionTree,[WinError 1450] Não existem recursos de sistema suficientes para concluir o serviço solicitado
+42811,dataset,"('Connection broken: IncompleteRead(359491752 bytes read, 126876253 more expected)', IncompleteRead(359491752 bytes read"
+41103,dataset,"('Connection broken: IncompleteRead(66904064 bytes read, 338545446 more expected)', IncompleteRead(66904064 bytes read, "
+399,dataset,"factorize requires a Series, Index, ExtensionArray, np.ndarray or NumpyExtensionArray got list."
+41165,clf_Perceptron,[WinError 1450] Não existem recursos de sistema suficientes para concluir o serviço solicitado
+390,dataset,"factorize requires a Series, Index, ExtensionArray, np.ndarray or NumpyExtensionArray got list."
+42819,dataset,"('Connection broken: IncompleteRead(196100956 bytes read, 244574025 more expected)', IncompleteRead(196100956 bytes read"
+41026,dataset,"factorize requires a Series, Index, ExtensionArray, np.ndarray or NumpyExtensionArray got list."
+43149,dataset,Unsupported escape sequence: \w
+40596,dataset,Number of requested targets 22 is not implemented.
+396,dataset,"factorize requires a Series, Index, ExtensionArray, np.ndarray or NumpyExtensionArray got list."
+393,dataset,"factorize requires a Series, Index, ExtensionArray, np.ndarray or NumpyExtensionArray got list."
+389,dataset,"factorize requires a Series, Index, ExtensionArray, np.ndarray or NumpyExtensionArray got list."
+40597,dataset,Number of requested targets 14 is not implemented.
+40594,dataset,Number of requested targets 7 is not implemented.
+40592,dataset,Number of requested targets 5 is not implemented.
+40590,dataset,Number of requested targets 53 is not implemented.
+4137,dataset,"factorize requires a Series, Index, ExtensionArray, np.ndarray or NumpyExtensionArray got list."
+401,dataset,"factorize requires a Series, Index, ExtensionArray, np.ndarray or NumpyExtensionArray got list."
+392,dataset,"factorize requires a Series, Index, ExtensionArray, np.ndarray or NumpyExtensionArray got list."
+394,dataset,"factorize requires a Series, Index, ExtensionArray, np.ndarray or NumpyExtensionArray got list."
+386,dataset,"factorize requires a Series, Index, ExtensionArray, np.ndarray or NumpyExtensionArray got list."
+40591,dataset,Number of requested targets 27 is not implemented.
+4136,dataset,"factorize requires a Series, Index, ExtensionArray, np.ndarray or NumpyExtensionArray got list."
+40589,dataset,Number of requested targets 6 is not implemented.

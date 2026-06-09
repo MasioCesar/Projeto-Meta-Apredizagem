@@ -1,2 +1,2 @@
 experiment,features,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std
-B_Test2_Semantic,"Stat + Better Semantic (300 feats, bi-grams)",0.6206521739130435,0.08422335055569788,0.321590174531351,0.07847495058667674
+B_Test2_Semantic,"Stat + Better Semantic (300 feats, bi-grams)",0.427789824854045,0.03180671432124473,0.2861391747618575,0.04351205623192198

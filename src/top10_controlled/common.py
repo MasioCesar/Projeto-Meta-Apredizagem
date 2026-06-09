@@ -19,10 +19,10 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = BASE_DIR / "data"
 OUTPUT_DIR = DATA_DIR / "top10_controlled"
 
-INPUT_METAFEATURES = DATA_DIR / "metafeatures_selected_datasets.csv"
-INPUT_MATRIX = DATA_DIR / "performance_matrix.csv"
+INPUT_METAFEATURES = DATA_DIR / __import__("os").environ.get("MAB_META", "metafeatures_selected_datasets.csv")
+INPUT_MATRIX = DATA_DIR / __import__("os").environ.get("MAB_PERF", "performance_matrix.csv")
 
-CLASSIFIER_COLS = ["DecisionTree", "LogisticRegression", "Perceptron"]
+CLASSIFIER_COLS = ["DecisionTree", "KNN", "LogisticRegression", "MLP", "Perceptron", "SVM"]
 
 BOILERPLATE_WORDS = {
     "author", "authors", "source", "sources", "unknown", "date", "please",

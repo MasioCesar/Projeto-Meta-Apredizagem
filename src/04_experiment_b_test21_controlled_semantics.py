@@ -18,8 +18,8 @@ from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
 BASE_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = BASE_DIR / "data"
 
-INPUT_METAFEATURES = DATA_DIR / "metafeatures_selected_datasets.csv"
-INPUT_MATRIX = DATA_DIR / "performance_matrix.csv"
+INPUT_METAFEATURES = DATA_DIR / __import__("os").environ.get("MAB_META", "metafeatures_selected_datasets.csv")
+INPUT_MATRIX = DATA_DIR / __import__("os").environ.get("MAB_PERF", "performance_matrix.csv")
 OUTPUT_RESULTS = DATA_DIR / "experiment_b_test21_controlled_semantics.csv"
 
 
@@ -216,8 +216,11 @@ def load_data():
 
     classifier_cols = [
         "DecisionTree",
+        "KNN",
         "LogisticRegression",
+        "MLP",
         "Perceptron",
+        "SVM"
     ]
 
     existing_classifier_cols = [

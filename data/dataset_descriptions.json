@@ -1,0 +1,1046 @@
+[
+ {
+  "did": 46,
+  "name": "splice",
+  "nr_attr": 60,
+  "nr_inst": 3190,
+  "nr_class": 3,
+  "description": "**Author**: Genbank. Donated by G. Towell, M. Noordewier, and J. Shavlik  \n\n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Molecular+Biology+(Splice-junction+Gene+Sequences))   \n\n**Please cite**:  None  \n\n\n\nPrimate splice-junction gene sequences (DNA) with associated imperfect domain theory.\n\nSplice junctions are points on a DNA sequence at which 'superfluous' DNA is removed during the process of protein creation in higher organisms. The problem posed in this dataset is to recognize, given a sequence of DNA, the boundaries between exons (the parts of the DNA sequence retained after splicing) and introns (the parts of the DNA sequence that are spliced out). This problem consists of two subtasks: recognizing exon/intron boundaries (referred to as EI sites), and recognizing intron/exon boundaries (IE sites). (In the biological community, IE borders are referred to a ''acceptors'' while EI borders are referred to as ''donors''.)\n\n\n\nAll examples taken from Genbank 64.1. Categories \"ei\" and \"ie\" include every \"split-gene\" for primates in Genbank 64.1. Non-splice examples taken from sequences known not to include a splicing site.\n\n         \n\n### Attribute Information \n\n>\n\n              1   One of {n ei ie}, indicating the class.\n\n              2   The instance name.\n\n           3-62   The remaining 60 fields are the sequence, starting at \n\n                  position -30 and ending at position +30. Each of\n\n                  these fields is almost always filled by one of \n",
+  "feature_names_sample": "attribute_21, attribute_54, attribute_53, attribute_11, attribute_51, attribute_46, attribute_22, attribute_16, attribute_18, Class, attribute_27, attribute_8, attribute_28, attribute_37, attribute_26, attribute_49, attribute_25, attribute_58, attribute_1, attribute_20, attribute_57, attribute_7, attribute_19, attribute_45, attribute_14, attribute_43, attribute_34, attribute_33, attribute_10, attribute_38, attribute_31, attribute_15, attribute_40, attribute_32, attribute_52, attribute_2, attribute_12, attribute_24, attribute_4, attribute_13"
+ },
+ {
+  "did": 40670,
+  "name": "dna",
+  "nr_attr": 180,
+  "nr_inst": 3186,
+  "nr_class": 3,
+  "description": "**Author**: Ross King, based on data from Genbank 64.1  \n\n**Source**: [MLbench](https://www.rdocumentation.org/packages/mlbench/versions/2.1-1/topics/DNA). Originally from the StatLog project.  \n\n**Please Cite**:   \n\n\n\n**Primate Splice-Junction Gene Sequences (DNA)**  \n\nOriginally from the StatLog project. The raw data is still available on [UCI](https://archive.ics.uci.edu/ml/datasets/Molecular+Biology+(Splice-junction+Gene+Sequences)).\n\n\n\nThe data consists of 3,186 data points (splice junctions). The data points are described by 180 indicator binary variables and the problem is to recognize the 3 classes (ei, ie, neither), i.e., the boundaries between exons (the parts of the DNA sequence retained after splicing) and introns (the parts of the DNA sequence that are spliced out). The StatLog DNA dataset is a processed version of the [Irvine database]((https://archive.ics.uci.edu/ml/datasets/Molecular+Biology+(Splice-junction+Gene+Sequences))). The main difference is that the symbolic variables representing the nucleotides (only A,G,T,C) were replaced by 3 binary indicator variables. Thus the original 60 symbolic attributes were changed into 180 binary attributes. The names of the examples were removed. The examples with ambiguities were removed (there was very few of them, 4). The StatLog version of this dataset was produced by Ross King at Strathclyde University. For original details see the Irvine database documentation.\n\n\n\nThe nucleotides A,C,G,T were given indicator values",
+  "feature_names_sample": "A161, A12, A65, A149, A79, A6, A86, A19, A13, A21, A110, A4, A26, A36, A41, A97, A25, A71, A127, A5, A112, A60, A68, A101, A73, A44, A102, A84, A129, A122, A45, A105, A179, A58, A159, A81, A167, A10, A32, A14"
+ },
+ {
+  "did": 1128,
+  "name": "OVA_Breast",
+  "nr_attr": 1000,
+  "nr_inst": 1545,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 215695_s_at, 227971_at, 201784_s_at, 226403_at, 222891_s_at, 203333_at, 203773_x_at, 223690_at, 212875_s_at, 1569594_a_at, 228575_at, 1555786_s_at, 205335_s_at, 213374_x_at, 201622_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 235944_at, 236001_at, 221094_s_at, 226269_at, 213193_x_at, 202941_at, 202678_at, 227094_at, 218498_s_at, 228055_at"
+ },
+ {
+  "did": 1130,
+  "name": "OVA_Lung",
+  "nr_attr": 1000,
+  "nr_inst": 1545,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 215695_s_at, 227971_at, 201784_s_at, 226403_at, 222891_s_at, 203333_at, 203773_x_at, 223690_at, 212875_s_at, 1569594_a_at, 228575_at, 1555786_s_at, 205335_s_at, 213374_x_at, 201622_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 235944_at, 236001_at, 221094_s_at, 226269_at, 213193_x_at, 202941_at, 202678_at, 227094_at, 218498_s_at, 228055_at"
+ },
+ {
+  "did": 1134,
+  "name": "OVA_Kidney",
+  "nr_attr": 1000,
+  "nr_inst": 1545,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 215695_s_at, 227971_at, 201784_s_at, 226403_at, 222891_s_at, 203333_at, 203773_x_at, 223690_at, 212875_s_at, 1569594_a_at, 228575_at, 1555786_s_at, 205335_s_at, 213374_x_at, 201622_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 235944_at, 236001_at, 221094_s_at, 226269_at, 213193_x_at, 202941_at, 202678_at, 227094_at, 218498_s_at, 228055_at"
+ },
+ {
+  "did": 1494,
+  "name": "qsar-biodeg",
+  "nr_attr": 41,
+  "nr_inst": 1055,
+  "nr_class": 2,
+  "description": "**Author**: Kamel Mansouri, Tine Ringsted, Davide Ballabio  \n\n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/QSAR+biodegradation)  \n\n**Please cite**: Mansouri, K., Ringsted, T., Ballabio, D., Todeschini, R., Consonni, V. (2013). Quantitative Structure - Activity Relationship models for ready biodegradability of chemicals. Journal of Chemical Information and Modeling, 53, 867-878 \n\n\n\n\n\nQSAR biodegradation Data Set \n\n\n\n* Abstract: \n\n\n\nData set containing values for 41 attributes (molecular descriptors) used to classify 1055 chemicals into 2 classes (ready and not ready biodegradable).\n\n\n\n\n\n* Source:\n\n\n\nKamel Mansouri, Tine Ringsted, Davide Ballabio (davide.ballabio '@' unimib.it), Roberto Todeschini, Viviana Consonni, Milano Chemometrics and QSAR Research Group (http://michem.disat.unimib.it/chm/), UniversitÃ  degli Studi Milano â€“ Bicocca, Milano (Italy)\n\n\n\n\n\n* Data Set Information:\n\n\n\nThe QSAR biodegradation dataset was built in the Milano Chemometrics and QSAR Research Group (UniversitÃ  degli Studi Milano â€“ Bicocca, Milano, Italy). The research leading to these results has received funding from the European Communityâ€™s Seventh Framework Programme [FP7/2007-2013] under Grant Agreement n. 238701 of Marie Curie ITN Environmental Chemoinformatics (ECO) project. \n\nThe data have been used to develop QSAR (Quantitative Structure Activity Relationships) models for the study of the relationships between chemical structure and biodegradation of molecules. Biodegradati",
+  "feature_names_sample": "V17, V33, V9, V21, V14, V12, Class, V38, V29, V37, V30, V31, V20, V3, V39, V24, V28, V36, V41, V8, V10, V16, V6, V40, V15, V7, V34, V32, V27, V11, V23, V25, V18, V2, V22, V35, V26, V13, V19, V4"
+ },
+ {
+  "did": 1145,
+  "name": "AP_Breast_Colon",
+  "nr_attr": 1000,
+  "nr_inst": 630,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 231830_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 215695_s_at, 234830_at, 201784_s_at, 226403_at, 236655_at, 1569106_s_at, 222891_s_at, 203333_at, 203773_x_at, 213224_s_at, 212875_s_at, 1569594_a_at, 223690_at, 1555786_s_at, 232349_x_at, 205335_s_at, 213374_x_at, 201622_at, 222757_s_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 235944_at, 236001_at, 226269_at, 224794_s_at, 213193_x_at"
+ },
+ {
+  "did": 1140,
+  "name": "AP_Ovary_Lung",
+  "nr_attr": 1000,
+  "nr_inst": 324,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 227971_at, 201784_s_at, 226403_at, 1552594_at, 222891_s_at, 203333_at, 203773_x_at, 223690_at, 212875_s_at, 1569594_a_at, 1555786_s_at, 205335_s_at, 213374_x_at, 201622_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 235944_at, 221094_s_at, 213193_x_at, 218037_at, 202941_at, 202678_at, 227094_at, 218498_s_at, 228055_at, 219179_at, 218764_at, 200708_at"
+ },
+ {
+  "did": 1157,
+  "name": "AP_Endometrium_Kidney",
+  "nr_attr": 1000,
+  "nr_inst": 321,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 215695_s_at, 201784_s_at, 226403_at, 1552594_at, 222891_s_at, 203333_at, 203773_x_at, 223690_at, 212875_s_at, 1569594_a_at, 228575_at, 214046_at, 1555786_s_at, 205335_s_at, 213374_x_at, 201622_at, 225509_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 235944_at, 221094_s_at, 213193_x_at, 202941_at, 218700_s_at, 202678_at, 242354_at, 227094_at"
+ },
+ {
+  "did": 1136,
+  "name": "AP_Lung_Uterus",
+  "nr_attr": 1000,
+  "nr_inst": 250,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 227971_at, 201784_s_at, 226403_at, 222891_s_at, 203333_at, 203773_x_at, 223690_at, 212875_s_at, 1569594_a_at, 210056_at, 228575_at, 1555786_s_at, 232349_x_at, 205335_s_at, 213374_x_at, 201622_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 235944_at, 221094_s_at, 213193_x_at, 204998_s_at, 202941_at, 202678_at, 227094_at, 218498_s_at, 228055_at"
+ },
+ {
+  "did": 1132,
+  "name": "AP_Omentum_Lung",
+  "nr_attr": 1000,
+  "nr_inst": 203,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 227971_at, 201784_s_at, 226403_at, 231484_at, 222891_s_at, 203773_x_at, 223690_at, 212875_s_at, 1569594_a_at, 210056_at, 220595_at, 228575_at, 1555786_s_at, 232349_x_at, 205335_s_at, 213374_x_at, 201622_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 235944_at, 226269_at, 213193_x_at, 204998_s_at, 202941_at, 202678_at, 218498_s_at, 228055_at"
+ },
+ {
+  "did": 46827,
+  "name": "QSAR_Bioconcentration_classification",
+  "nr_attr": 12,
+  "nr_inst": 779,
+  "nr_class": 3,
+  "description": "the QSAR Bioconcentration Classes Dataset is a well-known dataset used in cheminformatics and environmental chemistry. It is available from the UCI Machine Learning Repository and is often used for classification and regression tasks related to predicting the bioconcentration factor (BCF) of chemical compounds.\n\nDataset Overview\nObjective: The primary goal of this dataset is to predict the bioconcentration factor (BCF) of chemical compounds, which is a measure of how likely a chemical is to accumulate in living organisms (e.g., fish) from the surrounding environment. This is important for assessing the environmental impact and toxicity of chemicals.\n\nFeatures: The dataset contains molecular descriptors (features) that describe the chemical structure and properties of the compounds.\n\nTarget Variables:\n\nlogBCF: The logarithm of the bioconcentration factor. This is a continuous variable and is often used for regression tasks.\n\nClass: A categorical variable that classifies compounds into different bioconcentration classes (e.g., low, medium, high). This is used for classification tasks.\n\nPredict whether a chemical: (1) is mainly stored within lipid tissues, (2) has additional storage sites (e.g. proteins), or (3) is metabolized/eliminated. \n\nThis dataset to OpenML is to predict Class, the column logBCF is not included in the dataset.",
+  "feature_names_sample": "N-072, CAS, PCD, nHM, B02[C-N], SMILES, X2Av, F04[C-O], Set, Class, MLOGP, ON1V, piPC09"
+ },
+ {
+  "did": 4134,
+  "name": "Bioresponse",
+  "nr_attr": 1000,
+  "nr_inst": 3751,
+  "nr_class": 2,
+  "description": "**Author**: Boehringer Ingelheim  \n**Source**: [Kaggle](https://www.kaggle.com/c/bioresponse) - 2011  \n**Please cite**: None  \n\nPredict a biological response of molecules from their chemical properties. Each row in this data set represents a molecule. The first column contains experimental data describing an actual biological response; the molecule was seen to elicit this response (1), or not (0). The remaining columns represent molecular descriptors (d1 through d1776), these are calculated properties that can capture some of the characteristics of the molecule - for example size, shape, or elemental constitution. The descriptor matrix has been normalized.\n\nThe original training and test set were merged.",
+  "feature_names_sample": "D1504, D206, D1234, D1684, D585, D241, D274, D600, D1118, D878, D1236, D1501, D1691, D325, D1598, D1173, D180, D82, D246, D64, D317, D739, D1306, D617, D280, D1734, D1164, D76, D62, D1137, D358, D1457, D1043, D477, D1384, D198, D1391, D1387, D692, D417"
+ },
+ {
+  "did": 1412,
+  "name": "lungcancer_GSE31210",
+  "nr_attr": 23,
+  "nr_inst": 226,
+  "nr_class": 2,
+  "description": "**Author**: Okayama et al.  \nMichel Lang  \n**Source**: Unknown - Date unknown  \n**Please cite**: Okayama H, Kohno T, Ishii Y, Shimada Y et al. Identification of genes upregulated in ALK-positive and EGFR/KRAS/ALK-negative lung adenocarcinomas. Cancer Res 2012 Jan 1;72(1):100-11.  \n\nfRMA-normalized. Only \"Kratz-genes\"*.\n\n\\* (see: A practical molecular assay to predict survival in resected non-squamous, non-small-cell lung cancer: development and international validation studies Kratz, Johannes R et al. The Lancet , Volume 379 , Issue 9818 , 823 - 832)",
+  "feature_names_sample": "g_AFFX.HUMGAPDH.M33197_M_at, g_216010_x_at, g_204891_s_at, g_204531_s_at, g_201938_at, g_214088_s_at, g_211475_s_at, histology, g_AFFX.HUMGAPDH.M33197_5_at, g_215638_at, OS_years, g_206924_at, OS_event, g_202387_at, g_203967_at, sex, g_204890_s_at, g_204979_s_at, age, g_202454_s_at, g_206926_s_at, g_203968_s_at, g_212724_at, g_211851_x_at"
+ },
+ {
+  "did": 46850,
+  "name": "hepatitis_c_virus_hcv_for_egyptian_patients",
+  "nr_attr": 28,
+  "nr_inst": 1385,
+  "nr_class": 4,
+  "description": "Egyptian patients who underwent treatment dosages for HCV about 18 months. Discretization should be applied based on expert recommendations; there is an attached file shows how.\n\nAge\tAge\nGender\tGender\nBMI\tBody Mass Index\nFever\tFever\nNausea/Vomting\tNausea/Vomting\nHeadache\tHeadache\nDiarrhea\tDiarrhea\nFatigue & generalized bone ache\tFatigue & generalized bone ache\nJaundice\tJaundice\nEpigastric pain\tEpigastric pain\nWBC\tWhite blood cell\nRBC\tred blood cells\nHGB\tHemoglobin\nPlat\tPlatelets\nAST 1\taspartate transaminase ratio\nALT 1\talanine transaminase ratio 1 week\nALT 4\talanine transaminase ratio 12 weeks\nALT 12\talanine transaminase ratio 4 weeks\nALT 24\talanine transaminase ratio 24 weeks\nALT 36\talanine transaminase ratio 36 weeks\nALT 48\talanine transaminase ratio 48 weeks\nALT after 24 w\talanine transaminase ratio 24 weeks\nRNA Base\tRNA Base\nRNA 4\tRNA 4\nRNA 12\tRNA 12\nRNA EOT\tRNA end-of-treatment \nRNA EF\tRNA Elongation Factor\nBaseline histological Grading\tBaseline histological Grading\nBaselinehistological staging\tBaselinehistological staging\n\nA novel model based on non invasive methods for prediction of liver fibrosis\nBy Mahmoud Nasr, Khaled El-Bahnasy, M. Hamdy, S. Kamal. 2017\n\nPublished in International Computer Engineering Conference",
+  "feature_names_sample": "ALT_48, RBC, RNA_12, ALT_1, RNA_EOT, ALT_36, Age_, HGB, WBC, ALT_24, ALT_after_24_w, Nausea/Vomting, Plat, BMI, Headache_, Fatigue_&_generalized_bone_ache_, AST_1, ALT_12, Jaundice_, Diarrhea_, Baseline_histological_Grading, Gender, ALT4, RNA_EF, RNA_Base, Fever, Epigastric_pain_, Baselinehistological_staging, RNA_4"
+ },
+ {
+  "did": 151,
+  "name": "electricity",
+  "nr_attr": 8,
+  "nr_inst": 45312,
+  "nr_class": 2,
+  "description": "**Author**: M. Harries, J. Gama, A. Bifet  \n\n**Source**: [Joao Gama](http://www.inescporto.pt/~jgama/ales/ales_5.html) - 2009  \n\n**Please cite**: None  \n\n\n\n**Electricity** is a widely used dataset described by M. Harries and analyzed by J. Gama (see papers below). This data was collected from the Australian New South Wales Electricity Market. In this market, prices are not fixed and are affected by demand and supply of the market. They are set every five minutes. Electricity transfers to/from the neighboring state of Victoria were done to alleviate fluctuations.\n\n\n\nThe dataset (originally named ELEC2) contains 45,312 instances dated from 7 May 1996 to 5 December 1998. Each example of the dataset refers to a period of 30 minutes, i.e. there are 48 instances for each time period of one day. Each example on the dataset has 5 fields, the day of week, the time stamp, the New South Wales electricity demand, the Victoria electricity demand, the scheduled electricity transfer between states and the class label. The class label identifies the change of the price (UP or DOWN) in New South Wales relative to a moving average of the last 24 hours (and removes the impact of longer term price trends). \n\n\n\nThe data was normalized by A. Bifet.\n\n\n\n### Attribute information  \n\n* Date: date between 7 May 1996 to 5 December 1998. Here normalized between 0 and 1\n\n* Day: day of the week (1-7)\n\n* Period: time of the measurement (1-48) in half hour intervals over 24 hours. Here normalized between 0 a",
+  "feature_names_sample": "date, transfer, nswdemand, nswprice, period, class, vicdemand, day, vicprice"
+ },
+ {
+  "did": 316,
+  "name": "yeast_ml8",
+  "nr_attr": 116,
+  "nr_inst": 2417,
+  "nr_class": 2,
+  "description": "**Author**:   \n  \n**Source**: Unknown -   \n**Please cite**:   \n\nYeast dataset\n\nPast Usage:\nAndré Elisseeff and Jason Weston.\nA kernel method for multi-labelled classification.\nIn Thomas G. Dietterich, Susan Becker, and Zoubin Ghahramani, editors, Advances in Neural Information Processing Systems 14, 2002.",
+  "feature_names_sample": "attr86, attr90, attr47, class8, attr52, attr44, attr43, attr98, attr75, attr95, attr46, attr59, attr42, attr16, attr65, attr15, attr92, attr1, attr22, attr100, attr48, attr94, attr103, attr37, attr27, attr50, attr10, attr24, class10, attr29, attr45, attr88, attr25, attr17, attr39, attr41, attr58, class11, attr13, attr102"
+ },
+ {
+  "did": 1011,
+  "name": "ecoli",
+  "nr_attr": 7,
+  "nr_inst": 336,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nBinarized version of the original data set (see version 1). The multi-class target feature is converted to a two-class nominal target feature by re-labeling the majority class as positive ('P') and all others as negative ('N'). Originally converted by Quan Sun.",
+  "feature_names_sample": "chg, binaryClass, aac, alm1, lip, mcg, alm2, gvh"
+ },
+ {
+  "did": 46874,
+  "name": "student_depression_dataset",
+  "nr_attr": 16,
+  "nr_inst": 27901,
+  "nr_class": 2,
+  "description": "Analyzing Mental Health Trends and Predictors Among Students\n\nAbout Dataset\nA student depression dataset typically contains data aimed at analyzing, understanding, and predicting depression levels among students. It may include features such as demographic information (age, gender), academic performance (grades, attendance), lifestyle habits (sleep patterns, exercise, social activities), mental health history, and responses to standardized depression scales.\n\nThese datasets are valuable for research in psychology, data science, and education to identify factors contributing to student depression and to design early intervention strategies. Ethical considerations like privacy, informed consent, and anonymization of data are crucial in working with such sensitive information.\n\nFile Structure\nFormat: CSV format\nRows: Each row represents an individual student.\nColumns: Each column represents a specific feature or attribute.\nColumns\nID: Unique identifier for each student.\nAge: Age of the student.\nGender: Gender (e.g., Male, Female).\nCity: Geographic region\nCGPA: Grade Point Average or other academic scores.\nSleep Duration: Average daily sleep duration.\nProfession:\nWork Pressure:\nAcademic Pressure:\nStudy Satisfaction:\nJob Satisfaction:\nDietary Habits:\nAnd much more\nTarget Variable\n\nDepression_Status: Binary (Yes/No)\n\nWe deleted the column id since it is not useful for our analysis.",
+  "feature_names_sample": "Depression, Sleep Duration, Gender, Study Satisfaction, Work/Study Hours, Profession, Age, Have you ever had suicidal thoughts ?, City, CGPA, Dietary Habits, Job Satisfaction, Work Pressure, Financial Stress, Degree, Academic Pressure, Family History of Mental Illness"
+ },
+ {
+  "did": 1508,
+  "name": "user-knowledge",
+  "nr_attr": 5,
+  "nr_inst": 403,
+  "nr_class": 5,
+  "description": "**Author**:   \n**Source**: UCI    \n**Please cite**:  H. T. Kahraman, Sagiroglu, S., Colak, I., Developing intuitive knowledge classifier and modeling of users' domain dependent data in web, Knowledge Based Systems, vol. 37, pp. 283-295, 2013.   \n\n* Title:  \n\nUser Knowledge Modeling Data Set \n\n* Abstract: \n\nIt is the real dataset about the students' knowledge status about the subject of Electrical DC Machines. The dataset had been obtained from Ph.D. Thesis.\n\n* Source:\n\n-- Creators: Hamdi Tolga Kahraman (htolgakahraman '@' yahoo.com) \n-- Institution: Faculty of Technology, Department of Software Engineering, Karadeniz Technical University, Trabzon, Turkiye \n-- Creators: Ilhami Colak (icolak '@' gazi.edu.tr) \n-- Institution: Faculty of Technology, Department of Electrical and Electronics Engineering, Gazi University, Ankara, Turkiye \n-- Creators: Seref Sagiroglu (ss '@' gazi.edu.tr) \n-- Institution: Faculty of Technology, Department of Computer Engineering, Gazi University, Ankara, Turkiye \n\n-- Donor: undergraduate students of Department of Electrical Education of Gazi University in the 2009 semester \n-- Date: October, 2009\n\n\n* Data Set Information:\n\n-- The users' knowledge class were classified by the authors \nusing intuitive knowledge classifier (a hybrid ML technique of k-NN and meta-heuristic exploring methods), k-nearest neighbor algorithm. See article for more details on how the users' data was collected and evaluated by the user modeling server. \n\nH. T. Kahraman, Sagirog",
+  "feature_names_sample": "V3, V2, Class, V4, V1, V5"
+ },
+ {
+  "did": 46960,
+  "name": "students_dropout_and_academic_success",
+  "nr_attr": 36,
+  "nr_inst": 4424,
+  "nr_class": 3,
+  "description": "This dataset was curated for [TabArena](https://tabarena.ai/) by the TabArena team\nas part of the [TabArena Tabular ML IID Study](https://tabarena.ai/data-tabular-ml-iid-study).\nFor more details on the study, see our [paper](https://tabarena.ai/paper-tabular-ml-iid-study).\n\n**Dataset Focus**: This dataset shall be used for evaluating predictive machine\nlearning models for independent and identically distributed tabular data. The\nintended task is classification.\n\n---\n#### Dataset Metadata\n- **Licence:** CC BY 4.0\n- **Original Data Source:** https://doi.org/10.24432/C5MC89\n- **Reference (please cite)**: Martins, Monica V., et al. 'Early prediction of students performance in higher education: A case study.' Trends and Applications in Information Systems and Technologies: Volume 1 9. Springer International Publishing, 2021.  https://doi.org/10.1007/978-3-030-72657-7_16\n- **Dataset Year:** 2021\n- **Dataset Description:** see the reference and the original data source for details.\n\n#### Curation comments by the TabArena team (for code see the [page of the study](https://tabarena.ai/data-tabular-ml-iid-study)):\n- We renamed the target variable and fixed some typos in the feature names.\n- We reversed the ordinal encoding of all categorical features.\n- We removed whitespaces and special characters from the feature names.",
+  "feature_names_sample": "Admission_grade, Curricular_units_2nd_sem_credited, Marital_status, Mothers_qualification, Tuition_fees_up_to_date, Curricular_units_2nd_sem_evaluations, GDP, Displaced, Previous_qualification, Curricular_units_2nd_sem_grade, Mothers_occupation, Application_order, Previous_qualification_grade, Scholarship_holder, Fathers_occupation, Debtor, Curricular_units_1st_sem_grade, Curricular_units_1st_sem_evaluations, Fathers_qualification, Curricular_units_2nd_sem_approved, Curricular_units_1st_sem_approved, Unemployment_rate, Age_at_enrollment, Curricular_units_2nd_sem_enrolled, International, Nation"
+ },
+ {
+  "did": 43255,
+  "name": "1StudentPerfromance",
+  "nr_attr": 7,
+  "nr_inst": 1000,
+  "nr_class": 2,
+  "description": "#StudentPerfromance",
+  "feature_names_sample": "reading score, parental level of education, lunch, gender, test preparation course, math score, writing score, race/ethnicity"
+ },
+ {
+  "did": 43890,
+  "name": "law-school-admission-bianry",
+  "nr_attr": 11,
+  "nr_inst": 20800,
+  "nr_class": 2,
+  "description": "Law School Admissions (Binarized) \n Survey among students attending law school in the U.S. in 1991. \n The dataset was obtained from the R-package fairml. \n The response variable has been changed to a binary version: Whether ugpa is greater than 3.\n The race1 variables has been binarized to labels white and non-white.",
+  "feature_names_sample": "fulltime, fam_inc, race1, ugpa, gender, age, bar, lsat, ugpagt3, decile1, cluster, decile3"
+ },
+ {
+  "did": 46940,
+  "name": "Marketing_Campaign",
+  "nr_attr": 25,
+  "nr_inst": 2240,
+  "nr_class": 2,
+  "description": "This dataset was curated for [TabArena](https://tabarena.ai/) by the TabArena team\nas part of the [TabArena Tabular ML IID Study](https://tabarena.ai/data-tabular-ml-iid-study).\nFor more details on the study, see our [paper](https://tabarena.ai/paper-tabular-ml-iid-study).\n\n**Dataset Focus**: This dataset shall be used for evaluating predictive machine\nlearning models for independent and identically distributed tabular data. The\nintended task is classification.\n\n---\n#### Dataset Metadata\n- **Licence:** Public\n- **Original Data Source:** https://www.kaggle.com/datasets/rodsaldanha/arketing-campaign\n- **Reference (please cite)**: Saldanha, Rodolfo. 'Marketing Campaign.' Kaggle, 2020, https://www.kaggle.com/datasets/rodsaldanha/arketing-campaign.\n- **Dataset Year:** 2020\n- **Dataset Description:** see the reference and the original data source for details.\n\n#### Curation comments by the TabArena team (for code see the [page of the study](https://tabarena.ai/data-tabular-ml-iid-study)):\n- We drop the ID column.\n- We rename the values of the target variable to be more descriptive.\n- We drop constant columns.",
+  "feature_names_sample": "MntSweetProducts, Dt_Customer, Year_Birth, Teenhome, AcceptedCmp5, MntWines, Response, NumDealsPurchases, Income, Complain, Kidhome, AcceptedCmp4, NumStorePurchases, NumWebVisitsMonth, MntMeatProducts, AcceptedCmp2, AcceptedCmp1, Education, MntGoldProds, MntFruits, NumWebPurchases, MntFishProducts, AcceptedCmp3, Recency, Marital_Status, NumCatalogPurchases"
+ },
+ {
+  "did": 43895,
+  "name": "ibm-employee-performance",
+  "nr_attr": 33,
+  "nr_inst": 1470,
+  "nr_class": 2,
+  "description": "IBM Employee Attrition Data \n The dataset used in the code pattern is supplied by Kaggle and contains HR analytics data of employees\nthat stay and leave. The types of data include metrics such as education level, job satisfactions, and commmute distance. \n The dataset was obtained\nfrom https://github.com/IBM/employee-attrition-aif360. \n\nThe dataset is available under the Open Dataset License and the Database Content License.",
+  "feature_names_sample": "EducationField, JobInvolvement, TrainingTimesLastYear, OverTime, EmployeeCount, YearsInCurrentRole, StockOptionLevel, YearsAtCompany, MonthlyIncome, DailyRate, Over18, NumCompaniesWorked, Age, HourlyRate, YearsWithCurrManager, RelationshipSatisfaction, PercentSalaryHike, StandardHours, WorkLifeBalance, DistanceFromHome, EmployeeNumber, PerformanceRating, BusinessTravel, Education, JobRole, EnvironmentSatisfaction, Gender, JobLevel, TotalWorkingYears, YearsSinceLastPromotion, MonthlyRate, JobSatisfaction, Department, MaritalStatus"
+ },
+ {
+  "did": 1461,
+  "name": "bank-marketing",
+  "nr_attr": 16,
+  "nr_inst": 45211,
+  "nr_class": 2,
+  "description": "**Author**: Paulo Cortez, Sérgio Moro\n\n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/bank+marketing)\n\n**Please cite**: S. Moro, R. Laureano and P. Cortez. Using Data Mining for Bank Direct Marketing: An Application of the CRISP-DM Methodology. In P. Novais et al. (Eds.), Proceedings of the European Simulation and Modelling Conference - ESM'2011, pp. 117-121, Guimarães, Portugal, October, 2011. EUROSIS.       \n\n\n\n**Bank Marketing**  \n\nThe data is related with direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be (or not) subscribed. \n\n\n\nThe classification goal is to predict if the client will subscribe a term deposit (variable y).\n\n\n\n### Attribute information  \n\nFor more information, read [Moro et al., 2011].\n\n\n\nInput variables:\n\n\n\n- bank client data:\n\n\n\n1 - age (numeric) \n\n\n\n2 - job : type of job (categorical: \"admin.\",\"unknown\",\"unemployed\",\"management\",\"housemaid\",\"entrepreneur\", \"student\",\"blue-collar\",\"self-employed\",\"retired\",\"technician\",\"services\") \n\n\n\n3 - marital : marital status (categorical: \"married\",\"divorced\",\"single\"; note: \"divorced\"  means divorced or widowed) \n\n\n\n4 - education (categorical: \"unknown\",\"secondary\",\"primary\",\"tertiary\") \n\n\n\n5 - default: has credit in default? (binary: \"yes\",\"no\") \n\n\n\n6 - balance: average yearly balance, in euros (numeric) \n\n\n\n7 - hous",
+  "feature_names_sample": "V8, V9, V11, V10, V16, V6, V14, V3, V2, V12, Class, V15, V13, V7, V4, V1, V5"
+ },
+ {
+  "did": 46526,
+  "name": "Loan_Approval_Status_Classification",
+  "nr_attr": 23,
+  "nr_inst": 45000,
+  "nr_class": 2,
+  "description": "# Loan Approval Classification Dataset\n\nThis dataset is a synthetic version inspired by the original Credit Risk dataset on Kaggle and enriched with additional variables based on historical loan approval data. SMOTENC was used to simulate new data points to enlarge the databank. The dataset is structured for both categorical and continuous features.\n\n## Target Variable\nThe target variable 'loan_status' is binary:\n- 1 = approved\n- 0 = rejected",
+  "feature_names_sample": "intent_personal, cb_person_cred_hist_length, gender_male, loan_status, defaults_no, person_income, intent_venture, home_mortgage, loan_amnt, credit_score, person_education, home_other, intent_medical, person_emp_exp, person_age, loan_int_rate, home_rent, intent_education, intent_homeimprovement, home_own, defaults_yes, gender_female, intent_debtconsolidation, loan_percent_income"
+ },
+ {
+  "did": 42477,
+  "name": "default-of-credit-card-clients",
+  "nr_attr": 23,
+  "nr_inst": 30000,
+  "nr_class": 2,
+  "description": "**Author**: Yeh, I. C., & Lien, C. H\n\n**Source**: [original](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients#) - 2016-01-26  \n\n**Please cite**: Yeh, I. C., & Lien, C. H. (2009). The comparisons of data mining techniques for the predictive accuracy of probability of default of credit card clients. Expert Systems with Applications, 36(2), 2473-2480.\n\n\n\n   \n\n\n\nData Set Information:\n\n\n\nThis research aimed at the case of customersâ€™ default payments in Taiwan and compares the predictive accuracy of probability of default among six data mining methods. From the perspective of risk management, the result of predictive accuracy of the estimated probability of default will be more valuable than the binary result of classification - credible or not credible clients. Because the real probability of default is unknown, this study presented the novel Sorting Smoothing Method to estimate the real probability of default. With the real probability of default as the response variable (Y), and the predictive probability of default as the independent variable (X), the simple linear regression result (Y = A + BX) shows that the forecasting model produced by artificial neural network has the highest coefficient of determination; its regression intercept (A) is close to zero, and regression coefficient (B) to one. Therefore, among the six data mining techniques, artificial neural network is the only one that can accurately estimate the real probability of default.\n\n\n\n\n\n## ",
+  "feature_names_sample": "x19, x6, x10, x13, x20, x17, x15, x21, x3, x14, x18, x5, x22, x23, x2, x9, y, x1, id, x4, x12, x7, x8, x16, x11"
+ },
+ {
+  "did": 46372,
+  "name": "Multiclass_Classification_for_Corporate_Credit_Ratings",
+  "nr_attr": 7,
+  "nr_inst": 5000,
+  "nr_class": 10,
+  "description": "This dataset is derived from the Credit Risk Analytics book by Harald, Daniel, and Bart, as described in the Medium article by Roi Polanitzer. It focuses on predicting financial difficulties and defaults in corporate credit ratings, which is crucial in the business world for stakeholders like banks and insurance companies.",
+  "feature_names_sample": "commeqta, llploans, size, rating, spid, roe, costtoincome, liqassta"
+ },
+ {
+  "did": 46382,
+  "name": "company_quality_and_valuation_finance",
+  "nr_attr": 10,
+  "nr_inst": 719,
+  "nr_class": 6,
+  "description": "This dataset is designed to evaluate companies based on quality and valuation metrics. It uses a two-stage scoring system to classify companies into categories like 'High Quality, Fair Valuation'. The dataset is ideal for financial analysis and investment decision-making.",
+  "feature_names_sample": "net debt / ebit, croic, mcap, p/fcf, total_score, gross margin, roe, company, operating margin, ev/fcf, revenues"
+ },
+ {
+  "did": 46455,
+  "name": "Credit_Card_Fraud_Classification",
+  "nr_attr": 30,
+  "nr_inst": 28480,
+  "nr_class": 2,
+  "description": "# Credit Card Fraud Detection Dataset\n\nIt is important that credit card companies are able to recognize fraudulent credit card transactions so that customers are not charged for items that they did not purchase.\n\nThe original complete dataset contains transactions made by credit cards in September 2013 by European cardholders. This dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions. The dataset is highly imbalanced, the positive class (frauds) account for 0.172% of all transactionsThis dataset takes a 10% stratified sample.",
+  "feature_names_sample": "v23, v26, v12, v21, v25, time, v9, v18, v5, v7, v6, v27, v28, v14, v19, amount, v22, v8, v3, class, v17, v11, v2, v4, v15, v24, v20, v1, v10, v13, v16"
+ },
+ {
+  "did": 31,
+  "name": "credit-g",
+  "nr_attr": 20,
+  "nr_inst": 1000,
+  "nr_class": 2,
+  "description": "**Author**: Dr. Hans Hofmann  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)) - 1994    \n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)\n\n**German Credit dataset**  \nThis dataset classifies people described by a set of attributes as good or bad credit risks.\n\nThis dataset comes with a cost matrix: \n``` \nGood  Bad (predicted)  \nGood   0    1   (actual)  \nBad    5    0  \n```\n\nIt is worse to class a customer as good when they are bad (5), than it is to class a customer as bad when they are good (1).  \n\n### Attribute description  \n\n1. Status of existing checking account, in Deutsche Mark.  \n2. Duration in months  \n3. Credit history (credits taken, paid back duly, delays, critical accounts)  \n4. Purpose of the credit (car, television,...)  \n5. Credit amount  \n6. Status of savings account/bonds, in Deutsche Mark.  \n7. Present employment, in number of years.  \n8. Installment rate in percentage of disposable income  \n9. Personal status (married, single,...) and sex  \n10. Other debtors / guarantors  \n11. Present residence since X years  \n12. Property (e.g. real estate)  \n13. Age in years  \n14. Other installment plans (banks, stores)  \n15. Housing (rent, own,...)  \n16. Number of existing credits at this bank  \n17. Job  \n18. Number of people being liable to provide maintenance for  \n19. Telephone (yes,no)  \n20. Foreign worker (yes,no)",
+  "feature_names_sample": "job, savings_status, foreign_worker, other_parties, credit_amount, duration, purpose, existing_credits, own_telephone, installment_commitment, residence_since, class, checking_status, housing, credit_history, personal_status, employment, other_payment_plans, age, num_dependents, property_magnitude"
+ },
+ {
+  "did": 44097,
+  "name": "credit-g_copy",
+  "nr_attr": 20,
+  "nr_inst": 1000,
+  "nr_class": 2,
+  "description": "**Author**: Dr. Hans Hofmann  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)) - 1994    \n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)\n\n**German Credit dataset**  \nThis dataset classifies people described by a set of attributes as good or bad credit risks.\n\nThis dataset comes with a cost matrix: \n``` \nGood  Bad (predicted)  \nGood   0    1   (actual)  \nBad    5    0  \n```\n\nIt is worse to class a customer as good when they are bad (5), than it is to class a customer as bad when they are good (1).  \n\n### Attribute description  \n\n1. Status of existing checking account, in Deutsche Mark.  \n2. Duration in months  \n3. Credit history (credits taken, paid back duly, delays, critical accounts)  \n4. Purpose of the credit (car, television,...)  \n5. Credit amount  \n6. Status of savings account/bonds, in Deutsche Mark.  \n7. Present employment, in number of years.  \n8. Installment rate in percentage of disposable income  \n9. Personal status (married, single,...) and sex  \n10. Other debtors / guarantors  \n11. Present residence since X years  \n12. Property (e.g. real estate)  \n13. Age in years  \n14. Other installment plans (banks, stores)  \n15. Housing (rent, own,...)  \n16. Number of existing credits at this bank  \n17. Job  \n18. Number of people being liable to provide maintenance for  \n19. Telephone (yes,no)  \n20. Foreign worker (yes,no)",
+  "feature_names_sample": "job, savings_status, foreign_worker, other_parties, credit_amount, duration, purpose, existing_credits, own_telephone, installment_commitment, residence_since, class, checking_status, housing, credit_history, personal_status, employment, other_payment_plans, age, num_dependents, property_magnitude"
+ },
+ {
+  "did": 44098,
+  "name": "credit-g_reproduced_1",
+  "nr_attr": 20,
+  "nr_inst": 1000,
+  "nr_class": 2,
+  "description": "**Author**: Dr. Hans Hofmann  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)) - 1994    \n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)\n\n**German Credit dataset**  \nThis dataset classifies people described by a set of attributes as good or bad credit risks.\n\nThis dataset comes with a cost matrix: \n``` \nGood  Bad (predicted)  \nGood   0    1   (actual)  \nBad    5    0  \n```\n\nIt is worse to class a customer as good when they are bad (5), than it is to class a customer as bad when they are good (1).  \n\n### Attribute description  \n\n1. Status of existing checking account, in Deutsche Mark.  \n2. Duration in months  \n3. Credit history (credits taken, paid back duly, delays, critical accounts)  \n4. Purpose of the credit (car, television,...)  \n5. Credit amount  \n6. Status of savings account/bonds, in Deutsche Mark.  \n7. Present employment, in number of years.  \n8. Installment rate in percentage of disposable income  \n9. Personal status (married, single,...) and sex  \n10. Other debtors / guarantors  \n11. Present residence since X years  \n12. Property (e.g. real estate)  \n13. Age in years  \n14. Other installment plans (banks, stores)  \n15. Housing (rent, own,...)  \n16. Number of existing credits at this bank  \n17. Job  \n18. Number of people being liable to provide maintenance for  \n19. Telephone (yes,no)  \n20. Foreign worker (yes,no)",
+  "feature_names_sample": "job, savings_status, foreign_worker, other_parties, credit_amount, duration, purpose, existing_credits, own_telephone, installment_commitment, residence_since, class, checking_status, housing, credit_history, personal_status, employment, other_payment_plans, age, num_dependents, property_magnitude"
+ },
+ {
+  "did": 46962,
+  "name": "taiwanese_bankruptcy_prediction",
+  "nr_attr": 94,
+  "nr_inst": 6819,
+  "nr_class": 2,
+  "description": "This dataset was curated for [TabArena](https://tabarena.ai/) by the TabArena team\nas part of the [TabArena Tabular ML IID Study](https://tabarena.ai/data-tabular-ml-iid-study).\nFor more details on the study, see our [paper](https://tabarena.ai/paper-tabular-ml-iid-study).\n\n**Dataset Focus**: This dataset shall be used for evaluating predictive machine\nlearning models for independent and identically distributed tabular data. The\nintended task is classification.\n\n---\n#### Dataset Metadata\n- **Licence:** CC BY 4.0\n- **Original Data Source:** https://doi.org/10.24432/C5004D\n- **Reference (please cite)**: Liang, Deron, et al. 'Financial ratios and corporate governance indicators in bankruptcy prediction: A comprehensive study.' European journal of operational research 252.2 (2016): 561-572. https://doi.org/10.1016/j.ejor.2016.01.012\n- **Dataset Year:** 2009\n- **Dataset Description:** see the reference and the original data source for details.\n\n#### Curation comments by the TabArena team (for code see the [page of the study](https://tabarena.ai/data-tabular-ml-iid-study)):\n- We rename the features to be shorter and have no special characters.\n- We drop the constant column \"Net_Income_Flag\".\n- Anomaly: the paper introducing the dataset has more features, but these do not seem to be in the dataset. \n- Anomaly: the data is temporal but all features are time-invariant. This might still have a latent, non-verifiable temporal component, which we ignore for our predictive IID task.",
+  "feature_names_sample": "Working_Capital_Turnover_Rate, Persistent_EPS_Last_4_Seasons, Contingent_Liabilities_to_Net_Worth, Total_Expense_to_Assets, Average_Collection_Days, Cash_to_Total_Assets, Current_Liabilities_to_Liability, Net_Value_Per_Share_B, Current_Liability_to_Current_Assets, Operating_Gross_Margin, AfterTax_Net_Profit_Growth_Rate, LongTerm_Liability_to_Current_Assets, Liability_Assets_Flag, NoCredit_Interval, Cash_Reinvestment_Percent, AfterTax_Net_Interest_Rate, Operating_Expense_Rate, Quick_Assets_to_Current_Liability, Equity_to_Liability, Net_Worth_to_Assets, Inventory_Accounts_Receivable_to_Net_Value"
+ },
+ {
+  "did": 1495,
+  "name": "qualitative-bankruptcy",
+  "nr_attr": 6,
+  "nr_inst": 250,
+  "nr_class": 2,
+  "description": "**Author**:  A. Martin, J. Uthayakumar, M. Nadarajan, V. Prasanna Venkatesan   \n**Source**: UCI   \n**Please cite**:    \n\n* Abstract: \n\nPredict the Bankruptcy from Qualitative parameters from experts.\n\n* Source:\n\nSource Information\n-- Creator : Mr.A.Martin(jayamartin '@' yahoo.com)\nMr.J.Uthayakumar (uthayakumar17691 '@' gmail.com)\nMr.M.Nadarajan(nadaraj.muthuvel '@' gmail.com)\n-- Guided By : Dr.V.Prasanna Venkatesan\n-- Institution : Sri Manakula Vinayagar Engineering College and Pondicherry University\n-- Country : India\n-- Date : February 2014\n\n\n* Data Set Information:\n\nThe parameters which we used for collecting the dataset is referred from the paper 'The discovery of expert' decision rules from qualitative bankruptcy data using genetic algorithms' by Myoung-Jong Kim*, Ingoo Han.\n\n\n* Attribute Information: \n(P=Positive,A-Average,N-negative,B-Bankruptcy,NB-Non-Bankruptcy) \n\n1. Industrial Risk: {P,A,N} \n2. Management Risk: {P,A,N} \n3. Financial Flexibility: {P,A,N} \n4. Credibility: {P,A,N} \n5. Competitiveness: {P,A,N} \n6. Operating Risk: {P,A,N} \n7. Class: {B,NB}\n\n\n* Relevant Papers:\n\nThe parameters which we used for collecting the dataset is referred from the paper 'The discovery of expertsâ€™ decision rules from qualitative bankruptcy data using genetic algorithms' by Myoung-Jong Kim*, Ingoo Han.",
+  "feature_names_sample": "V6, V3, V2, Class, V4, V1, V5"
+ },
+ {
+  "did": 49,
+  "name": "heart-c",
+  "nr_attr": 13,
+  "nr_inst": 303,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\nPublication Request: \n    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n    This file describes the contents of the heart-disease directory.\n \n    This directory contains 4 databases concerning heart disease diagnosis.\n    All attributes are numeric-valued.  The data was collected from the\n    four following locations:\n \n      1. Cleveland Clinic Foundation (cleveland.data)\n      2. Hungarian Institute of Cardiology, Budapest (hungarian.data)\n      3. V.A. Medical Center, Long Beach, CA (long-beach-va.data)\n      4. University Hospital, Zurich, Switzerland (switzerland.data)\n \n    Each database has the same instance format.  While the databases have 76\n    raw attributes, only 14 of them are actually used.  Thus I've taken the\n    liberty of making 2 copies of each database: one with all the attributes\n    and 1 with the 14 attributes actually used in past experiments.\n \n    The authors of the databases have requested:\n \n       ...that any publications resulting from the use of the data include the \n       names of the principal investigator responsible for the data collection\n       at each institution.  They would be:\n \n        1. Hungarian Institute of Cardiology. Budapest: Andras Janosi, M.D.\n        2. University Hospital, Zurich, Switzerland: William Steinbrunn, M.D.\n        3. University Hospital, Basel, Switzerland: Matthias Pfisterer, M.D.\n        4. V.A. Medical Center, Long Beach ",
+  "feature_names_sample": "chol, thal, fbs, thalach, sex, ca, exang, age, oldpeak, restecg, num, trestbps, cp, slope"
+ },
+ {
+  "did": 15,
+  "name": "breast-w",
+  "nr_attr": 9,
+  "nr_inst": 699,
+  "nr_class": 2,
+  "description": "**Author**: Dr. William H. Wolberg, University of Wisconsin  \n\n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/breast+cancer+wisconsin+(original)), [University of Wisconsin](http://pages.cs.wisc.edu/~olvi/uwmp/cancer.html) - 1995  \n\n**Please cite**: See below, plus [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)  \n\n\n\n**Breast Cancer Wisconsin (Original) Data Set.** Features are computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. They describe characteristics of the cell nuclei present in the image. The target feature records the prognosis (malignant or benign). [Original data available here](ftp://ftp.cs.wisc.edu/math-prog/cpo-dataset/machine-learn/cancer/)  \n\n\n\nCurrent dataset was adapted to ARFF format from the UCI version. Sample code ID's were removed.  \n\n\n\n! Note that there is also a related Breast Cancer Wisconsin (Diagnosis) Data Set with a different set of features, better known as [wdbc](https://www.openml.org/d/1510).\n\n\n\n### Relevant Papers  \n\n\n\nW.N. Street, W.H. Wolberg and O.L. Mangasarian. Nuclear feature extraction for breast tumor diagnosis. IS&T/SPIE 1993 International Symposium on Electronic Imaging: Science and Technology, volume 1905, pages 861-870, San Jose, CA, 1993. \n\n\n\nO.L. Mangasarian, W.N. Street and W.H. Wolberg. Breast cancer diagnosis and prognosis via linear programming. Operations Research, 43(4), pages 570-577, July-August 1995.  \n\n\n\n### Citation request  \n\n\n\nThis breast cancer database was obta",
+  "feature_names_sample": "Mitoses, Cell_Size_Uniformity, Cell_Shape_Uniformity, Bare_Nuclei, Normal_Nucleoli, Marginal_Adhesion, Single_Epi_Cell_Size, Class, Clump_Thickness, Bland_Chromatin"
+ },
+ {
+  "did": 13,
+  "name": "breast-cancer",
+  "nr_attr": 9,
+  "nr_inst": 286,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\nCitation Request:\n    This breast cancer domain was obtained from the University Medical Centre,\n    Institute of Oncology, Ljubljana, Yugoslavia.  Thanks go to M. Zwitter and \n    M. Soklic for providing the data.  Please include this citation if you plan\n    to use this database.\n \n 1. Title: Breast cancer data (Michalski has used this)\n \n 2. Sources: \n    -- Matjaz Zwitter & Milan Soklic (physicians)\n       Institute of Oncology \n       University Medical Center\n       Ljubljana, Yugoslavia\n    -- Donors: Ming Tan and Jeff Schlimmer (Jeffrey.Schlimmer@a.gp.cs.cmu.edu)\n    -- Date: 11 July 1988\n \n 3. Past Usage: (Several: here are some)\n      -- Michalski,R.S., Mozetic,I., Hong,J., & Lavrac,N. (1986). The \n         Multi-Purpose Incremental Learning System AQ15 and its Testing \n         Application to Three Medical Domains.  In Proceedings of the \n         Fifth National Conference on Artificial Intelligence, 1041-1045,\n         Philadelphia, PA: Morgan Kaufmann.\n         -- accuracy range: 66%-72%\n      -- Clark,P. & Niblett,T. (1987). Induction in Noisy Domains.  In \n         Progress in Machine Learning (from the Proceedings of the 2nd\n         European Working Session on Learning), 11-30, Bled, \n         Yugoslavia: Sigma Press.\n         -- 8 test results given: 65%-72% accuracy range\n      -- Tan, M., & Eshelman, L. (1988). Using weighted networks to \n         represent classification knowledge in noisy domai",
+  "feature_names_sample": "breast, inv-nodes, menopause, node-caps, tumor-size, age, deg-malig, irradiat, breast-quad, Class"
+ },
+ {
+  "did": 45557,
+  "name": "Mammographic-Mass-Data-Set",
+  "nr_attr": 4,
+  "nr_inst": 961,
+  "nr_class": 2,
+  "description": "Mammography is the most effective method for breast cancer screening\navailable today. However, the low positive predictive value of breast\nbiopsy resulting from mammogram interpretation leads to approximately\n70% unnecessary biopsies with benign outcomes. To reduce the high\nnumber of unnecessary breast biopsies, several computer-aided diagnosis\n(CAD) systems have been proposed in the last years.These systems\nhelp physicians in their decision to perform a breast biopsy on a suspicious\nlesion seen in a mammogram or to perform a short term follow-up\nexamination instead.\n\nThis data set can be used to predict the severity (benign or malignant)\nof a mammographic mass lesion from BI-RADS attributes and the patient's age.\nIt contains a BI-RADS assessment, the patient's age and three BI-RADS attributes\ntogether with the ground truth (the severity field) for 516 benign and\n445 malignant masses that have been identified on full field digital mammograms\ncollected at the Institute of Radiology of the University Erlangen-Nuremberg between 2003 and 2006.\n\nEach instance has an associated BI-RADS assessment ranging from 1 (definitely benign)\nto 5 (highly suggestive of malignancy) assigned in a double-review process by\nphysicians. Assuming that all cases with BI-RADS assessments greater or equal\na given value (varying from 1 to 5), are malignant and the other cases benign,\nsensitivities and associated specificities can be calculated. These can be an\nindication of how well a CAD system performs",
+  "feature_names_sample": "Age, BI-RADS, Density, Shape, Margin, Severity"
+ },
+ {
+  "did": 46846,
+  "name": "glioma_grading_clinical_and_mutation_features",
+  "nr_attr": 23,
+  "nr_inst": 839,
+  "nr_class": 2,
+  "description": "For what purpose was the dataset created?\n\nGliomas are the most common primary tumors of the brain. They can be graded as LGG (Lower-Grade Glioma) or GBM (Glioblastoma Multiforme) depending on the histological/imaging criteria. Clinical and molecular/mutation factors are also very crucial for the grading process. Molecular tests are expensive to help accurately diagnose glioma patients.  \n\nIn this dataset, the most frequently mutated 20 genes and 3 clinical features are considered from TCGA-LGG and TCGA-GBM brain glioma projects.\n\nThe prediction task is to determine whether a patient is LGG or GBM with a given clinical and molecular/mutation features. The main objective is to find the optimal subset of mutation genes and clinical features for the glioma grading process to improve performance and reduce costs.\n\nWho funded the creation of the dataset?\n\nThe Cancer Genome Atlas (TCGA) Project - NCI\n\nWhat do the instances in this dataset represent?\n\nIn this dataset, the instances represent the records of patients who have brain glioma. The dataset was  constructed based on TCGA-LGG and TCGA-GBM brain glioma projects.\n\nEach record is characterized by 20 molecular features (each of which can be mutated or not_mutated (wildtype) depending on the TCGA Case_ID) and 3 clinical features (concerning the demographics of the patient).\n\nAre there recommended data splits?\n\nNo. We suggest 10-fold cross-validation for feature selection, classification etc.\n\nDoes the dataset contain data that mi",
+  "feature_names_sample": "PTEN, EGFR, IDH1, NOTCH1, NF1, SMARCA4, FUBP1, TP53, MUC16, PIK3R1, Age_at_diagnosis, PIK3CA, FAT4, IDH2, CIC, Race, CSMD3, RB1, Gender, PDGFRA, Grade, ATRX, GRIN2A, BCOR"
+ },
+ {
+  "did": 40497,
+  "name": "thyroid-ann",
+  "nr_attr": 21,
+  "nr_inst": 3772,
+  "nr_class": 3,
+  "description": "This directory contains Thyroid datasets. &quot;ann-train.data&quot; contains 3772 \nlearning examples and &quot;ann-test.data&quot; contains 3428 testing examples. I have \nobtained this data from Daimler-Benz. This are the informations I have got \ntogether with the dataset:\n\n-------------------------------------------------------------------------------\n1. Data setp summary\n\nNumber of attributes: 21 (15 attributes are binary,\n      6 attributes are continuous)\nNumber of classes: 3\nNumber of learning examples: 3772\nNumber of testing examples: 3428\nData set is availbale on ASCII-file\n\n2. Description\n\nThe problem is to determine whether a patient referred to the clinic is\nhypothyroid. Therefore three classes are built: normal (not hypothyroid),\nhyperfunction and subnormal functioning. Because 92 percent of the patients\nare not hyperthyroid a good classifier must be significant better than 92%.\n\nNote\n\nThese are the datas Quinlans used in the case study of his article\n&quot;Simplifying Decision Trees&quot; (International Journal of Man-Machine Studies \n(1987) 221-234)\n-------------------------------------------------------------------------------\n\n\nUnfortunately this data differ from the one Ross Quinlan placed in\n&quot;pub/machine-learning-databases/thyroid-disease&quot; on &quot;ics.uci.edu&quot;.\nI don't know any more details about the dataset. But it's hard to\ntrain Backpropagation ANNs with it. The dataset is used in two technical\nreports:\n\n-----------------------------------",
+  "feature_names_sample": "V17, V9, V21, V14, V12, Class, V20, V3, V8, V10, V16, V6, V15, V7, V11, V18, V2, V13, V19, V4, V1, V5"
+ },
+ {
+  "did": 35,
+  "name": "dermatology",
+  "nr_attr": 34,
+  "nr_inst": 366,
+  "nr_class": 6,
+  "description": "1. Title: Dermatology Database\n\n2. Source Information:\n   (a) Original owners:\n       -- 1. Nilsel Ilter, M.D., Ph.D., \n             Gazi University, \n             School of Medicine\n             06510 Ankara, Turkey\n             Phone: +90 (312) 214 1080\n\n       -- 2. H. Altay Guvenir, PhD., \n             Bilkent University,\n             Department of Computer Engineering and Information Science,\n             06533 Ankara, Turkey\n             Phone: +90 (312) 266 4133\n             Email: guvenir@cs.bilkent.edu.tr\n\n   (b) Donor: H. Altay Guvenir,\n              Bilkent University,\n              Department of Computer Engineering and Information Science,\n              06533 Ankara, Turkey\n              Phone: +90 (312) 266 4133\n              Email: guvenir@cs.bilkent.edu.tr\n\n   (c) Date:  January, 1998\n\n3. Past Usage:\n   1. G. Demiroz, H. A. Govenir, and N. Ilter, \n      \"Learning Differential Diagnosis of Eryhemato-Squamous Diseases using\n       Voting Feature Intervals\", Aritificial Intelligence in Medicine,\n\n      The aim is to determine the type of Eryhemato-Squamous Disease.\n\n4. Relevant Information:\n     This database contains 34 attributes, 33 of which are linear\n     valued and one of them is nominal. \n\n     The differential diagnosis of erythemato-squamous diseases is a real\n     problem in dermatology. They all share the clinical features of\n     erythema and scaling, with very little differences. The diseases in\n     this group are psoriasis, seboreic dermatitis, lic",
+  "feature_names_sample": "focal_hypergranulosis, eosinophils_in_the_infiltrate, follicular_papules, follicular_horn_plug, disappearance_of_the_granular_layer, scaling, family_history, band-like_infiltrate, Age, munro_microabcess, oral_mucosal_involvement, vacuolisation_and_damage_of_basal_layer, hyperkeratosis, melanin_incontinence, thinning_of_the_suprapapillary_epidermis, knee_and_elbow_involvement, perifollicular_parakeratosis, class, erythema, polygonal_papules, exocytosis, spongiosis, definite_borders, koebner_phenomenon, fibrosis_of_the_papillary_dermis, scalp_involvement, acanthosis, elongation_of_the_rete_ridge"
+ },
+ {
+  "did": 481,
+  "name": "biomed",
+  "nr_attr": 8,
+  "nr_inst": 209,
+  "nr_class": 2,
+  "description": "**Author**:   \n\n**Source**: Unknown - Date unknown  \n\n**Please cite**:   \n\n\n\nFebruary 23, 1982\n\n\n\nThe 1982 annual meetings of the American Statistical Association (ASA)\n\nwill be held August 16-19, 1982 in Cincinnati.  At that meeting, the ASA\n\nCommittee on Statistical Graphics plans to sponsor an \"Exposition of\n\nStatistical Graphics Technology.\"  The purpose of this activity is to\n\nmore fully inform the ASA membership about the capabilities and uses of\n\ncomputer graphcis in statistical work.   This letter is to invite you to\n\nparticipate in the Exposition.\n\n\n\nAttached is a set of biomedical data containing 209 observations (134\n\nfor \"normals\" and 75 for \"carriers\").  Each vendor of provider of\n\nstatistical graphics software participating in the Exposition is to\n\nanalyze these data using their software and to prepare tabular, graphical\n\nand text output illustrating the use of graphics in these analyses and\n\nsummarizing their conclusions.  The tabular and graphical materials must be\n\ndirect computer output from the statistical graphics software; the\n\ntextual descriptions and summaries need not be.  The total display space\n\navailable to each participant at the meeting will be a standard poster-\n\nboard (approximately 4' x 2 1/2').  All entries will be displayed in one\n\nlocation at the meetings, together with brief written commentary by\n\nthe committee summarizing the results of this activity.\n\n\n\nReference\n\n\n\nExposition of Statistical Graphics Technology,\n\nL. H. Cox, M. M. Johnson,",
+  "feature_names_sample": "m3, Date_that_blood_sample_was_taken, m2, Age_of_patient, m4, Observation_number, Hospital_identification_number_for_blood_sample, class, ml"
+ },
+ {
+  "did": 44149,
+  "name": "Heart_disease_prediction_20",
+  "nr_attr": 13,
+  "nr_inst": 296,
+  "nr_class": 2,
+  "description": "This database contains 14 attributes.     The goal field refers to the presence of heart disease in the patient.    It is integer valued with 0 or 1.",
+  "feature_names_sample": "chol, thal, diag, trestpbs, fbs, thalach, sex, ca, exang, age, oldpeak, restecg, cp, slope"
+ },
+ {
+  "did": 53,
+  "name": "heart-statlog",
+  "nr_attr": 13,
+  "nr_inst": 270,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\nThis database contains 13 attributes (which have been extracted from\n a larger set of 75)       \n   \n \n \n Attribute Information:\n ------------------------\n       -- 1. age       \n       -- 2. sex       \n       -- 3. chest pain type  (4 values)       \n       -- 4. resting blood pressure  \n       -- 5. serum cholestoral in mg/dl      \n       -- 6. fasting blood sugar > 120 mg/dl       \n       -- 7. resting electrocardiographic results  (values 0,1,2) \n       -- 8. maximum heart rate achieved  \n       -- 9. exercise induced angina    \n       -- 10. oldpeak = ST depression induced by exercise relative to rest   \n       -- 11. the slope of the peak exercise ST segment     \n       -- 12. number of major vessels (0-3) colored by flourosopy        \n       -- 13.  thal: 3 = normal; 6 = fixed defect; 7 = reversable defect     \n \n Attributes types\n -----------------\n \n Real: 1,4,5,8,10,12\n Ordered:11,\n Binary: 2,6,9\n Nominal:7,3,13\n \n Variable to be predicted\n ------------------------\n Absence (1) or presence (2) of heart disease\n \n Cost Matrix\n \n          abse  pres\n absence   0     1\n presence  5     0\n \n where the rows represent the true values and the columns the predicted.\n \n No missing values.\n \n 270 observations\n\n\n\n\n Relabeled values in attribute class\n    From: 1                       To: absent              \n    From: 2                       To: present",
+  "feature_names_sample": "chest, exercise_induced_angina, fasting_blood_sugar, resting_electrocardiographic_results, number_of_major_vessels, serum_cholestoral, sex, resting_blood_pressure, age, oldpeak, maximum_heart_rate_achieved, class, thal, slope"
+ },
+ {
+  "did": 40475,
+  "name": "thyroid-allhyper",
+  "nr_attr": 26,
+  "nr_inst": 2800,
+  "nr_class": 5,
+  "description": "General Description of Thyroid Disease Databases \n                        and Related Files\n\nThis directory contains 6 databases, corresponding test set, and \ncorresponding documentation.  They were left at the University of\nCalifornia at Irvine by Ross Quinlan during his visit in 1987 for\nthe 1987 Machine Learning Workshop.  \n\nThe documentation files (with file extension &quot;names&quot;) are formatted to\nbe read by Quinlan's C4 decision tree program.  Though briefer than\nthe other documentation files found in this database repository, they\nshould suffice to describe the database, specifically:\n\n    1. Source\n    2. Number and names of attributes (including class names)\n    3. Types of values that each attribute takes\n\nIn general, these databases are quite similar and can be characterized\nsomewhat as follows:\n\n    1. Many attributes (29 or so, mostly the same set over all the databases)\n    2. mostly numeric or Boolean valued attributes\n    3. thyroid disease domains (records provided by the Garavan Institute\n       of Sydney, Australia)\n    4. several missing attribute values (signified by &quot;?&quot;)\n    5. small number of classes (under 10, changes with each database)\n    7. 2800 instances in each data set\n    8. 972 instances in each test set (It seems that the test sets' instances\n       are disjoint with respect to the corresponding data sets, but this has \n       not been verified)\n\nSee the following for a discussion of relevant experiments and related work:\n   Qu",
+  "feature_names_sample": "V17, V9, V21, V14, V12, Class, V20, V3, V24, V8, V10, V16, V6, V15, V7, V11, V23, V25, V18, V2, V22, V26, V13, V19, V4, V1, V5"
+ },
+ {
+  "did": 40476,
+  "name": "thyroid-allhypo",
+  "nr_attr": 26,
+  "nr_inst": 2800,
+  "nr_class": 5,
+  "description": "General Description of Thyroid Disease Databases and Related Files\n\nThis directory contains 6 databases, corresponding test set, and \ncorresponding documentation.  They were left at the University of\nCalifornia at Irvine by Ross Quinlan during his visit in 1987 for\nthe 1987 Machine Learning Workshop.  \n\nThe documentation files (with file extension &quot;names&quot;) are formatted to\nbe read by Quinlan's C4 decision tree program.  Though briefer than\nthe other documentation files found in this database repository, they\nshould suffice to describe the database, specifically:\n\n    1. Source\n    2. Number and names of attributes (including class names)\n    3. Types of values that each attribute takes\n\nIn general, these databases are quite similar and can be characterized\nsomewhat as follows:\n\n    1. Many attributes (29 or so, mostly the same set over all the databases)\n    2. mostly numeric or Boolean valued attributes\n    3. thyroid disease domains (records provided by the Garavan Institute\n       of Sydney, Australia)\n    4. several missing attribute values (signified by &quot;?&quot;)\n    5. small number of classes (under 10, changes with each database)\n    7. 2800 instances in each data set\n    8. 972 instances in each test set (It seems that the test sets' instances\n       are disjoint with respect to the corresponding data sets, but this has \n       not been verified)\n\nSee the following for a discussion of relevant experiments and related work:\n   Quinlan,J.R., Compton,P.J.,",
+  "feature_names_sample": "V17, V9, V21, V14, V12, Class, V20, V3, V24, V8, V10, V16, V6, V15, V7, V11, V23, V25, V18, V2, V22, V26, V13, V19, V4, V1, V5"
+ },
+ {
+  "did": 40477,
+  "name": "thyroid-allrep",
+  "nr_attr": 26,
+  "nr_inst": 2800,
+  "nr_class": 5,
+  "description": "General Description of Thyroid Disease Databases \n                        and Related Files\n\nThis directory contains 6 databases, corresponding test set, and \ncorresponding documentation.  They were left at the University of\nCalifornia at Irvine by Ross Quinlan during his visit in 1987 for\nthe 1987 Machine Learning Workshop.  \n\nThe documentation files (with file extension &quot;names&quot;) are formatted to\nbe read by Quinlan's C4 decision tree program.  Though briefer than\nthe other documentation files found in this database repository, they\nshould suffice to describe the database, specifically:\n\n    1. Source\n    2. Number and names of attributes (including class names)\n    3. Types of values that each attribute takes\n\nIn general, these databases are quite similar and can be characterized\nsomewhat as follows:\n\n    1. Many attributes (29 or so, mostly the same set over all the databases)\n    2. mostly numeric or Boolean valued attributes\n    3. thyroid disease domains (records provided by the Garavan Institute\n       of Sydney, Australia)\n    4. several missing attribute values (signified by &quot;?&quot;)\n    5. small number of classes (under 10, changes with each database)\n    7. 2800 instances in each data set\n    8. 972 instances in each test set (It seems that the test sets' instances\n       are disjoint with respect to the corresponding data sets, but this has \n       not been verified)\n\nSee the following for a discussion of relevant experiments and related work:\n   Qu",
+  "feature_names_sample": "V17, V9, V21, V14, V12, Class, V20, V3, V24, V8, V10, V16, V6, V15, V7, V11, V23, V25, V18, V2, V22, V26, V13, V19, V4, V1, V5"
+ },
+ {
+  "did": 40478,
+  "name": "thyroid-dis",
+  "nr_attr": 26,
+  "nr_inst": 2800,
+  "nr_class": 5,
+  "description": "General Description of Thyroid Disease Databases \n                        and Related Files\n\nThis directory contains 6 databases, corresponding test set, and \ncorresponding documentation.  They were left at the University of\nCalifornia at Irvine by Ross Quinlan during his visit in 1987 for\nthe 1987 Machine Learning Workshop.  \n\nThe documentation files (with file extension &quot;names&quot;) are formatted to\nbe read by Quinlan's C4 decision tree program.  Though briefer than\nthe other documentation files found in this database repository, they\nshould suffice to describe the database, specifically:\n\n    1. Source\n    2. Number and names of attributes (including class names)\n    3. Types of values that each attribute takes\n\nIn general, these databases are quite similar and can be characterized\nsomewhat as follows:\n\n    1. Many attributes (29 or so, mostly the same set over all the databases)\n    2. mostly numeric or Boolean valued attributes\n    3. thyroid disease domains (records provided by the Garavan Institute\n       of Sydney, Australia)\n    4. several missing attribute values (signified by &quot;?&quot;)\n    5. small number of classes (under 10, changes with each database)\n    7. 2800 instances in each data set\n    8. 972 instances in each test set (It seems that the test sets' instances\n       are disjoint with respect to the corresponding data sets, but this has \n       not been verified)\n\nSee the following for a discussion of relevant experiments and related work:\n   Qu",
+  "feature_names_sample": "V17, V9, V21, V14, V12, Class, V20, V3, V24, V8, V10, V16, V6, V15, V7, V11, V23, V25, V18, V2, V22, V26, V13, V19, V4, V1, V5"
+ },
+ {
+  "did": 46879,
+  "name": "mental_health_detection",
+  "nr_attr": 14,
+  "nr_inst": 540,
+  "nr_class": 4,
+  "description": "Mental Health Detection Dataset\n\nMake your machine learning model more accurate with these dataset\n\n\nThis dataset contains survey responses from patients regarding various symptoms associated with depression. Each patient answered 14 questions, and the responses are coded from 1 to 6 based on the frequency of experiencing each symptom. Additionally, the dataset includes a column indicating the patient's overall depression state.\n\nhttps://www.kaggle.com/datasets/hamjashaikh/mental-health-detection-dataset\n\nWe deleted the column \"Number\".",
+  "feature_names_sample": "Hopelessness, Worthlessness, Appetite, Sleep, Panic Attacks, Low Energy, Aggression, Depression_State, Agitation, Sleep Disturbance, Fatigue, Suicidal Ideation, Interest, Restlessness, Concentration"
+ },
+ {
+  "did": 1464,
+  "name": "blood-transfusion-service-center",
+  "nr_attr": 4,
+  "nr_inst": 748,
+  "nr_class": 2,
+  "description": "**Author**: Prof. I-Cheng Yeh  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Blood+Transfusion+Service+Center)  \n**Please cite**: Yeh, I-Cheng, Yang, King-Jang, and Ting, Tao-Ming, \"Knowledge discovery on RFM model using Bernoulli sequence\", Expert Systems with Applications, 2008.   \n\n**Blood Transfusion Service Center Data Set**  \nData taken from the Blood Transfusion Service Center in Hsin-Chu City in Taiwan -- this is a classification problem.\n\nTo demonstrate the RFMTC marketing model (a modified version of RFM), this study adopted the donor database of Blood Transfusion Service Center in Hsin-Chu City in Taiwan. The center passes their blood transfusion service bus to one university in Hsin-Chu City to gather blood donated about every three months. To build an FRMTC model, we selected 748 donors at random from the donor database. \n\n### Attribute Information  \n* V1: Recency - months since last donation\n* V2: Frequency - total number of donation\n* V3: Monetary - total blood donated in c.c.\n* V4: Time - months since first donation), and a binary variable representing whether he/she donated blood in March 2007 (1 stand for donating blood; 0 stands for not donating blood).\n\nThe target attribute is a binary variable representing whether he/she donated blood in March 2007 (2 stands for donating blood; 1 stands for not donating blood).",
+  "feature_names_sample": "V3, V2, Class, V4, V1"
+ },
+ {
+  "did": 36,
+  "name": "segment",
+  "nr_attr": 19,
+  "nr_inst": 2310,
+  "nr_class": 7,
+  "description": "**Author**: University of Massachusetts Vision Group, Carla Brodley  \n\n**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/image+segmentation) - 1990  \n\n**Please cite**: [UCI](http://archive.ics.uci.edu/ml/citation_policy.html)  \n\n\n\n**Image Segmentation Data Set**\n\nThe instances were drawn randomly from a database of 7 outdoor images. The images were hand-segmented to create a classification for every pixel. Each instance is a 3x3 region.\n\n \n\n### Attribute Information  \n\n\n\n1.  region-centroid-col:  the column of the center pixel of the region.\n\n2.  region-centroid-row:  the row of the center pixel of the region.\n\n3.  region-pixel-count:  the number of pixels in a region = 9.\n\n4.  short-line-density-5:  the results of a line extractoin algorithm that \n\n          counts how many lines of length 5 (any orientation) with\n\n          low contrast, less than or equal to 5, go through the region.\n\n5.  short-line-density-2:  same as short-line-density-5 but counts lines\n\n          of high contrast, greater than 5.\n\n6.  vedge-mean:  measure the contrast of horizontally\n\n          adjacent pixels in the region.  There are 6, the mean and \n\n          standard deviation are given.  This attribute is used as\n\n         a vertical edge detector.\n\n7.  vegde-sd:  (see 6)\n\n8.  hedge-mean:  measures the contrast of vertically adjacent\n\n           pixels. Used for horizontal line detection. \n\n9.  hedge-sd: (see 8).\n\n10. intensity-mean:  the average over the region of (R + G + B)/3\n\n11. rawre",
+  "feature_names_sample": "exred-mean, region-centroid-row, hedge-sd, region-centroid-col, region-pixel-count, vegde-sd, short-line-density-5, hedge-mean, rawblue-mean, short-line-density-2, rawred-mean, hue-mean, value-mean, class, vedge-mean, saturation-mean, exblue-mean, exgreen-mean, rawgreen-mean, intensity-mean"
+ },
+ {
+  "did": 182,
+  "name": "satimage",
+  "nr_attr": 36,
+  "nr_inst": 6430,
+  "nr_class": 6,
+  "description": "**Author**: Ashwin Srinivasan, Department of Statistics and Data Modeling, University of Strathclyde  \n\n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Statlog+(Landsat+Satellite)) - 1993  \n\n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)  \n\n\n\nThe database consists of the multi-spectral values of pixels in 3x3 neighbourhoods in a satellite image, and the classification associated with the central pixel in each neighbourhood. The aim is to predict this classification, given the multi-spectral values. In the sample database, the class of a pixel is coded as a number. \n\n\n\nOne frame of Landsat MSS imagery consists of four digital images of the same scene in different spectral bands. Two of these are in the visible region (corresponding approximately to green and red regions of the visible spectrum) and two are in the (near) infra-red. Each pixel is a 8-bit binary word, with 0 corresponding to black and 255 to white. The spatial resolution of a pixel is about 80m x 80m. Each image contains 2340 x 3380 such pixels. \n\n\n\nThe database is a (tiny) sub-area of a scene, consisting of 82 x 100 pixels. Each line of data corresponds to a 3x3 square neighbourhood of pixels completely contained within the 82x100 sub-area. Each line contains the pixel values in the four spectral bands (converted to ASCII) of each of the 9 pixels in the 3x3 neighbourhood and a number indicating the classification label of the central pixel. \n\n\n\nEach pixel is categorized as ",
+  "feature_names_sample": "C3attr, D4attr, B14attr, B26attr, F30attr, E11attr, A7attr, F6attr, C27attr, D16attr, E5attr, A13attr, A19attr, D10attr, A25attr, D28attr, Aattr, C9attr, F12attr, Eattr, Battr, E29attr, A1attr, class, B8attr, Cattr, E17attr, Fattr, B20attr, C21attr, E23attr, F24attr, B2attr, Dattr, C15attr, D22attr, F18attr"
+ },
+ {
+  "did": 6,
+  "name": "letter",
+  "nr_attr": 16,
+  "nr_inst": 20000,
+  "nr_class": 26,
+  "description": "**Author**: David J. Slate  \n\n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Letter+Recognition) - 01-01-1991  \n\n**Please cite**: P. W. Frey and D. J. Slate. \"Letter Recognition Using Holland-style Adaptive Classifiers\". Machine Learning 6(2), 1991  \n\n\n\n1. TITLE: \n\n  Letter Image Recognition Data \n\n \n\n    The objective is to identify each of a large number of black-and-white\n\n    rectangular pixel displays as one of the 26 capital letters in the English\n\n    alphabet.  The character images were based on 20 different fonts and each\n\n    letter within these 20 fonts was randomly distorted to produce a file of\n\n    20,000 unique stimuli.  Each stimulus was converted into 16 primitive\n\n    numerical attributes (statistical moments and edge counts) which were then\n\n    scaled to fit into a range of integer values from 0 through 15.  We\n\n    typically train on the first 16000 items and then use the resulting model\n\n    to predict the letter category for the remaining 4000.  See the article\n\n    cited above for more details.",
+  "feature_names_sample": "x-box, x-bar, x2bar, x-ege, onpix, xegvy, high, y-box, xy2br, y-ege, y-bar, yegvx, width, y2bar, class, xybar, x2ybr"
+ },
+ {
+  "did": 32,
+  "name": "pendigits",
+  "nr_attr": 16,
+  "nr_inst": 10992,
+  "nr_class": 10,
+  "description": "**Author**: E. Alpaydin, Fevzi. Alimoglu  \n**Source**: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Pen-Based+Recognition+of+Handwritten+Digits)  \n**Please cite**:  [UCI citation policy](https://archive.ics.uci.edu/ml/citation_policy.html)\n\n**Pen-Based Recognition of Handwritten Digits**  \nWe create a digit database by collecting 250 samples from 44 writers. The samples, written by 30 writers, are used for training, cross-validation and writer dependent testing, and the digits written by the other 14 are used for writer independent testing. This database is also available in the UNIPEN format.\n\nWe use a WACOM PL-100V pressure sensitive tablet with an integrated LCD display and a cordless stylus. The input and display areas are located in the same place. Attached to the serial port of an Intel 486 based PC, it allows us to collect handwriting samples. The tablet\nsends $x$ and $y$ tablet coordinates and pressure level values of the pen at fixed time intervals (sampling rate) of 100 miliseconds. \n \nThese writers are asked to write 250 digits in random order inside boxes of 500 by 500 tablet pixel resolution.  Subject are monitored only during the first entry screens. Each screen contains five boxes with the digits to be written displayed above. Subjects are told to write only inside these boxes.  If they make a mistake or are unhappy with their writing, they are instructed to clear the content of a box by using an on-screen button. The first ten digi",
+  "feature_names_sample": "input9, input11, input1, input10, input4, input7, input2, input8, input5, class, input3, input6, input16, input13, input15, input12, input14"
+ },
+ {
+  "did": 28,
+  "name": "optdigits",
+  "nr_attr": 64,
+  "nr_inst": 5620,
+  "nr_class": 10,
+  "description": "**Author**: E. Alpaydin, C. Kaynak  \n\n**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/optical+recognition+of+handwritten+digits)  \n\n**Please cite**: [UCI citation policy](https://archive.ics.uci.edu/ml/citation_policy.html)  \n\n\n\n1. Title of Database: Optical Recognition of Handwritten Digits\n\n \n\n 2. Source:\n\n  E. Alpaydin, C. Kaynak\n\n  Department of Computer Engineering\n\n  Bogazici University, 80815 Istanbul Turkey\n\n  alpaydin@boun.edu.tr\n\n  July 1998\n\n \n\n 3. Past Usage:\n\n  C. Kaynak (1995) Methods of Combining Multiple Classifiers and Their\n\n  Applications to Handwritten Digit Recognition, \n\n  MSc Thesis, Institute of Graduate Studies in Science and \n\n  Engineering, Bogazici University.\n\n \n\n  E. Alpaydin, C. Kaynak (1998) Cascading Classifiers, Kybernetika,\n\n  to appear. ftp://ftp.icsi.berkeley.edu/pub/ai/ethem/kyb.ps.Z\n\n \n\n 4. Relevant Information:\n\n  We used preprocessing programs made available by NIST to extract\n\n  normalized bitmaps of handwritten digits from a preprinted form. From\n\n  a total of 43 people, 30 contributed to the training set and different\n\n  13 to the test set. 32x32 bitmaps are divided into nonoverlapping \n\n  blocks of 4x4 and the number of on pixels are counted in each block.\n\n  This generates an input matrix of 8x8 where each element is an \n\n  integer in the range 0..16. This reduces dimensionality and gives \n\n  invariance to small distortions.\n\n \n\n  For info on NIST preprocessing routines, see \n\n  M. D. Garris, J. L. Blue, G. T. Candela, D.",
+  "feature_names_sample": "input24, input11, input29, input19, input39, input22, input27, input41, input59, input8, input28, input55, input50, input61, input51, input12, input26, input17, input49, input10, input40, input25, input64, input48, input31, input36, input6, input13, input18, input33, input21, input43, input15, input56, input38, input4, input60, input7, input2, input58"
+ },
+ {
+  "did": 40499,
+  "name": "texture",
+  "nr_attr": 40,
+  "nr_inst": 5500,
+  "nr_class": 11,
+  "description": "**Author**: Laboratory of Image Processing and Pattern Recognition (INPG-LTIRF), Grenoble - France.  \n\n**Source**: [ELENA project](https://www.elen.ucl.ac.be/neural-nets/Research/Projects/ELENA/databases/REAL/texture/)   \n\n**Please cite**: None\n\n\n\n####1. Summary\n\n\n\nThis database was generated by the Laboratory of Image Processing and Pattern Recognition (INPG-LTIRF) in the development of the Esprit project ELENA No. 6891 and the Esprit working group ATHOS No. 6620.\n\n```\n\n (a) Original source:\n\n\n\n   P. Brodatz \"Textures: A Photographic Album for Artists and Designers\",\n\n   Dover Publications,Inc.,New York, 1966.\n\n\n\n (b) Creation: Laboratory of Image Processing and Pattern Recognition\n\n\n\n   Institut National Polytechnique de Grenoble INPG\n\n   Laboratoire de Traitement d'Image et de Reconnaissance de Formes LTIRF\n\n   Av. Felix Viallet, 46\n\n   F-38031 Grenoble Cedex\n\n   France\n\n\n\n (c) Contact: Dr. A. Guerin-Dugue, INPG-LTIRF, guerin@tirf.inpg.fr\n\n```\n\n\n\n####2. Past Usage:\n\n\n\nThis database has a private usage at the TIRF laboratory. It has been created in order to study the textures discrimination with high order statistics.\n\n\n\n```\n\nA.Guerin-Dugue, C. Aviles-Cruz, \"High Order Statistics from Natural Textured Images\",\n\nIn ATHOS workshop on System Identification and High Order Statistics, Sophia-Antipolis, France, September 1993.\n\n\n\nGuerin-Dugue, A. and others, Deliverable R3-B4-P - Task B4: Benchmarks, Technical report,\n\nElena-NervesII \"Enhanced Learning for Evolutive Neural Archit",
+  "feature_names_sample": "V17, V33, V9, V21, V14, V12, Class, V38, V29, V37, V30, V31, V20, V3, V39, V24, V28, V36, V8, V10, V16, V6, V40, V15, V7, V34, V32, V27, V11, V23, V25, V18, V2, V22, V35, V26, V13, V19, V4, V1"
+ },
+ {
+  "did": 20,
+  "name": "mfeat-pixel",
+  "nr_attr": 240,
+  "nr_inst": 2000,
+  "nr_class": 10,
+  "description": "**Author**: Robert P.W. Duin, Department of Applied Physics, Delft University of Technology  \n\n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Multiple+Features) - 1998  \n\n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)   \n\n\n\n**Multiple Features Dataset: Pixel**  \n\nOne of a set of 6 datasets describing features of handwritten numerals (0 - 9) extracted from a collection of Dutch utility maps. The maps were scanned in 8 bit grey value at density of 400dpi, scanned, sharpened, and thresholded. Corresponding patterns in different datasets correspond to the same original character. 200 instances per class (for a total of 2,000 instances) have been digitized in binary images.  \n\n\n\nUsing this dataset, sampled versions of the original images may be obtained (15 x 16 pixels).  \n\n\n\n### Attribute Information  \n\nThe mfeatures represent 240 (15 x 16) pixel averages in 2 x 3 windows. \n\n\n\n### Relevant Papers  \n\nA slightly different version of the database is used in  \n\nM. van Breukelen, R.P.W. Duin, D.M.J. Tax, and J.E. den Hartog, Handwritten digit recognition by combined classifiers, Kybernetika, vol. 34, no. 4, 1998, 381-386.\n\n \n\nThe database as is is used in:  \n\nA.K. Jain, R.P.W. Duin, J. Mao, Statistical Pattern Recognition: A Review, IEEE Transactions on Pattern Analysis and Machine Intelligence archive, Volume 22 Issue 1, January 2000",
+  "feature_names_sample": "att75, att209, att240, att140, att214, att183, att128, att164, att54, att66, att106, att179, att63, att103, att60, att71, att104, att105, att221, att120, att181, att142, att162, att17, att169, att70, att47, att23, att161, att186, att233, att80, att101, att95, att236, att198, att135, att191, att118, att2"
+ },
+ {
+  "did": 1459,
+  "name": "artificial-characters",
+  "nr_attr": 7,
+  "nr_inst": 10218,
+  "nr_class": 10,
+  "description": "**Author**: H. Altay Guvenir, Burak Acar, Haldun Muderrisoglu    \n\n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Artificial+Characters) - 1992  \n\n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)  \n\n\n\nThis database has been artificially generated. It describes the structure of the capital letters A, C, D, E, F, G, H, L, P, R, indicated by a number 1-10, in that order (A=1,C=2,...). Each letter's structure is described by a set of segments (lines) which resemble the way an automatic program would segment an image. The dataset consists of 600 such descriptions per letter. \n\n\n\nOriginally, each 'instance' (letter) was stored in a separate file, each consisting of between 1 and 7 segments, numbered 0,1,2,3,... Here they are merged. That means that the first 5 instances describe the first 5 segments of the first segmentation of the first letter (A). Also, the training set (100 examples) and test set (the rest) are merged. The next 7 instances describe another segmentation (also of the letter A) and so on.\n\n\n\n### Attribute Information  \n\n\n\n* V1: object number, the number of the segment (0,1,2,..,7)  \n\n* V2-V5: the initial and final coordinates of a segment in a cartesian plane (XX1,YY1,XX2,YY2).  \n\n* V6: size, this is the length of a segment computed by using the geometric distance between two points A(X1,Y1) and B(X2,Y2).\n\n* V7: diagonal, this is the length of the diagonal of the smallest rectangle which includes the picture of the character. T",
+  "feature_names_sample": "V6, V3, V2, Class, V7, V4, V1, V5"
+ },
+ {
+  "did": 40926,
+  "name": "CIFAR_10_small",
+  "nr_attr": 1000,
+  "nr_inst": 20000,
+  "nr_class": 10,
+  "description": "**Author**: Alex Krizhevsky, Vinod Nair, and Geoffrey Hinton    \n\n**Source**: [University of Toronto](https://www.cs.toronto.edu/~kriz/cifar.html) - 2009  \n\n**Please cite**: Alex Krizhevsky (2009) Learning Multiple Layers of Features from Tiny Images, Tech Report.\n\n\n\n**CIFAR-10 small**  \n\nThis is a 20,000 instance sample of the original CIFAR-10 dataset. Sampled randomly and stratified, with 2000 examples per class. Training and test set are merged. Find the corresponding task for the original train-test splits.\n\n\n\nCIFAR-10 is a labeled subset of the [80 million tiny images dataset](http://groups.csail.mit.edu/vision/TinyImages/). It (originally) consists 32x32 color images representing 10 classes of objects:  \n\n0. airplane  \n\n1. automobile          \n\n2. bird          \n\n3. cat          \n\n4. deer          \n\n5. dog          \n\n6. frog          \n\n7. horse          \n\n8. ship          \n\n9. truck          \n\n\n\nThe classes are completely mutually exclusive. There is no overlap between automobiles and trucks. \"Automobile\" includes sedans, SUVs, things of that sort. \"Truck\" includes only big trucks. Neither includes pickup trucks.\n\n\n\nThe original CIFAR-10 dataset contains 6000 images per class. The original train-test split randomly divided these into 5000 train and 1000 test images per class.\n\n\n\n### Attribute description  \n\n\n\nEach instance represents a 32x32 colour image as a 3072-value array. The first 1024 entries contain the red channel values, the next 1024 the green, and the final",
+  "feature_names_sample": "a821, a2990, a3051, a1410, a2913, a1214, a1457, a448, a1315, a1190, a2500, a3063, a2108, a2876, a346, a781, a1614, a1312, a2021, a279, a2775, a296, a384, a1277, a1472, a2031, a1523, a2153, a201, a422, a1306, a1285, a2290, a8, a153, a1653, a600, a746, a1333, a2316"
+ },
+ {
+  "did": 1462,
+  "name": "banknote-authentication",
+  "nr_attr": 4,
+  "nr_inst": 1372,
+  "nr_class": 2,
+  "description": "Author: Volker Lohweg (University of Applied Sciences, Ostwestfalen-Lippe)  \nSource: [UCI](https://archive.ics.uci.edu/ml/datasets/banknote+authentication) - 2012  \nPlease cite: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html) \n\nDataset about distinguishing genuine and forged banknotes. Data were extracted from images that were taken from genuine and forged banknote-like specimens. For digitization, an industrial camera usually used for print inspection was used. The final images have 400x 400 pixels. Due to the object lens and distance to the investigated object gray-scale pictures with a resolution of about 660 dpi were gained. A Wavelet Transform tool was used to extract features from these images.\n\n### Attribute Information  \n\nV1. variance of Wavelet Transformed image (continuous)  \nV2. skewness of Wavelet Transformed image (continuous)  \n\n\nClass (target). Presumably 1 for genuine and 2 for forged",
+  "feature_names_sample": "V3, V2, Class, V4, V1"
+ },
+ {
+  "did": 40496,
+  "name": "LED-display-domain-7digit",
+  "nr_attr": 7,
+  "nr_inst": 500,
+  "nr_class": 10,
+  "description": "**Author**: Breiman,L., Friedman,J.H., Olshen,R.A., and Stone,C.J.  \n\n**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/LED+Display+Domain), [KEEL](http://sci2s.ugr.es/keel/dataset.php?cod=63, https://archive.ics.uci.edu/ml/datasets/LED+Display+Domain) - 1988  \n\n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)  \n\n\n\n**LED display data set**  \n\nThis simple domain contains 7 Boolean attributes and 10 classes, the set of decimal digits. Recall that LED displays contain 7 light-emitting diodes -- hence the reason for 7 attributes. The class attribute is an integer ranging between 0 and 9 inclusive, representing the possible digits show on the display.\n\n\n\nThe problem would be easy if not for the introduction of noise.  In this case, each attribute value has the 10% probability of having its value inverted.  \n\n\n\nIt's valuable to know the optimal Bayes rate for these databases. In this case, the misclassification rate is 26% (74% classification accuracy).\n\n        \n\n### Attribute Information  \n\n* V1-V7 represent each of the 7 LEDs, with values either 0 or 1, according to whether the corresponding light is on or not for the decimal digit. Each has a 10% percent chance of being inverted.",
+  "feature_names_sample": "V6, V3, V2, Class, V7, V4, V1, V5"
+ },
+ {
+  "did": 44698,
+  "name": "Fashion-MNIST_seed_0_nrows_2000_nclasses_10_ncols_100_stratify_True",
+  "nr_attr": 100,
+  "nr_inst": 2000,
+  "nr_class": 10,
+  "description": "Subsampling of the dataset Fashion-MNIST (40996) with\n\nseed=0\nargs.nrows=2000\nargs.ncols=100\nargs.nclasses=10\nargs.no_stratify=True\nGenerated with the following source code:\n\n\n```python\n    def subsample(\n        self,\n        seed: int,\n        nrows_max: int = 2_000,\n        ncols_max: int = 100,\n        nclasses_max: int = 10,\n        stratified: bool = True,\n    ) -> Dataset:\n        rng = np.random.default_rng(seed)\n\n        x = self.x\n        y = self.y\n\n        # Uniformly sample\n        classes = y.unique()\n        if len(classes) > nclasses_max:\n            vcs = y.value_counts()\n            selected_classes = rng.choice(\n                classes,\n                size=nclasses_max,\n                replace=False,\n                p=vcs / sum(vcs),\n            )\n\n            # Select the indices where one of these classes is present\n            idxs = y.index[y.isin(classes)]\n            x = x.iloc[idxs]\n            y = y.iloc[idxs]\n\n        # Uniformly sample columns if required\n        if len(x.columns) > ncols_max:\n            columns_idxs = rng.choice(\n                list(range(len(x.columns))), size=ncols_max, replace=False\n            )\n            sorted_column_idxs = sorted(columns_idxs)\n            selected_columns = list(x.columns[sorted_column_idxs])\n            x = x[selected_columns]\n        else:\n            sorted_column_idxs = list(range(len(x.columns)))\n\n        if len(x) > nrows_max:\n            # Stratify accordingly\n            target_name = y.name\n ",
+  "feature_names_sample": "pixel487, pixel712, pixel307, pixel475, pixel177, pixel484, pixel636, pixel767, pixel66, pixel543, pixel620, pixel697, pixel526, pixel406, pixel627, pixel659, pixel217, pixel186, pixel734, pixel126, pixel736, pixel474, pixel293, pixel16, pixel656, pixel196, pixel691, pixel452, pixel606, pixel511, pixel282, pixel435, pixel394, pixel52, pixel458, pixel637, pixel283, pixel515, pixel521, pixel382"
+ },
+ {
+  "did": 1478,
+  "name": "har",
+  "nr_attr": 561,
+  "nr_inst": 10299,
+  "nr_class": 6,
+  "description": "**Author**: Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto and Xavier Parra  \n\n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones)  \n\n**Please cite**: Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. A Public Domain Dataset for Human Activity Recognition Using Smartphones. 21th European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning, ESANN 2013. Bruges, Belgium 24-26 April 2013.   \n\n\n\n**Human Activity Recognition**  \n\nHuman Activity Recognition (HAR) database built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors. This dataset version contains all the training and testing examples provided in the original data repository.\n\n\n\nThe experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers were selected for generating the ",
+  "feature_names_sample": "V230, V223, V12, V193, V347, V190, V385, V88, V253, V405, V288, V79, V16, V457, V243, V40, V27, V57, V326, V442, V314, V205, V524, V22, V146, V104, V189, V323, V474, V119, V330, V418, V184, V102, V401, V283, V273, V322, V30, V499"
+ },
+ {
+  "did": 1497,
+  "name": "wall-robot-navigation",
+  "nr_attr": 24,
+  "nr_inst": 5456,
+  "nr_class": 4,
+  "description": "**Author**: Ananda Freire, Marcus Veloso and Guilherme Barreto     \n\n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Wall-Following+Robot+Navigation+Data) - 2010  \n\n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)\n\n\n\n**Wall-Following Robot Navigation Data Data Set**  \n\nThe data were collected as the SCITOS G5 robot navigates through the room following the wall in a clockwise direction, for 4 rounds, using 24 ultrasound sensors arranged circularly around its 'waist'.\n\n\n\nThe data consists of raw values of the measurements of all 24 ultrasound sensors and the corresponding class label. Sensor readings are sampled at a rate of 9 samples per second.\n\n\n\nThe class labels are:  \n\n1. Move-Forward,  \n\n2. Slight-Right-Turn,  \n\n3. Sharp-Right-Turn,  \n\n4. Slight-Left-Turn  \n\n\n\nIt is worth mentioning that the 24 ultrasound readings and the simplified distances were collected at the same time step, so each file has the same number of rows (one for each sampling time step). \n\n\n\nThe wall-following task and data gathering were designed to test the hypothesis that this apparently simple navigation task is indeed a non-linearly separable classification task. Thus, linear classifiers, such as the Perceptron network, are not able to learn the task and command the robot around the room without collisions. Nonlinear neural classifiers, such as the MLP network, are able to learn the task and command the robot successfully without collisions. \n\n\n\n### Attribute Info",
+  "feature_names_sample": "V17, V9, V21, V14, V12, Class, V20, V3, V24, V8, V10, V16, V6, V15, V7, V11, V23, V18, V2, V22, V13, V19, V4, V1, V5"
+ },
+ {
+  "did": 40,
+  "name": "sonar",
+  "nr_attr": 60,
+  "nr_inst": 208,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\nNAME: Sonar, Mines vs. Rocks\n \n SUMMARY: This is the data set used by Gorman and Sejnowski in their study\n of the classification of sonar signals using a neural network [1].  The\n task is to train a network to discriminate between sonar signals bounced\n off a metal cylinder and those bounced off a roughly cylindrical rock.\n \n SOURCE: The data set was contributed to the benchmark collection by Terry\n Sejnowski, now at the Salk Institute and the University of California at\n San Deigo.  The data set was developed in collaboration with R. Paul\n Gorman of Allied-Signal Aerospace Technology Center.\n \n MAINTAINER: Scott E. Fahlman\n \n PROBLEM DESCRIPTION:\n \n The file \"sonar.mines\" contains 111 patterns obtained by bouncing sonar\n signals off a metal cylinder at various angles and under various\n conditions.  The file \"sonar.rocks\" contains 97 patterns obtained from\n rocks under similar conditions.  The transmitted sonar signal is a\n frequency-modulated chirp, rising in frequency.  The data set contains\n signals obtained from a variety of different aspect angles, spanning 90\n degrees for the cylinder and 180 degrees for the rock.\n \n Each pattern is a set of 60 numbers in the range 0.0 to 1.0.  Each number\n represents the energy within a particular frequency band, integrated over\n a certain period of time.  The integration aperture for higher frequencies\n occur later in time, since these frequencies are transmitted later durin",
+  "feature_names_sample": "attribute_21, attribute_54, attribute_53, attribute_11, attribute_51, attribute_46, attribute_22, attribute_16, attribute_18, Class, attribute_27, attribute_8, attribute_28, attribute_37, attribute_26, attribute_49, attribute_25, attribute_58, attribute_1, attribute_20, attribute_57, attribute_7, attribute_19, attribute_45, attribute_14, attribute_43, attribute_34, attribute_33, attribute_10, attribute_38, attribute_31, attribute_15, attribute_40, attribute_32, attribute_52, attribute_2, attribute_12, attribute_24, attribute_4, attribute_13"
+ },
+ {
+  "did": 1504,
+  "name": "steel-plates-fault",
+  "nr_attr": 33,
+  "nr_inst": 1941,
+  "nr_class": 2,
+  "description": "**Author**: Semeion, Research Center of Sciences of Communication, Rome, Italy.     \n\n**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/steel+plates+faults)     \n\n**Please cite**: Dataset provided by Semeion, Research Center of Sciences of Communication, Via Sersale 117, 00128, Rome, Italy.  \n\n\n\n**Steel Plates Faults Data Set**  \n\nA dataset of steel plates' faults, classified into 7 different types. The goal was to train machine learning for automatic pattern recognition.\n\n\n\nThe dataset consists of 27 features describing each fault (location, size, ...) and 7 binary features indicating the type of fault (on of 7: Pastry, Z_Scratch, K_Scatch, Stains, Dirtiness, Bumps, Other_Faults). The latter is commonly used as a binary classification target ('common' or 'other' fault.)\n\n\n\n### Attribute Information  \n\n* V1: X_Minimum  \n\n* V2: X_Maximum  \n\n* V3: Y_Minimum  \n\n* V4: Y_Maximum  \n\n* V5: Pixels_Areas  \n\n* V6: X_Perimeter  \n\n* V7: Y_Perimeter  \n\n* V8: Sum_of_Luminosity  \n\n* V9: Minimum_of_Luminosity  \n\n* V10: Maximum_of_Luminosity  \n\n* V11: Length_of_Conveyer  \n\n* V12: TypeOfSteel_A300  \n\n* V13: TypeOfSteel_A400  \n\n* V14: Steel_Plate_Thickness  \n\n* V15: Edges_Index  \n\n* V16: Empty_Index  \n\n* V17: Square_Index  \n\n* V18: Outside_X_Index  \n\n* V19: Edges_X_Index  \n\n* V20: Edges_Y_Index  \n\n* V21: Outside_Global_Index  \n\n* V22: LogOfAreas  \n\n* V23: Log_X_Index  \n\n* V24: Log_Y_Index  \n\n* V25: Orientation_Index  \n\n* V26: Luminosity_Index  \n\n* V27: SigmoidOfAreas  \n\n* V28: Pastry  \n\n",
+  "feature_names_sample": "V17, V33, V9, V21, V14, V12, Class, V29, V30, V31, V20, V3, V24, V28, V8, V10, V16, V6, V15, V7, V32, V27, V11, V23, V25, V18, V2, V22, V26, V13, V19, V4, V1, V5"
+ },
+ {
+  "did": 45562,
+  "name": "seismic-bumps",
+  "nr_attr": 18,
+  "nr_inst": 2584,
+  "nr_class": 2,
+  "description": "========================================================================================================\nSeismic bumps dataset\n========================================================================================================\nThe data describe the problem of high energy (higher than 10^4 J) seismic bumps forecasting in a coal\nmine. Data come from two of longwalls located in a Polish coal mine.\n\n--------------------------------------------------------------------------------------------------------\nCitation request\n--------------------------------------------------------------------------------------------------------\nSikora M., Wrobel L.: Application of rule induction algorithms for analysis of data collected by seismic\nhazard monitoring systems in coal mines. Archives of Mining Sciences, 55(1), 2010, 91-114.\n\n--------------------------------------------------------------------------------------------------------\nDonors and creators\n--------------------------------------------------------------------------------------------------------\nMarek Sikora^{1,2} (marek.sikora@polsl.pl), Lukasz Wrobel^{1} (lukasz.wrobel@polsl.pl)\n(1) Institute of Computer Science, Silesian University of Technology, 44-100 Gliwice, Poland\n(2) Institute of Innovative Technologies EMAG, 40-189 Katowice, Poland\n\n--------------------------------------------------------------------------------------------------------\nData characteristics\n----------------------------------------------------------------",
+  "feature_names_sample": "seismic, shift, nbumps, nbumps4, nbumps7, gdpuls, nbumps2, ghazard, nbumps89, nbumps5, class, gdenergy, gpuls, seismoacoustic, nbumps6, maxenergy, energy, genergy, nbumps3"
+ },
+ {
+  "did": 1476,
+  "name": "gas-drift",
+  "nr_attr": 128,
+  "nr_inst": 13910,
+  "nr_class": 6,
+  "description": "**Author**: Alexander Vergara  \n\n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/gas+sensor+array+drift+dataset) - 2012    \n\n**Please cite**: Alexander Vergara, Shankar Vembu, Tuba Ayhan, Margaret A. Ryan, Margie L. Homer, Ramón Huerta. Chemical gas sensor drift compensation using classifier ensembles, Sensors and Actuators B: Chemical (2012) doi: 10.1016/j.snb.2012.01.074.   \n\n\n\n### Description\n\nGas Sensor Array Drift Dataset Data Set\n\n\n\n### Sources\n\n```\n\n(a) Creators: Alexander Vergara (vergara '@' ucsd.edu) \n\nBioCircutis Institute \n\nUniversity of California San Diego \n\nSan Diego, California, USA \n\n\n\n(b) Donors: Alexander Vergara (vergara '@' ucsd.edu) \n\nRamon Huerta (rhuerta '@' ucsd.edu) \n\n```\n\n\n\n### Dataset Information\n\n\n\nThis archive contains 13910 measurements from 16 chemical sensors utilized in simulations for drift compensation in a discrimination task of 6 gases at various levels of concentrations.  \n\nThe goal is to achieve good performance (or as low degradation as possible) over time, as reported in the paper mentioned below in Section 2: Data collection. \n\n\n\nThe primary purpose of providing this dataset is to make it freely accessible online to the chemo-sensor research community and artificial intelligence to develop strategies to cope with sensor/concept drift. The dataset can be used exclusively for research purposes. Commercial purposes are fully excluded.\n\n\n\nThe dataset was gathered within January 2007 to February 2011 (36 months) in a gas deliver",
+  "feature_names_sample": "V48, V33, V127, V21, V63, V12, V121, V29, V47, V88, V68, V98, V39, V59, V67, V109, V79, V115, V70, V87, V99, V16, V105, V40, V27, V49, V57, V22, V104, V13, V119, V97, V9, V120, V102, V43, Class, V83, V85, V58"
+ },
+ {
+  "did": 4538,
+  "name": "GesturePhaseSegmentationProcessed",
+  "nr_attr": 32,
+  "nr_inst": 9873,
+  "nr_class": 5,
+  "description": "**Author**: Renata Cristina Barros Madeo (Madeo\",\"R. C. B.)  Priscilla Koch Wagner (Wagner\",\"P. K.)  Sarajane Marques Peres (Peres\",\"S. M.)  {renata.si\",\"priscilla.wagner\",\"sarajane} at usp.br  http://each.uspnet.usp.br/sarajane/  \n\n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/gesture+phase+segmentation)  \n\n**Please cite**: Please refer to the [Machine Learning Repository's citation policy](https://archive.ics.uci.edu/ml/citation_policy.html). Additionally, the authors require a citation to one or more publications from those cited as relevant papers.  \n\n\n\nCreators: \n\nRenata Cristina Barros Madeo (Madeo, R. C. B.) \n\nPriscilla Koch Wagner (Wagner, P. K.) \n\nSarajane Marques Peres (Peres, S. M.) \n\n{renata.si, priscilla.wagner, sarajane} at usp.br \n\nhttp://each.uspnet.usp.br/sarajane/ \n\n\n\nDonor: \n\nUniversity of Sao Paulo - Brazil\n\n\n\nData Set Information:\n\n\n\nThe dataset is composed by features extracted from 7 videos with people gesticulating, aiming at studying Gesture Phase Segmentation. \n\nEach video is represented by two files: a raw file, which contains the position of hands, wrists, head and spine of the user in each frame; and a processed file, which contains velocity and acceleration of hands and wrists. See the data set description for more information on the dataset.\n\n\n\nAttribute Information:\n\n\n\nRaw files: 18 numeric attributes (double), a timestamp and a class attribute (nominal). \n\nProcessed files: 32 numeric attributes (double) and a class attribute (nomin",
+  "feature_names_sample": "X26, X16, X30, X21, X22, X18, X23, X20, X3, X31, X14, X29, X25, X24, Phase, X17, X11, X10, X27, X32, X13, X15, X12, X4, X9, X6, X5, X19, X28, X2, X8, X1, X7"
+ },
+ {
+  "did": 46280,
+  "name": "blastchar",
+  "nr_attr": 19,
+  "nr_inst": 7043,
+  "nr_class": 2,
+  "description": "From original source:\n-----\n\nContext\n\"Predict behavior to retain customers. You can analyze all relevant customer data and develop focused customer retention programs.\" [IBM Sample Data Sets]\n\nContent\nEach row represents a customer, each column contains customer's attributes described on the column Metadata.\n\nThe data set includes information about:\n\nCustomers who left within the last month - the column is called Churn\nServices that each customer has signed up for - phone, multiple lines, internet, online security, online backup, device protection, tech support, and streaming TV and movies\nCustomer account information - how long they've been a customer, contract, payment method, paperless billing, monthly charges, and total charges\nDemographic info about customers - gender, age range, and if they have partners and dependents\nInspiration\nTo explore this type of models and learn more about the subject.\n\nNew version from IBM:\nhttps://community.ibm.com/community/user/businessanalytics/blogs/steven-macko/2019/07/11/telco-customer-churn-1113\n-----\nColumns with index 0 were deleted from the dataset, usually because they related to some kind of index.",
+  "feature_names_sample": "PaymentMethod, PhoneService, gender, TechSupport, DeviceProtection, OnlineSecurity, PaperlessBilling, Partner, Dependents, OnlineBackup, Contract, StreamingMovies, MultipleLines, Churn, tenure, MonthlyCharges, TotalCharges, StreamingTV, InternetService, SeniorCitizen"
+ },
+ {
+  "did": 1590,
+  "name": "adult",
+  "nr_attr": 14,
+  "nr_inst": 48842,
+  "nr_class": 2,
+  "description": "**Author**: Ronny Kohavi and Barry Becker  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Adult) - 1996  \n**Please cite**: Ron Kohavi, \"Scaling Up the Accuracy of Naive-Bayes Classifiers: a Decision-Tree Hybrid\", Proceedings of the Second International Conference on Knowledge Discovery and Data Mining, 1996  \n\nPrediction task is to determine whether a person makes over 50K a year. Extraction was done by Barry Becker from the 1994 Census database. A set of reasonably clean records was extracted using the following conditions: ((AAGE>16) && (AGI>100) && (AFNLWGT>1)&& (HRSWK>0))\n\nThis is the original version from the UCI repository, with training and test sets merged.\n\n### Variable description\n\nVariables are all self-explanatory except __fnlwgt__. This is a proxy for the demographic background of the people: \"People with similar demographic characteristics should have similar weights\". This similarity-statement is not transferable across the 51 different states.\n\nDescription from the donor of the database: \n\nThe weights on the CPS files are controlled to independent estimates of the civilian noninstitutional population of the US.  These are prepared monthly for us by Population Division here at the Census Bureau. We use 3 sets of controls. These are:\n1.  A single cell estimate of the population 16+ for each state.\n2.  Controls for Hispanic Origin by age and sex.\n3.  Controls by Race, age and sex.\n\nWe use all three sets of controls in our weighting program and \"rake\" ",
+  "feature_names_sample": "occupation, education-num, education, sex, capital-gain, workclass, age, relationship, race, marital-status, capital-loss, class, native-country, hours-per-week, fnlwgt"
+ },
+ {
+  "did": 40701,
+  "name": "churn",
+  "nr_attr": 20,
+  "nr_inst": 5000,
+  "nr_class": 2,
+  "description": "**Author**: Unknown  \n\n**Source**: [PMLB](https://github.com/EpistasisLab/penn-ml-benchmarks/tree/master/datasets/classification), [BigML](https://bigml.com/user/francisco/gallery/dataset/5163ad540c0b5e5b22000383), Supposedly from UCI but I can't find it there.  \n\n**Please cite**:   \n\n\n\nA dataset relating characteristics of telephony account features and usage and whether or not the customer churned. Originally used in [Discovering Knowledge in Data: An Introduction to Data Mining](http://secs.ac.in/wp-content/CSE_PORTAL/DataMining_Daniel.pdf).",
+  "feature_names_sample": "total_day_minutes, international_plan, total_eve_charge, account_length, number_customer_service_calls, total_eve_minutes, total_day_calls, total_night_charge, total_eve_calls, total_day_charge, voice_mail_plan, state, phone_number, area_code, class, total_intl_minutes, total_night_minutes, total_night_calls, total_intl_charge, number_vmail_messages, total_intl_calls"
+ },
+ {
+  "did": 46667,
+  "name": "imdb_genre_prediction",
+  "nr_attr": 11,
+  "nr_inst": 800,
+  "nr_class": 2,
+  "description": "Predict whether or not a movie falls within the Drama category based on text features like\n    its name, description, actors/directors, and numerical features like its release year, runtime, etc.\n    Representing a task with smaller sample-size, the original version of this dataset was collected from\n    IMDB (the most popular movies): https://www.kaggle.com/PromptCloudHQ/imdb-data\n  \n Dataset found from the paper: Benchmarking multimodal automl for tabular data with text fields. arXiv preprint arXiv:2111.02705.",
+  "feature_names_sample": "Votes, Genre_is_Drama, Rank, Rating, Actors, Metascore, Year, Runtime (Minutes), Director, Title, Revenue (Millions), Description"
+ },
+ {
+  "did": 1119,
+  "name": "adult-census",
+  "nr_attr": 14,
+  "nr_inst": 32561,
+  "nr_class": 2,
+  "description": "**Author**: Ronny Kohavi and Barry Becker  \n**Source**: [MLRR](http://axon.cs.byu.edu:5000/)    \n**Please cite**: Ron Kohavi, \"Scaling Up the Accuracy of Naive-Bayes Classifiers: a Decision-Tree Hybrid\", Proceedings of the Second International Conference on Knowledge Discovery and Data Mining, 1996  \n\nDataset from the MLRR repository: http://axon.cs.byu.edu:5000/\n\n**Note: this dataset is identical to the version stored in UCI, but only includes the training data, not the test data. See [adult (2)](http://openml.org/d/1590) for the complete data.**",
+  "feature_names_sample": "fnlwgt:, education:, native-country:, ID, marital-status:, workclass, age, race:, capital-gain:, relationship:, capital-loss:, sex:, hours-per-week:, class, education-num:, occupation:"
+ },
+ {
+  "did": 46938,
+  "name": "Is-this-a-good-customer",
+  "nr_attr": 13,
+  "nr_inst": 1723,
+  "nr_class": 2,
+  "description": "This dataset was curated for [TabArena](https://tabarena.ai/) by the TabArena team\nas part of the [TabArena Tabular ML IID Study](https://tabarena.ai/data-tabular-ml-iid-study).\nFor more details on the study, see our [paper](https://tabarena.ai/paper-tabular-ml-iid-study).\n\n**Dataset Focus**: This dataset shall be used for evaluating predictive machine\nlearning models for independent and identically distributed tabular data. The\nintended task is classification.\n\n---\n#### Dataset Metadata\n- **Licence:** CC0: Public Domain\n- **Original Data Source:** https://www.kaggle.com/datasets/podsyp/is-this-a-good-customer\n- **Reference (please cite)**: Kaggle User Podsyp. 'Is This a Good Customer?' Kaggle, 2020, https://www.kaggle.com/datasets/podsyp/is-this-a-good-customer.\n- **Dataset Year:** 2020\n- **Dataset Description:** see the reference and the original data source for details.\n\n#### Curation comments by the TabArena team (for code see the [page of the study](https://tabarena.ai/data-tabular-ml-iid-study)):\n- We renamed the values of the target variable to be more descriptive.",
+  "feature_names_sample": "product_type, income, is_client, phone_operator, sex, credit_term, education, family_status, bad_client_target, age, month, region, credit_amount, having_children_flg"
+ },
+ {
+  "did": 46281,
+  "name": "insurance_company",
+  "nr_attr": 85,
+  "nr_inst": 9822,
+  "nr_class": 2,
+  "description": "From original source:\n-----\n\nAdditional Information\n\nInformation about customers consists of 86 variables and includes product usage data and socio-demographic data derived from zip area codes. The data was supplied by the Dutch data mining company Sentient Machine Research and is based on a real world business problem. The training set contains over 5000 descriptions of customers, including the information of whether or not they have a caravan insurance policy. A test set contains 4000 customers of whom only the organisers know if they have a caravan insurance policy. \n\nThe data dictionary (http://kdd.ics.uci.edu/databases/tic/dictionary.txt) describes the variables used and their values. \n\nNote: All the variables starting with M are zipcode variables. They give information on the distribution of that variable, e.g. Rented house, in the zipcode area of the customer. \n\nOne instance per line with tab delimited fields. \n\nTICDATA2000.txt: Dataset to train and validate prediction models and build a description (5822 customer records). Each record consists of 86 attributes, containing sociodemographic data (attribute 1-43) and product ownership (attributes 44-86).The sociodemographic data is derived from zip codes. All customers living in areas with the same zip code have the same sociodemographic attributes. Attribute 86, \"CARAVAN:Number of mobile home policies\", is the target variable. \n\nTICEVAL2000.txt: Dataset for predictions (4000 customer records). It has the same format as ",
+  "feature_names_sample": "34, 83, 50, 8, 33, 72, 28, 5, 11, 18, 78, 42, 38, 9, 56, 80, 0, 73, 40, 21, 69, 57, 48, 26, 39, 54, 19, 67, 17, 23, 3, 30, 61, 46, 6, 64, 47, 66, 35, 44"
+ },
+ {
+  "did": 46371,
+  "name": "Customer_Churn_Classification_Nominal",
+  "nr_attr": 24,
+  "nr_inst": 35000,
+  "nr_class": 2,
+  "description": "An updated version of the Customer Churn dataset for binary classification. The target variable 'exited' is now treated as nominal with categories: 'not_churned' and 'churned'.",
+  "feature_names_sample": "age_tenure_product, bal_sal, male, female, tenure_age, hascrcard, numofproducts, creditscore, spain, surname_tfidf_2, surname_tfidf_3, balance, surname_tfidf_0, tenure, surname_tfidf_1, mem__no__products, exited, surname, surname_tfidf_4, estimatedsalary, age, france, isactivemember, cred_bal_sal, germany"
+ },
+ {
+  "did": 46911,
+  "name": "Bank_Customer_Churn",
+  "nr_attr": 10,
+  "nr_inst": 10000,
+  "nr_class": 2,
+  "description": "This dataset was curated for [TabArena](https://tabarena.ai/) by the TabArena team\nas part of the [TabArena Tabular ML IID Study](https://tabarena.ai/data-tabular-ml-iid-study).\nFor more details on the study, see our [paper](https://tabarena.ai/paper-tabular-ml-iid-study).\n\n**Dataset Focus**: This dataset shall be used for evaluating predictive machine\nlearning models for independent and identically distributed tabular data. The\nintended task is classification.\n\n---\n#### Dataset Metadata\n- **Licence:** Public\n- **Original Data Source:** https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset\n- **Reference (please cite)**: Topre, Gaurav. 'Bank Customer Churn Dataset.' Kaggle, 2022, https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset.\n- **Dataset Year:** 2020\n- **Dataset Description:** see the reference and the original data source for details.\n\n#### Curation comments by the TabArena team (for code see the [page of the study](https://tabarena.ai/data-tabular-ml-iid-study)):\n- We renamed the values of the target variable to be more meaningful.\n- We dropped the ID column.",
+  "feature_names_sample": "estimated_salary, products_number, churn, country, gender, age, balance, credit_score, credit_card, active_member, tenure"
+ },
+ {
+  "did": 44232,
+  "name": "UCI_churn",
+  "nr_attr": 20,
+  "nr_inst": 3333,
+  "nr_class": 2,
+  "description": "No description available",
+  "feature_names_sample": "number vmail messages, total intl minutes, phone number, voice mail plan, total day charge, total intl charge, total eve calls, account length, state, total eve minutes, total intl calls, customer service calls, total eve charge, total day minutes, international plan, total night charge, churn, total day calls, total night calls, area code, total night minutes"
+ },
+ {
+  "did": 45545,
+  "name": "Tour-and-Travels-Customer-Churn-Prediction",
+  "nr_attr": 6,
+  "nr_inst": 954,
+  "nr_class": 2,
+  "description": "A Tour & Travels Company Wants To Predict Whether A Customer Will Churn Or Not Based On Indicators Given Below.\n\nHelp Build Predictive Models And Save The Company's Money.\n\nPerform Fascinating EDAs.\n\nThe Data Was Used For Practice Purposes And Also During A Mini Hackathon, Its Completely Free To Use",
+  "feature_names_sample": "Target, AnnualIncomeClass, BookedHotelOrNot, Age, AccountSyncedToSocialMedia, FrequentFlyer, ServicesOpted"
+ },
+ {
+  "did": 373,
+  "name": "UNIX_user_data",
+  "nr_attr": 2,
+  "nr_inst": 9100,
+  "nr_class": 9,
+  "description": "**Author**: Terran Lane (terran@ecn.purdue.edu)   \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/UNIX+User+Data) - Date unknown  \n**Please cite**:   \n\nThis file contains 9 sets of sanitized user data drawn from the command histories of 8 UNIX computer users at Purdue over the course of up to 2 years (USER0 and USER1 were generated by the same person, working on different platforms and different projects).  The data is drawn from tcsh(1) history files and has been parsed and sanitized to remove filenames, user names, directory structures, web addresses, host names, and other possibly identifying items.  Command names, flags, and shell metacharacters have been preserved.  Additionally, **SOF** and **EOF** tokens have been inserted at the start and end of\nshell sessions, respectively.  Sessions are concatenated by date order and tokens appear in the order issued within the shell session, but no timestamps are included in this data.  For example, the two sessions:\n\ncd ~/private/docs  \nls -laF | more  \ncat foo.txt bar.txt zorch.txt > somewhere  \nexit  \n\ncd ~/games/  \nxquake &  \nfg  \nvi scores.txt  \nmailx john_doe@somewhere.com  \nexit  \n\nwould be represented by the token stream  \n\n**SOF**  \ncd  \n\\<1\\>                  (one \"file name\" argument)  \nls  \n-laF  \n|  \nmore  \ncat  \n\\<3\\>                     (three \"file\" arguments)\n\\>  \n\\<1\\>  \nexit  \n**EOF**  \n**SOF**  \ncd  \n\\<1\\>  \nxquake  \n&  \nfg  \nvi  \n\\<1\\>  \nmailx  \n\\<1\\>  \nexit  \n**EOF**\n\nThis data is made available und",
+  "feature_names_sample": "session, history, user"
+ },
+ {
+  "did": 1457,
+  "name": "amazon-commerce-reviews",
+  "nr_attr": 1000,
+  "nr_inst": 1500,
+  "nr_class": 50,
+  "description": "**Author**: Zhi Liu  \n**Source**: UCI\n**Please cite**:   \n\nDataset creator and donator: Zhi Liu, e-mail: liuzhi8673 '@' gmail.com, institution: National Engineering Research Center for E-Learning, Hubei Wuhan, China\n\nData Set Information:\n \ndataset are derived from the customers reviews in Amazon Commerce Website for authorship identification. Most previous studies conducted the identification experiments for two to ten authors. But in the online context, reviews to be identified usually have more potential authors, and normally classification algorithms are not adapted to large number of target classes. To examine the robustness of classification algorithms, we identified 50 of the most active users (represented by a unique ID and username) who frequently posted reviews in these newsgroups. The number of reviews we collected for each author is 30.\n\nAttribute Information:\n \nattribution includes authors' linguistic style such as usage of digit, punctuation, words and sentences' length and usage frequency of words and so on",
+  "feature_names_sample": "V7151, V4566, V9924, V3769, V2407, V1591, V7699, V6968, V4648, V4947, V8688, V5150, V253, V5127, V3792, V1311, V6634, V7542, V8545, V457, V3419, V741, V1424, V27, V7989, V6887, V7286, V6343, V2867, V9141, V323, V1915, V9613, V119, V8772, V9289, V9729, V3073, V9046, V1257"
+ },
+ {
+  "did": 46806,
+  "name": "product_sentiment_machine_hack",
+  "nr_attr": 4,
+  "nr_inst": 5091,
+  "nr_class": 4,
+  "description": "Classify the sentiment (4-way classification) of user reviews of products based on the review\n    text and product type (e.g. Tablet, Mobile, etc.). Intuitively, we expect most of the predictive signal to\n    lie in the text, but predictions can be further improved by accounting for the fact that certain types of\n    products tend to receive certain user sentiment. Representing a relatively simple multimodal task\n    with only a single text feature and one categorical feature, this dataset originally stems from a 2020\n    MachineHack prediction competition: https://machinehack.com/hackathons/product_\n    sentiment_classification_weekend_hackathon_19/overview\n  \n Dataset found from the paper: Benchmarking multimodal automl for tabular data with text fields. arXiv preprint arXiv:2111.02705.",
+  "feature_names_sample": "Sentiment, Product_Description, Text_ID, Product_Type, Unnamed: 0"
+ },
+ {
+  "did": 46937,
+  "name": "in_vehicle_coupon_recommendation",
+  "nr_attr": 24,
+  "nr_inst": 12684,
+  "nr_class": 2,
+  "description": "This dataset was curated for [TabArena](https://tabarena.ai/) by the TabArena team\nas part of the [TabArena Tabular ML IID Study](https://tabarena.ai/data-tabular-ml-iid-study).\nFor more details on the study, see our [paper](https://tabarena.ai/paper-tabular-ml-iid-study).\n\n**Dataset Focus**: This dataset shall be used for evaluating predictive machine\nlearning models for independent and identically distributed tabular data. The\nintended task is classification.\n\n---\n#### Dataset Metadata\n- **Licence:** CC BY 4.0\n- **Original Data Source:** https://doi.org/10.24432/C5GS4P\n- **Reference (please cite)**: Wang, Tong, et al. 'A bayesian framework for learning rule sets for interpretable classification.' Journal of Machine Learning Research 18.70 (2017): 1-37. https://www.jmlr.org/papers/v18/16-003.html\n- **Dataset Year:** 2017\n- **Dataset Description:** see the reference and the original data source for details.\n\n#### Curation comments by the TabArena team (for code see the [page of the study](https://tabarena.ai/data-tabular-ml-iid-study)):\n- We renamed the target feature and its value to be more descriptive.\n- We removed text data from the \"time\" feature to make it numeric.\n- We drop constant columns.\n- We fixed a typo in the feature names. \n- Anomaly: the data has many binned numeric features that are treated as categorical features with text describing the bins.\n- Anomaly: the numeric features in the dataset are low-cardinality (<25)",
+  "feature_names_sample": "income, CarryAway, AcceptCoupon, gender, direction_same, expiration, time, maritalStatus, car, education, coupon, CoffeeHouse, RestaurantLessThan20, destination, toCoupon_GEQ25min, Restaurant20To50, occupation, has_children, passenger, direction_opp, age, weather, Bar, toCoupon_GEQ15min, temperature"
+ },
+ {
+  "did": 46941,
+  "name": "maternal_health_risk",
+  "nr_attr": 6,
+  "nr_inst": 1014,
+  "nr_class": 3,
+  "description": "This dataset was curated for [TabArena](https://tabarena.ai/) by the TabArena team\nas part of the [TabArena Tabular ML IID Study](https://tabarena.ai/data-tabular-ml-iid-study).\nFor more details on the study, see our [paper](https://tabarena.ai/paper-tabular-ml-iid-study).\n\n**Dataset Focus**: This dataset shall be used for evaluating predictive machine\nlearning models for independent and identically distributed tabular data. The\nintended task is classification.\n\n---\n#### Dataset Metadata\n- **Licence:** CC BY 4.0\n- **Original Data Source:** https://doi.org/10.24432/C5DP5D\n- **Reference (please cite)**: Ahmed, Marzia, et al. 'Review and analysis of risk factor of maternal health in remote area using the Internet of Things (IoT).' InECCE2019: Proceedings of the 5th International Conference on Electrical, Control & Computer Engineering, Kuantan, Pahang, Malaysia, 29th July 2019. Springer Singapore, 2020. https://doi.org/10.1007/978-981-15-2317-5_30\n- **Dataset Year:** 2020\n- **Dataset Description:** see the reference and the original data source for details.\n\n#### Curation comments by the TabArena team (for code see the [page of the study](https://tabarena.ai/data-tabular-ml-iid-study)):\n- Anomaly: the data has a lot of duplicates (55%).",
+  "feature_names_sample": "BS, Age, SystolicBP, BodyTemp, DiastolicBP, HeartRate, RiskLevel"
+ },
+ {
+  "did": 1158,
+  "name": "AP_Breast_Kidney",
+  "nr_attr": 1000,
+  "nr_inst": 604,
+  "nr_class": 2,
+  "description": "",
+  "feature_names_sample": ""
+ },
+ {
+  "did": 1137,
+  "name": "AP_Colon_Kidney",
+  "nr_attr": 1000,
+  "nr_inst": 546,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 215695_s_at, 201784_s_at, 226403_at, 222891_s_at, 203333_at, 203773_x_at, 223690_at, 212875_s_at, 228575_at, 1555786_s_at, 205335_s_at, 213374_x_at, 201622_at, 222757_s_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 236001_at, 221094_s_at, 213193_x_at, 202941_at, 218700_s_at, 202678_at, 227094_at, 218498_s_at, 228055_at, 218764_at, 200708_at"
+ },
+ {
+  "did": 1165,
+  "name": "AP_Breast_Ovary",
+  "nr_attr": 1000,
+  "nr_inst": 542,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 231830_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 215695_s_at, 227971_at, 234830_at, 201784_s_at, 226403_at, 236655_at, 1569106_s_at, 222891_s_at, 203333_at, 203773_x_at, 213224_s_at, 212875_s_at, 1569594_a_at, 223690_at, 1555786_s_at, 232349_x_at, 205335_s_at, 213374_x_at, 201622_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 235944_at, 226269_at, 213193_x_at, 202941_at, 202678_at"
+ },
+ {
+  "did": 1150,
+  "name": "AP_Breast_Lung",
+  "nr_attr": 1000,
+  "nr_inst": 470,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 231830_x_at, 228089_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 215695_s_at, 234830_at, 201784_s_at, 226403_at, 236655_at, 1569106_s_at, 222891_s_at, 203333_at, 203773_x_at, 213224_s_at, 212875_s_at, 1569594_a_at, 223690_at, 1555786_s_at, 232349_x_at, 205335_s_at, 213374_x_at, 201622_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 235944_at, 226269_at, 213193_x_at, 202941_at, 202678_at"
+ },
+ {
+  "did": 1148,
+  "name": "AP_Breast_Uterus",
+  "nr_attr": 1000,
+  "nr_inst": 468,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 231830_x_at, 228089_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 215695_s_at, 234830_at, 201784_s_at, 226403_at, 236655_at, 1569106_s_at, 222891_s_at, 203333_at, 203773_x_at, 213224_s_at, 212875_s_at, 1569594_a_at, 223690_at, 1555786_s_at, 232349_x_at, 205335_s_at, 213374_x_at, 201622_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 235944_at, 221094_s_at, 226269_at, 213193_x_at, 202941_at"
+ },
+ {
+  "did": 1149,
+  "name": "AP_Ovary_Kidney",
+  "nr_attr": 1000,
+  "nr_inst": 458,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 215695_s_at, 227971_at, 201784_s_at, 226403_at, 222891_s_at, 203333_at, 203773_x_at, 223690_at, 212875_s_at, 1569594_a_at, 228575_at, 1555786_s_at, 205335_s_at, 213374_x_at, 201622_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 235944_at, 221094_s_at, 213193_x_at, 202941_at, 202678_at, 227094_at, 218498_s_at, 228055_at, 219179_at, 218764_at"
+ },
+ {
+  "did": 1127,
+  "name": "AP_Breast_Omentum",
+  "nr_attr": 1000,
+  "nr_inst": 421,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 231830_x_at, 228089_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 215695_s_at, 234830_at, 201784_s_at, 226403_at, 236655_at, 1569106_s_at, 222891_s_at, 203333_at, 203773_x_at, 213224_s_at, 212875_s_at, 1569594_a_at, 223690_at, 1555786_s_at, 232349_x_at, 205335_s_at, 213374_x_at, 201622_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 235944_at, 226269_at, 213193_x_at, 202941_at, 202678_at"
+ },
+ {
+  "did": 1122,
+  "name": "AP_Breast_Prostate",
+  "nr_attr": 1000,
+  "nr_inst": 413,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 231830_x_at, 228089_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 215695_s_at, 234830_at, 201784_s_at, 226403_at, 236655_at, 1569106_s_at, 231484_at, 222891_s_at, 203333_at, 203773_x_at, 213224_s_at, 212875_s_at, 1569594_a_at, 223690_at, 1555786_s_at, 232349_x_at, 205335_s_at, 213374_x_at, 201622_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 235944_at, 226269_at, 213193_x_at, 202941_at"
+ },
+ {
+  "did": 1126,
+  "name": "AP_Colon_Lung",
+  "nr_attr": 1000,
+  "nr_inst": 412,
+  "nr_class": 2,
+  "description": "",
+  "feature_names_sample": ""
+ },
+ {
+  "did": 1123,
+  "name": "AP_Endometrium_Breast",
+  "nr_attr": 1000,
+  "nr_inst": 405,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 231830_x_at, 228089_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 215695_s_at, 234830_at, 201784_s_at, 226403_at, 236655_at, 1552594_at, 1569106_s_at, 222891_s_at, 203333_at, 203773_x_at, 213224_s_at, 212875_s_at, 1569594_a_at, 223690_at, 1555786_s_at, 232349_x_at, 205335_s_at, 213374_x_at, 201622_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 235944_at, 221094_s_at, 226269_at, 213193_x_at"
+ },
+ {
+  "did": 1163,
+  "name": "AP_Lung_Kidney",
+  "nr_attr": 1000,
+  "nr_inst": 386,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 215695_s_at, 201784_s_at, 226403_at, 222891_s_at, 203333_at, 203773_x_at, 223690_at, 212875_s_at, 1569594_a_at, 228575_at, 214046_at, 1555786_s_at, 205335_s_at, 213374_x_at, 201622_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 235944_at, 221094_s_at, 213193_x_at, 202941_at, 218700_s_at, 202678_at, 227094_at, 218498_s_at, 228055_at, 219179_at"
+ },
+ {
+  "did": 1129,
+  "name": "AP_Uterus_Kidney",
+  "nr_attr": 1000,
+  "nr_inst": 384,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 215695_s_at, 227971_at, 201784_s_at, 226403_at, 222891_s_at, 203333_at, 203773_x_at, 223690_at, 212875_s_at, 1569594_a_at, 228575_at, 1555786_s_at, 205335_s_at, 213374_x_at, 201622_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 235944_at, 221094_s_at, 213193_x_at, 202941_at, 218700_s_at, 202678_at, 242354_at, 227094_at, 218498_s_at, 228055_at"
+ },
+ {
+  "did": 1147,
+  "name": "AP_Omentum_Kidney",
+  "nr_attr": 1000,
+  "nr_inst": 337,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 228089_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 215695_s_at, 227971_at, 201784_s_at, 226403_at, 222891_s_at, 203333_at, 203773_x_at, 223690_at, 212875_s_at, 1569594_a_at, 220595_at, 228575_at, 214046_at, 1555786_s_at, 205335_s_at, 213374_x_at, 201622_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 235944_at, 221094_s_at, 213193_x_at, 218037_at, 202941_at, 218700_s_at, 202678_at"
+ },
+ {
+  "did": 1144,
+  "name": "AP_Prostate_Kidney",
+  "nr_attr": 1000,
+  "nr_inst": 329,
+  "nr_class": 2,
+  "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nGEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression oriented machine learning algorithms. They can be used for estimation of different quality metrics (e.g. accuracy, precision, area under ROC curve, etc.) for classification, feature selection or clustering algorithms.\n\nThis repository was inspired by an increasing need in machine learning / bioinformatics communities for a collection of microarray classification problems that could be used by different researches. This way many different classification or feature selection techniques can finally be compared to eachother on the same set of problems.\n\nOrigin of data\n\nEach gene expression sample in GEMLeR repository comes from a large publicly available expO (Expression Project For Oncology) repository by International Genomics Consortium.\n\nThe goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restriction. The availability of this information translates into direct benefits for patients, researchers and pharma alike.\n\nSource: expO website\nAlthough there are various other sources of gene expression data available, a decision to use data from ex",
+  "feature_names_sample": "202832_at, 223112_s_at, 223165_s_at, 224594_x_at, 227921_at, 207126_x_at, 228089_x_at, 208755_x_at, 203445_s_at, 1560144_at, 211456_x_at, 215695_s_at, 201784_s_at, 226403_at, 236655_at, 231484_at, 203333_at, 203773_x_at, 223690_at, 212875_s_at, 1569594_a_at, 220595_at, 228575_at, 214046_at, 1555786_s_at, 205335_s_at, 213374_x_at, 201622_at, 39248_at, 218109_s_at, 1567214_a_at, 204912_at, 205717_x_at, 221094_s_at, 213193_x_at, 202941_at, 218700_s_at, 202678_at, 242354_at, 227094_at"
+ },
+ {
+  "did": 46752,
+  "name": "student_lifestyle_dataset",
+  "nr_attr": 7,
+  "nr_inst": 2000,
+  "nr_class": 3,
+  "description": "Daily Lifestyle and Academic Performance of Students\n\nAbout Dataset\nThis dataset provides a detailed view of student lifestyle patterns and their correlation with academic performance, represented by GPA. It contains 2,000 records of students' daily habits across study, extracurriculars, sleep, socializing, and physical activities. Each student's stress level is derived based on study and sleep hours, offering insights into how lifestyle factors may impact academic outcomes.\n\nThis data can support analyses in education, psychology, and health research fields, making it ideal for projects on lifestyle management, academic performance prediction, and well-being assessments.\n\nhttps://www.kaggle.com/datasets/steve1215rogg/student-lifestyle-dataset",
+  "feature_names_sample": "Student_ID, GPA, Stress_Level, Social_Hours_Per_Day, Extracurricular_Hours_Per_Day, Sleep_Hours_Per_Day, Physical_Activity_Hours_Per_Day, Study_Hours_Per_Day"
+ },
+ {
+  "did": 43098,
+  "name": "students_scores",
+  "nr_attr": 7,
+  "nr_inst": 1000,
+  "nr_class": 2,
+  "description": "This is a dataset about the academic performance of students\nin different subjects",
+  "feature_names_sample": "math.score, writing.score, test.preparation.course, lunch, race.ethnicity, reading.score, gender, parental.level.of.education"
+ },
+ {
+  "did": 45748,
+  "name": "StudentsPerformance",
+  "nr_attr": 7,
+  "nr_inst": 1000,
+  "nr_class": 2,
+  "description": "This data set consists of the marks secured by the students in various subjects.",
+  "feature_names_sample": "reading score, parental level of education, lunch, gender, test preparation course, math score, writing score, race/ethnicity"
+ },
+ {
+  "did": 46745,
+  "name": "Advanced_IoT_Dataset",
+  "nr_attr": 13,
+  "nr_inst": 30000,
+  "nr_class": 6,
+  "description": "About Dataset\nSource Data with Authors\nIn the master's thesis research conducted by student Mohammed Ismail Lifta (2023-2024) at the Department of Computer Science, College of Computer Science and Mathematics- Tikrit University,Iraq.Data were collected from the Agriculture Lab on plants that grow in a IoT greenhouse and Traditional greenhouse .The study was supervised by Professor (Assistant) Wisam Dawood Abdullah, administrator of Cisco Networking Academy / Tikrit University.\n\nDataset Description\nThe dataset \"Advanced_IoT_Dataset.csv\" consists of 30,000 entries and 14 columns. Below are the detailed descriptions of each column:\n\nRandom: An identifier for each record, likely indicating a random sample or batch (object type).\nAverage of chlorophyll in the plant (ACHP): The average chlorophyll content in the plant (float type).\nPlant height rate (PHR): The rate of plant height growth (float type).\nAverage wet weight of the growth vegetative (AWWGV): The average wet weight of vegetative growth (float type).\nAverage leaf area of the plant (ALAP): The average leaf area of the plant (float type).\nAverage number of plant leaves (ANPL): The average number of leaves per plant (float type).\nAverage root diameter (ARD): The average diameter of the plant's roots (float type).\nAverage dry weight of the root (ADWR): The average dry weight of the plant's roots (float type).\nPercentage of dry matter for vegetative growth (PDMVG): The percentage of dry matter in vegetative growth (float type)",
+  "feature_names_sample": "Average wet weight of the growth vegetative (AWWGV), Percentage of dry matter for root growth (PDMRG), Average number of plant leaves (ANPL), Average leaf area of the plant (ALAP), Average root length (ARL), Average dry weight of the root (ADWR), Plant height rate (PHR), Average wet weight of the root (AWWR), Average root diameter (ARD), Class, Random, Average dry weight of vegetative plants (ADWV), Percentage of dry matter for vegetative growth (PDMVG), Average  of chlorophyll in the plant (ACHP)"
+ },
+ {
+  "did": 46502,
+  "name": "Credit_Approval_Classification",
+  "nr_attr": 50,
+  "nr_inst": 1000,
+  "nr_class": 2,
+  "description": "A dataset for binary classification of credit approval status. Features include customer demographics, financial attributes, and credit history. The target variable class indicates whether the credit is good or bad.",
+  "feature_names_sample": "purpose_radio/tv, personal_status_male single, other_payment_plans_none, other_payment_plans_stores, credit_history_no credits/all paid, job_unemp/unskilled non res, savings_status, housing_rent, housing_for free, credit_history_existing paid, credit_amount, duration, purpose_retraining, foreign_worker_yes, purpose_other, existing_credits, purpose_used car, property_magnitude_no known property, other_parties_co applicant, job_skilled, purpose_repairs, property_magnitude_real estate, property_magnitude_car, purpose_domestic appliance, job_high qualif/self emp/mgmt, purpose_new car, job_unskille"
+ },
+ {
+  "did": 43595,
+  "name": "Loan-Predication",
+  "nr_attr": 11,
+  "nr_inst": 614,
+  "nr_class": 2,
+  "description": "Among all industries, insurance domain has the largest use of analytics  data science methods. This data set would provide you enough taste of working on data sets from insurance companies, what challenges are faced, what strategies are used, which variables influence the outcome etc. This is a classification problem. The data has 615 rows and 13 columns.\nProblem-----\nCompany wants to automate the loan eligibility process (real time) based on customer detail provided while filling online application form. These details are Gender, Marital Status, Education, Number of Dependents, Income, Loan Amount, Credit History and others. To automate this process, they have given a problem to identify the customers segments, those are eligible for loan amount so that they can specifically target these customers. Here they have provided a partial data set.",
+  "feature_names_sample": "ApplicantIncome, Loan_Amount_Term, Married, Credit_History, Loan_ID, Education, Self_Employed, LoanAmount, Property_Area, Loan_Status, Dependents, Gender, CoapplicantIncome"
+ },
+ {
+  "did": 46605,
+  "name": "differentiated_thyroid_cancer_recurrence",
+  "nr_attr": 16,
+  "nr_inst": 383,
+  "nr_class": 2,
+  "description": "Description: The dataset is a comprehensive collection of clinical data relating to thyroid diseases. With attributes capturing a wide range of information from patient demographics (age, gender) to specific clinical findings (smoking history, radiotherapy history, thyroid function, physical examination findings), it provides a detailed overview of patients diagnosed with various forms of thyroid conditions. The dataset encapsulates aspects such as the presence of adenopathy, pathology findings, focality of the disease, and risk categorization. Further, it delves into the TNM classification system, providing insights into the size and extent of tumors (T), presence of cancer in nearby lymph nodes (N), and metastasis (M), thereby contributing to the staging of the disease. The clinical response to treatment and recurrence status is also recorded, offering valuable data for outcomes analysis.\n\nAttribute Description:\n\nAge: Numeric, represents the age of the patient.\nGender: Categorical, 'M' for male, 'F' for female.\nSmoking: Binary, 'Yes' if the patient has a history of smoking, 'No' otherwise.\nHx Smoking: Binary, indicating a historical record of smoking.\nHx Radiotherapy: Binary, indicates if the patient has undergone radiotherapy.\nThyroid Function: Categorical, reports the thyroid's functional state.\nPhysical Examination: Text, describes findings from physical examination.\nAdenopathy: Binary, 'Yes' if adenopathy is present, 'No' otherwise.\nPathology: Categorical, type of thyro",
+  "feature_names_sample": "Pathology, Risk, Recurred, Age, Adenopathy, T, Physical Examination, Smoking, Focality, M, Response, Thyroid Function, Hx Radiothreapy, N, Hx Smoking, Gender, Stage"
+ },
+ {
+  "did": 37,
+  "name": "diabetes",
+  "nr_attr": 8,
+  "nr_inst": 768,
+  "nr_class": 2,
+  "description": "**Author**: [Vincent Sigillito](vgs@aplcen.apl.jhu.edu)  \n\n**Source**: [Obtained from UCI](https://archive.ics.uci.edu/ml/datasets/pima+indians+diabetes) \n\n**Please cite**: [UCI citation policy](https://archive.ics.uci.edu/ml/citation_policy.html)  \n\n1. Title: Pima Indians Diabetes Database\n \n 2. Sources:\n    (a) Original owners: National Institute of Diabetes and Digestive and\n                         Kidney Diseases\n    (b) Donor of database: Vincent Sigillito (vgs@aplcen.apl.jhu.edu)\n                           Research Center, RMI Group Leader\n                           Applied Physics Laboratory\n                           The Johns Hopkins University\n                           Johns Hopkins Road\n                           Laurel, MD 20707\n                           (301) 953-6231\n    (c) Date received: 9 May 1990\n \n 3. Past Usage:\n     1. Smith,~J.~W., Everhart,~J.~E., Dickson,~W.~C., Knowler,~W.~C., &\n        Johannes,~R.~S. (1988). Using the ADAP learning algorithm to forecast\n        the onset of diabetes mellitus.  In {it Proceedings of the Symposium\n        on Computer Applications and Medical Care} (pp. 261--265).  IEEE\n        Computer Society Press.\n \n        The diagnostic, binary-valued variable investigated is whether the\n        patient shows signs of diabetes according to World Health Organization\n        criteria (i.e., if the 2 hour post-load plasma glucose was at least \n        200 mg/dl at any survey  examination or if found during routine medical\n       ",
+  "feature_names_sample": "skin, pres, age, mass, class, pedi, insu, preg, plas"
+ },
+ {
+  "did": 46601,
+  "name": "Cirrhosis_Patient_Survival_Prediction",
+  "nr_attr": 17,
+  "nr_inst": 418,
+  "nr_class": 3,
+  "description": "For what purpose was the dataset created?\n\nCirrhosis results from prolonged liver damage, leading to extensive scarring, often due to conditions like hepatitis or chronic alcohol consumption. The data provided is sourced from a Mayo Clinic study on primary biliary cirrhosis (PBC) of the liver carried out from 1974 to 1984.\n\nWho funded the creation of the dataset?\n\nMayo Clinic\n\nWhat do the instances in this dataset represent?\n\nPeople\n\nDoes the dataset contain data that might be considered sensitive in any way?\n\nGender, Age\n\nWas there any data preprocessing performed?\n\n1. Drop all the rows where miss value (NA) were present in the Drug column\n2. Impute missing values with mean results\n3. One-hot encoding for all category attributes\n\nAdditional Information\n\nDuring 1974 to 1984, 424 PBC patients referred to the Mayo Clinic qualified for the randomized placebo-controlled trial testing the drug D-penicillamine. Of these, the initial 312 patients took part in the trial and have mostly comprehensive data. The remaining 112 patients didn't join the clinical trial but agreed to record basic metrics and undergo survival tracking. Six of these patients were soon untraceable after their diagnosis, leaving data for 106 of these individuals in addition to the 312 who were part of the randomized trial.\n\n1. ID: unique identifier\n2. N_Days: number of days between registration and the earlier of death, transplantation, or study analysis time in July 1986\n3. Status: status of the patient C (cens",
+  "feature_names_sample": "Spiders, Ascites, Albumin, Prothrombin, Tryglicerides, Age, Platelets, Status, Alk_Phos, Stage, Copper, SGOT, Bilirubin, Edema, Drug, Hepatomegaly, Cholesterol, Sex"
+ },
+ {
+  "did": 46733,
+  "name": "diabetes_risk_prediction_dataset",
+  "nr_attr": 16,
+  "nr_inst": 520,
+  "nr_class": 2,
+  "description": "Dataset Description: Early Stage Diabetes Risk Prediction\n\nThis dataset comprises crucial sign and symptom data of individuals who either exhibit early signs of diabetes or are at risk of developing diabetes. The variables included in the dataset provide valuable insights into potential indicators of diabetes onset. The dataset encompasses diverse information, ranging from demographic details to specific symptoms associated with diabetes.\n\nAttributes Description:\n\nAge (1-20 to 65): Age range of the individuals.\nSex (1. Male, 2. Female): Gender information.\nPolyuria (1. Yes, 2. No): Presence of excessive urination.\nPolydipsia (1. Yes, 2. No): Excessive thirst.\nSudden Weight Loss (1. Yes, 2. No): Abrupt weight loss.\nWeakness (1. Yes, 2. No): Generalized weakness.\nPolyphagia (1. Yes, 2. No): Excessive hunger.\nGenital Thrush (1. Yes, 2. No): Presence of genital thrush.\nVisual Blurring (1. Yes, 2. No): Blurring of vision.\nItching (1. Yes, 2. No): Presence of itching.\nIrritability (1. Yes, 2. No): Display of irritability.\nDelayed Healing (1. Yes, 2. No): Delayed wound healing.\nPartial Paresis (1. Yes, 2. No): Partial loss of voluntary movement.\nMuscle Stiffness (1. Yes, 2. No): Presence of muscle stiffness.\nAlopecia (1. Yes, 2. No): Hair loss.\nObesity (1. Yes, 2. No): Presence of obesity.\nClass (1. Positive, 2. Negative): Diabetes classification.\nThis dataset serves as a valuable resource for the development and validation of predictive models for early-stage diabetes risk assessme",
+  "feature_names_sample": "Polyuria, partial paresis, Age, delayed healing, muscle stiffness, Polydipsia, Obesity, Itching, sudden weight loss, Polyphagia, Irritability, weakness, Alopecia, class, Genital thrush, Gender, visual blurring"
+ },
+ {
+  "did": 46600,
+  "name": "maternal_health_risk",
+  "nr_attr": 6,
+  "nr_inst": 1014,
+  "nr_class": 3,
+  "description": "Additional Information\n\nAge, Systolic Blood Pressure as SystolicBP, Diastolic BP as DiastolicBP, Blood Sugar as BS, Body Temperature as BodyTemp, HeartRate and RiskLevel. All these are the responsible and significant risk factors for maternal mortality, that is one of the main concern of SDG of UN.\n\nHas Missing Values?\n\nNo",
+  "feature_names_sample": "BS, Age, SystolicBP, BodyTemp, DiastolicBP, HeartRate, RiskLevel"
+ },
+ {
+  "did": 46602,
+  "name": "Predicting_Risk_Factors_of_Chronic_Kidney_Disease",
+  "nr_attr": 28,
+  "nr_inst": 200,
+  "nr_class": 2,
+  "description": "Was there any data preprocessing performed?\n\nThis dataset is not pre-processed, if you want to apply a Machine learning Algorithm at first you have to need to pre-process the data\n\nAdditional Information\n\nThis dataset is real Bangladeshi patient data. The dataset is collected from Enam Medical College, Savar, Dhaka, Bangladesh.\n\nHas Missing Values?\n\nNo\n\n1. bp(Diastolic)\n2. bp limit\n3. sg\n4. al\n5. class\n6. rbc\n7. su\n8. pc\n9. pcc\n10. ba\n11.bgr\n12. bu\n13. sod\n14. sc\n15. pot\n16. hemo\n17. pcv\n18. rbcc\n19. wbcc\n20. htn\n21. dm\n22. cad\n23. appet\n24. pe\n25. ane\n26. grf\n27. stage\n28. affected\n29. age",
+  "feature_names_sample": "sg, sod, stage, rbcc, ane, grf, pcv, ba, htn, appet, rbc, bp limit, bp (Diastolic), affected, cad, sc, al, bgr, hemo, class, pot, wbcc, bu, su, dm, age, pe, pcc, pc"
+ },
+ {
+  "did": 42178,
+  "name": "telco-customer-churn",
+  "nr_attr": 19,
+  "nr_inst": 7043,
+  "nr_class": 2,
+  "description": "Context\n\"Predict behavior to retain customers. You can analyze all relevant customer data and develop focused customer retention programs.\" [IBM Sample Data Sets]\n\nContent\nEach row represents a customer, each column contains customer's attributes described on the column Metadata.\n\nThe data set includes information about:\n\nCustomers who left within the last month - the column is called Churn\nServices that each customer has signed up for - phone, multiple lines, internet, online security, online backup, device protection, tech support, and streaming TV and movies\nCustomer account information - how long they've been a customer, contract, payment method, paperless billing, monthly charges, and total charges\nDemographic info about customers - gender, age range, and if they have partners and dependents\nInspiration\nTo explore this type of models and learn more about the subject.\n\nTaken from Kaggle: https://www.kaggle.com/blastchar/telco-customer-churn/download",
+  "feature_names_sample": "PaymentMethod, PhoneService, gender, TechSupport, DeviceProtection, OnlineSecurity, PaperlessBilling, Partner, customerID, Dependents, OnlineBackup, Contract, StreamingMovies, MultipleLines, Churn, tenure, MonthlyCharges, TotalCharges, StreamingTV, InternetService, SeniorCitizen"
+ },
+ {
+  "did": 44226,
+  "name": "NewspaperChurn",
+  "nr_attr": 18,
+  "nr_inst": 15855,
+  "nr_class": 2,
+  "description": "This dataset includes 15856 records of individuals who are or were subscribers to this newspaper. Datasets contain demographic information like HH Income which stands for the household income, home ownership, dummy for Children, Ethnicity, Year Of Residence, Age range, Language, and Nielsen Prizm; Geographic information like Address, State, City, County, and Zip Code. Also, the delivery period is chosen by the particular subscriber, as well as the weekly charge associated with it. The dataset also included the number of rewards subscribers used, and the source channel he/she been recruited in the first place. Finally, dataset included the information of whether the customer is still our subscriber or not.",
+  "feature_names_sample": "weekly fee, Age range, Home Ownership, Language, Zip Code, dummy for Children, City, County, Ethnicity, Year Of Residence, State, Deliveryperiod, Subscriber, Address, SubscriptionID, HH Income, Nielsen Prizm, reward program, Source Channel"
+ },
+ {
+  "did": 46652,
+  "name": "news_channel",
+  "nr_attr": 17,
+  "nr_inst": 20284,
+  "nr_class": 6,
+  "description": "Predict which news category (i.e. channel) a Mashable.com news article belongs to based\n    on the text of its title, as well as auxiliary numerical features like the number of words in the article,\n    its average token length, how many keywords are listed, etc. Representing a task with one text\n    field but many tabular (numeric) features, the original version of this dataset was collected by [20]:\n    https://archive.ics.uci.edu/ml/datasets/online+news+popularity\n  \n Dataset found from the paper: Benchmarking multimodal automl for tabular data with text fields. arXiv preprint arXiv:2111.02705.",
+  "feature_names_sample": "rate_negative_words, global_sentiment_polarity, n_non_stop_words, n_non_stop_unique_tokens, rate_positive_words, num_self_hrefs, global_rate_positive_words, num_keywords, n_unique_tokens, global_subjectivity, article_title, n_tokens_content, num_imgs, average_token_length, channel, num_videos, global_rate_negative_words, num_hrefs"
+ }
+]

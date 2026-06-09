@@ -1,2 +1,2 @@
 experiment,features,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std
-B_Test3_Feature_Selection,Top 20 Stat + Semantic,0.6467391304347826,0.04885261968313964,0.4247602147602148,0.08921394409216576
+B_Test3_Feature_Selection,Top 20 Stat + Semantic,0.45709758131776485,0.021961890869892624,0.3163778090691106,0.029450056881723426
