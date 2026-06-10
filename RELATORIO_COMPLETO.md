@@ -148,6 +148,20 @@ O rank médio vence porque usa a **posição relativa de todos os 6 algoritmos**
 
 → O domínio melhora **as duas métricas top-1** (acurácia e F1-macro), de forma significativa, replicável e livre de vazamento. O ganho não é artefato de uma métrica — aparece na acurácia (intuitiva) e no F1-macro (justo com minorias). No top-3 não há espaço (já saturado).
 
+### 6b. O efeito é CONCENTRADO (e por isso é maior do que parece)
+
+O ganho global (+1,19 p.p.) é uma **média** que esconde grande variação. Medindo apenas onde o domínio **existe**:
+
+| Acurácia em… | Baseline | + domínio | Δ | Significância |
+|---|---|---|---|---|
+| todos (547) | 0,406 | 0,418 | +1,19 p.p. | p < 0,001 · 24/30 |
+| **domínio real** (383) | 0,427 | **0,447** | **+1,92 p.p.** | **p < 0,001 · 27/30** |
+| **finanças** (60) | 0,555 | **0,627** | **+7,2 p.p.** | **p < 0,001 · 23/30** |
+
+![Ganho por domínio: concentrado onde um algoritmo domina](artigo_final_sbc/figuras/fig_por_dominio.png)
+
+**Por que finanças (+7,2 p.p.)?** O domínio ajuda na proporção em que um algoritmo **domina** aquele domínio — aí o *prior* injetado pelo rank médio é confiável. Finanças tem a maior concentração: **a regressão logística vence em 58% dos datasets de finanças** (vs 37% no geral), coerente com dados financeiros (crédito, fraude) serem tabulares e quase-lineares — *credit scoring* é classicamente resolvido por regressão logística. Nos sintéticos (*other*) nenhum algoritmo domina (≤32%), o *prior* é não-confiável e o ganho some (e até fica levemente negativo). **Conclusão honesta:** o domínio não é um truque global — é um sinal forte onde há estrutura, e neutro onde não há.
+
 **Resultado de sistema:** regret do meta-learner ≈ 0,023 vs ≈ 0,034 do melhor-algoritmo-único → **−33%**. Selecionar por dataset vale a pena.
 
 ---
@@ -165,7 +179,8 @@ O rank médio vence porque usa a **posição relativa de todos os 6 algoritmos**
 ## 8. Contribuições
 
 1. **Resultado positivo:** o domínio, via *target encoding* por rank médio, melhora a seleção de algoritmo (acurácia +1,19 p.p.; F1-macro +0,69 p.p.; p<0,001) em 547 datasets sem viés, com validação livre de vazamento.
-2. **Achado sobre a codificação:** só a codificação supervisionada revela o sinal; one-hot, score, TF-IDF, embeddings e clusters não.
+2. **Efeito concentrado:** o ganho cresce onde o domínio existe e tem estrutura — **+1,92 p.p. em domínio real (383)** e **+7,2 p.p. em finanças (60)**, onde a regressão logística vence 58% dos casos.
+3. **Achado sobre a codificação:** só a codificação supervisionada revela o sinal; one-hot, score, TF-IDF, embeddings e clusters não.
 3. **Resultado de sistema:** meta-learner com regret ~33% menor que o SBA.
 4. **Contribuição metodológica:** protocolo para distinguir sinal de artefato (multi-semente, CV agrupada por colunas, controle de confundimento, modelo constante); demonstração de que ~26% dos rótulos de semente única são instáveis.
 5. **Base de dados melhorada:** pipeline que amplia a base de 116 para 547 datasets sem viés e deduplicados.
@@ -182,7 +197,7 @@ O rank médio vence porque usa a **posição relativa de todos os 6 algoritmos**
 
 ## 10. Conclusão
 
-A hipótese de que **o domínio importa para a seleção de algoritmos se confirma** — de forma precisa e honesta: o sinal é real, pequeno, e emerge sob **codificação supervisionada por rank médio**, com validação rigorosa e livre de vazamento (acurácia +1,19 p.p.; F1-macro +0,69 p.p.; p<0,001). Chegamos a ele descartando sistematicamente os artefatos que enganariam uma análise ingênua e testando exaustivamente as alternativas — o que torna a conclusão confiável. Complementarmente, o sistema de meta-aprendizagem demonstra valor prático (regret −33% vs SBA).
+A hipótese de que **o domínio importa para a seleção de algoritmos se confirma** — de forma precisa e honesta: o sinal é real e emerge sob **codificação supervisionada por rank médio**, com validação rigorosa e livre de vazamento (acurácia +1,19 p.p.; F1-macro +0,69 p.p.; p<0,001). E ele não é uniforme: **concentra-se onde o domínio tem estrutura** (+1,92 p.p. em domínio real, +7,2 p.p. em finanças), sendo neutro nos sintéticos — exatamente o que a teoria prevê (o *prior* de domínio só ajuda quando um algoritmo de fato domina). Chegamos a esse resultado descartando sistematicamente os artefatos que enganariam uma análise ingênua e testando exaustivamente as alternativas — o que torna a conclusão confiável. Complementarmente, o sistema de meta-aprendizagem demonstra valor prático (regret −33% vs SBA).
 
 **Trabalho futuro:** anotação de domínio por modelos de linguagem; extensão do *target encoding* a outras meta-informações; portfólios de algoritmos mais diversos.
 

@@ -208,6 +208,38 @@ Top-3 accuracy & 0,812 & 0,813 (+0,05 p.p.) & n.s. (saturada $\sim$81\%) \\
 \label{fig:res}
 \end{figure}
 
+\subsection*{F8b --- O efeito é CONCENTRADO (e por isso é maior do que parece)}
+O ganho global ($+1{,}19$ p.p.) é uma \textbf{média} que esconde grande variação
+(Figura~\ref{fig:dom}). Medindo apenas onde o domínio \emph{existe}:
+
+\begin{table}[H]\centering
+\caption{O ganho do domínio cresce nos datasets de domínio real e em finanças.}
+\begin{tabular}{lccc}
+\toprule
+Acurácia em\dots & Baseline & + domínio & Significância \\
+\midrule
+todos (547) & 0,406 & 0,418 (+1,19 p.p.) & $p<0{,}001$; 24/30 \\
+\textbf{domínio real} (383) & 0,427 & \textbf{0,447 (+1,92 p.p.)} & \textbf{$p<0{,}001$; 27/30} \\
+\textbf{finanças} (60) & 0,555 & \textbf{0,627 (+7,2 p.p.)} & \textbf{$p<0{,}001$} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.96\textwidth]{figuras/fig_por_dominio.png}
+\caption{Ganho por domínio. Grande onde um algoritmo domina (finanças); nulo/negativo
+nos sintéticos (\textit{other}) e em social.}
+\label{fig:dom}
+\end{figure}
+
+\noindent\textbf{Por que finanças (+7,2 p.p.)?} O domínio ajuda na proporção em que
+um algoritmo \emph{domina} aquele domínio --- aí o \emph{prior} é confiável.
+Finanças tem a maior concentração: \textbf{a regressão logística vence em 58\% dos
+datasets de finanças} (vs 37\% no geral), coerente com dados financeiros (crédito,
+fraude) serem tabulares e quase-lineares --- \emph{credit scoring} é classicamente
+resolvido por regressão logística. Nos sintéticos (\textit{other}) nenhum algoritmo
+domina ($\leq$32\%), o \emph{prior} é não-confiável e o ganho some.
+
 \noindent\textbf{Resultado de sistema:} pela métrica de \emph{regret} (perda vs.\
 oráculo), o meta-learner estatístico reduz o regret em $\sim$33\% frente ao
 melhor-algoritmo-único (Figura~\ref{fig:regret}).

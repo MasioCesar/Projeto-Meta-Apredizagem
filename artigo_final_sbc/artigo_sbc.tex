@@ -29,11 +29,14 @@ statistical meta-features. Whether the dataset's \emph{domain} (health, finance,
 biology, etc.) adds predictive value is contested. Using 547 unbiased OpenML
 datasets, we show that domain information \emph{does} help---small but real, and
 only under supervised encoding. Representing each domain by the mean rank of each
-algorithm within it (a target encoding fitted per training fold) improves both
-primary metrics: $+1.19$ accuracy and $+0.69$ F1-macro percentage points (both
-p $<$ 0.001 over 30 seeds, positive in 24/30) under leakage-controlled grouped
-cross-validation. Naive encodings---one-hot, keyword score, TF-IDF, dense
-embeddings, learned semantic clusters---show no effect. We reach this trustworthy
+algorithm within it (a target encoding fitted per training fold) improves accuracy by
+$+1.19$ percentage points overall (p $<$ 0.001 over 30 seeds, positive in 24/30)
+under leakage-controlled grouped cross-validation. The effect is
+\emph{concentrated}: on datasets with a real domain (excluding $\sim$30\%
+synthetic) the gain rises to $+1.92$ p.p., and in finance it reaches $+7.2$ p.p.
+($p<0.001$) --- precisely the domain where a single algorithm dominates (logistic
+regression wins 58\% of finance datasets). Naive encodings---one-hot, keyword
+score, TF-IDF, dense embeddings, learned semantic clusters---show no effect. We reach this trustworthy
 result only after ruling out the artifacts that inflate naive studies:
 single-seed variance, textual leakage, confounding, and unmatched model upgrades.
 Complementarily, the statistical meta-learner reduces selection regret by
@@ -47,12 +50,14 @@ dataset a partir de meta-features estatísticas. Se o \emph{domínio} do dataset
 Usando 547 datasets do OpenML sem viés, mostramos que a informação de domínio
 \emph{ajuda sim}---de forma pequena, porém real, e apenas sob codificação
 supervisionada. Representando cada domínio pelo rank médio de cada algoritmo nele
-(um \textit{target encoding} ajustado por fold de treino), melhoram-se as duas
-métricas principais: $+1{,}19$ p.p.\ de acurácia e $+0{,}69$ p.p.\ de F1-macro
-(ambas p $<$ 0,001 em 30 sementes, positivas em 24/30) sob validação cruzada
-agrupada e livre de vazamento. Codificações ingênuas---one-hot, \textit{score}
-por palavras, TF-IDF, embeddings densos, clusters semânticos aprendidos---não
-mostram efeito. Chegamos a esse resultado confiável apenas após descartar os
+(um \textit{target encoding} ajustado por fold de treino), a acurácia melhora
+$+1{,}19$ p.p.\ no geral (p $<$ 0,001 em 30 sementes, positiva em 24/30) sob
+validação cruzada agrupada e livre de vazamento. O efeito é \emph{concentrado}: em
+datasets de domínio real (excluindo $\sim$30\% sintéticos) o ganho sobe para
+$+1{,}92$ p.p., e em finanças chega a $+7{,}2$ p.p.\ ($p<0{,}001$) --- justamente o
+domínio onde um único algoritmo domina (a regressão logística vence em 58\% dos
+datasets de finanças). Codificações ingênuas---one-hot, \textit{score}, TF-IDF,
+embeddings densos, clusters aprendidos---não mostram efeito. Chegamos a esse resultado confiável apenas após descartar os
 artefatos que inflam estudos ingênuos: variância de semente única, vazamento
 textual, confundimento e troca de modelo não-pareada. Complementarmente, o
 meta-learner estatístico reduz o \textit{regret} de seleção em $\sim$33\% frente
@@ -79,11 +84,12 @@ positivo, mas o \emph{caminho rigoroso} até ele: mostramos por que análises
 ingênuas produzem ganhos ilusórios e como distingui-los do sinal genuíno.
 
 Contribuições: (i) demonstração de que o domínio, via \textit{target encoding} por
-rank médio, melhora a seleção (acurácia $+1{,}19$ p.p.; F1-macro $+0{,}69$ p.p.;
-p $<$ 0,001) em 547 datasets sem viés, sob validação livre de vazamento; (ii)
-evidência de que o alvo é dominado por ruído (26\% de rótulos de semente única
-instáveis; margens $\sim$0,8 p.p.\ entre algoritmos), o que limita o ganho
-possível; (iii) um protocolo metodológico para separar sinal de artefato; e (iv)
+rank médio, melhora a seleção ($+1{,}19$ p.p.\ global; $+1{,}92$ p.p.\ em domínio
+real; até $+7{,}2$ p.p.\ em finanças; p $<$ 0,001) em 547 datasets sem viés, sob
+validação livre de vazamento; (ii) a explicação do mecanismo --- o domínio ajuda na
+proporção em que um algoritmo domina aquele domínio; (iii) evidência de que o alvo
+é dominado por ruído (26\% de rótulos instáveis; margens $\sim$0,8 p.p.), o que
+limita o ganho; (iv) um protocolo metodológico para separar sinal de artefato; e (v)
 o resultado de sistema (regret $\sim$33\% menor que o melhor-algoritmo-único).
 
 \section{Trabalhos Relacionados}
@@ -196,15 +202,18 @@ sementes, o domínio melhora as duas métricas principais
 
 \begin{table}[H]
 \centering
-\caption{Ganho do domínio (\textit{target encoding} por rank médio), CV agrupada,
-30 sementes. Significativo e replicável em acurácia e F1-macro.}
+\caption{Ganho do domínio (\textit{target encoding} por rank médio), acurácia, CV
+agrupada, 30 sementes. O ganho cresce nos datasets de domínio real e em finanças.}
 \label{tab:principal}
 \begin{tabular}{lccc}
 \toprule
-Métrica & Baseline & + domínio (TE) & Significância \\
+Acurácia em\dots & Baseline & + domínio (TE) & Significância \\
 \midrule
-\textbf{Acurácia} & 0,406 & \textbf{0,418} ($+1{,}19$ p.p.) & \textbf{p $<$ 0,001; 24/30 $+$} \\
-\textbf{F1-macro} & 0,297 & \textbf{0,304} ($+0{,}69$ p.p.) & \textbf{p $<$ 0,001; 24/30 $+$} \\
+todos os datasets (547) & 0,406 & \textbf{0,418} ($+1{,}19$ p.p.) & \textbf{p $<$ 0,001; 24/30} \\
+\textbf{domínio real} (383) & 0,427 & \textbf{0,447} ($+1{,}92$ p.p.) & \textbf{p $<$ 0,001; 27/30} \\
+\textbf{finanças} (60) & 0,555 & \textbf{0,627} ($+7{,}2$ p.p.) & \textbf{p $<$ 0,001} \\
+\midrule
+F1-macro (todos) & 0,297 & \textbf{0,304} ($+0{,}69$ p.p.) & \textbf{p $<$ 0,001; 24/30} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -221,6 +230,30 @@ O domínio melhora a seleção de forma \emph{significativa, replicável e livre
 vazamento} (o ganho aparece sob CV agrupada, descartando memorização). O efeito é
 \emph{pequeno} --- limitado pela margem $\sim$0,8 p.p.\ entre algoritmos --- mas
 robusto, e crucialmente só emerge sob codificação supervisionada por rank médio.
+
+\subsection{Onde o domínio ajuda: o efeito é concentrado}
+
+O ganho global ($+1{,}19$ p.p.) é uma \emph{média} que esconde grande variação
+entre domínios (Figura~\ref{fig:dom}). Restringindo aos datasets de \textbf{domínio
+real} (excluindo $\sim$30\% de datasets sintéticos/abstratos, que não têm domínio),
+o ganho sobe para \textbf{$+1{,}92$ p.p.} ($p<0{,}001$; 27/30 sementes). E em
+\textbf{finanças} chega a \textbf{$+7{,}2$ p.p.} ($p<0{,}001$).
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.95\textwidth]{figuras/fig_por_dominio.png}
+\caption{Ganho de acurácia do domínio, por domínio. O efeito é grande onde um
+algoritmo domina o domínio (finanças: a regressão logística vence 58\% dos casos)
+e nulo/negativo onde nenhum domina (sintéticos, social).}
+\label{fig:dom}
+\end{figure}
+
+\noindent\textbf{Por que finanças?} O domínio ajuda na proporção em que um único
+algoritmo \emph{domina} aquele domínio --- pois aí o \emph{prior} de domínio é
+confiável. Finanças tem a maior concentração: a regressão logística é a melhor em
+\textbf{58\%} dos datasets (vs 37\% no geral), coerente com dados financeiros
+serem tabulares e quase-lineares (\emph{credit scoring} é classicamente resolvido
+por regressão logística). Já nos datasets sintéticos (\textit{other}) nenhum
+algoritmo domina ($\leq$32\%), o \emph{prior} é não-confiável e o ganho some.
 
 \subsection{Resultado de sistema}
 
@@ -260,11 +293,13 @@ meta-dataset com histórico de domínios.
 \section{Conclusão}
 
 A hipótese de que o domínio importa para a seleção de algoritmos \emph{se confirma}:
-o sinal é real e pequeno, e aparece sob codificação supervisionada por rank médio,
-com validação rigorosa e livre de vazamento (acurácia $+1{,}19$ p.p.\ e F1-macro
-$+0{,}69$ p.p., ambas p $<$ 0,001 em 30 sementes). Chegamos a ele descartando
-sistematicamente os artefatos que enganariam uma análise ingênua, o que sustenta a
-confiabilidade da conclusão. Como contribuição transferível, recomendamos
+o sinal é real e aparece sob codificação supervisionada por rank médio, com
+validação rigorosa e livre de vazamento ($+1{,}19$ p.p.\ de acurácia no geral,
+p $<$ 0,001). O efeito é \emph{concentrado}: cresce para $+1{,}92$ p.p.\ nos
+datasets de domínio real e até $+7{,}2$ p.p.\ em finanças --- justamente onde um
+algoritmo domina o domínio. Chegamos a ele descartando sistematicamente os
+artefatos que enganariam uma análise ingênua, o que sustenta a confiabilidade da
+conclusão. Como contribuição transferível, recomendamos
 validação multi-semente, CV agrupada por similaridade de colunas, controle de
 confundimento e codificação supervisionada de variáveis contextuais. Como trabalho
 futuro: anotação de domínio por modelos de linguagem e extensão do \textit{target
