@@ -1,0 +1,2 @@
+rank,strategy,semantic_mode,domain_mode,base_classifiers_considered,datasets_used,n_statistical_features_without_domain_score,target_classes,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std,f1_weighted_mean,f1_weighted_std,n_splits
+2,stat_plus_clusters_plus_domain_label_score_interaction,clusters_only,label_score_interaction,"DecisionTree, LogisticRegression, Perceptron",116,63,"DecisionTree, LogisticRegression, Perceptron",0.7155797101449275,0.033872451862377535,0.4434191334191334,0.04816391428319917,0.6698911898911899,0.044712707122116696,5

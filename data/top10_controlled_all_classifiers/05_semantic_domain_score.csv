@@ -1,0 +1,2 @@
+rank,strategy,semantic_mode,domain_mode,base_classifiers_considered,datasets_used,n_statistical_features_without_domain_score,target_classes,accuracy_mean,accuracy_std,f1_macro_mean,f1_macro_std,f1_weighted_mean,f1_weighted_std,n_splits
+5,stat_plus_tags_fixed_vocab_plus_domain_score,tags_fixed_vocab,score,"DecisionTree, LogisticRegression, Perceptron, SVM, KNN, MLP",107,63,"DecisionTree, KNN, LogisticRegression, MLP, Perceptron, SVM",0.4207792207792208,0.06560405746476668,0.26898309751250926,0.05052005026757416,0.3740598508245566,0.07863616649907448,5
