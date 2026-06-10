@@ -18,12 +18,12 @@ from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = BASE_DIR / "data"
-OUTPUT_DIR = DATA_DIR / "top10_controlled_three_classifiers_recheck"
+OUTPUT_DIR = DATA_DIR / "top10_controlled_all_classifiers"
 
-INPUT_METAFEATURES = DATA_DIR / __import__("os").environ.get("MAB_META", "metafeatures_selected_datasets.csv")
-INPUT_MATRIX = DATA_DIR / __import__("os").environ.get("MAB_PERF", "performance_matrix.csv")
+INPUT_METAFEATURES = DATA_DIR / "metafeatures_selected_datasets.csv"
+INPUT_MATRIX = DATA_DIR / "performance_matrix.csv"
 
-CLASSIFIER_COLS = ["DecisionTree", "LogisticRegression", "Perceptron"]
+CLASSIFIER_COLS = ["DecisionTree", "LogisticRegression", "Perceptron", "SVM", "KNN", "MLP"]
 REQUIRE_ALL_CLASSIFIER_COLS = True
 
 BOILERPLATE_WORDS = {

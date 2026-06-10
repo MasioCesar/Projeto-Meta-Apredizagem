@@ -33,24 +33,16 @@ OUTPUT_ERRORS = DATA_DIR / "error_logs.csv"
 
 classifiers = {
     "DecisionTree": DecisionTreeClassifier(random_state=42),
-
+    "LogisticRegression": LogisticRegression(random_state=42, max_iter=3000),
+    "Perceptron": Perceptron(random_state=42, max_iter=1000),
     "SVM": SVC(
         random_state=42,
-        kernel="rbf"
+        kernel="rbf",
+        max_iter=5000,  # Added to prevent infinite hangs on massive datasets
     ),
 
     "KNN": KNeighborsClassifier(
         n_neighbors=5
-    ),
-
-    "LogisticRegression": LogisticRegression(
-        random_state=42,
-        max_iter=3000
-    ),
-
-    "Perceptron": Perceptron(
-        random_state=42,
-        max_iter=1000
     ),
 
     "MLP": MLPClassifier(
@@ -61,13 +53,12 @@ classifiers = {
 }
 
 
-# Modelos que podem ficar muito lentos em datasets grandes
-HEAVY_CLASSIFIERS = {"SVM", "KNN", "MLP"}
-
-# Limites para evitar travamentos
-MAX_ROWS_FOR_HEAVY_MODELS = 10000
-MAX_FEATURES_FOR_HEAVY_MODELS = 1000
-MAX_FEATURES_FOR_PYMFE = 1000
+# No classifier is skipped by dataset size anymore. These constants are kept
+# only for compatibility with older references in this script.
+HEAVY_CLASSIFIERS = set()
+MAX_ROWS_FOR_HEAVY_MODELS = float('inf')
+MAX_FEATURES_FOR_HEAVY_MODELS = float('inf')
+MAX_FEATURES_FOR_PYMFE = float('inf')
 
 
 def load_openml_dataset(did):
@@ -241,24 +232,84 @@ def extract_statistical_metafeatures(X, y_encoded, max_features_for_pymfe=MAX_FE
 
 
 def should_skip_heavy_classifier(clf_name, X):
-    if clf_name not in HEAVY_CLASSIFIERS:
-        return False
-
-    n_rows, n_features = X.shape
-
-    if n_rows > MAX_ROWS_FOR_HEAVY_MODELS:
-        return True
-
-    if n_features > MAX_FEATURES_FOR_HEAVY_MODELS:
-        return True
-
     return False
 
 
-def save_partial_outputs(performance_results, metafeature_results, error_logs):
+def get_completed_performance_keys(performances_df):
+    if performances_df.empty:
+        return set()
+
+    required_cols = {"did", "Classifier", "acc_mean"}
+    if not required_cols.issubset(performances_df.columns):
+        return set()
+
+    df = performances_df.copy()
+    df["did"] = pd.to_numeric(df["did"], errors="coerce")
+    df["acc_mean"] = pd.to_numeric(df["acc_mean"], errors="coerce")
+    df = df.dropna(subset=["did", "Classifier", "acc_mean"])
+    df = df[df["acc_mean"].between(0, 1, inclusive="both")]
+
+    return {
+        (int(row["did"]), str(row["Classifier"]))
+        for _, row in df.iterrows()
+    }
+
+
+def prepare_output_frames(performance_results, metafeature_results):
     performances_df = pd.DataFrame(performance_results)
+
+    if not performances_df.empty:
+        performances_df = performances_df.drop_duplicates(
+            subset=["did", "Classifier"],
+            keep="last"
+        )
+
     df_meta = pd.DataFrame(metafeature_results)
+
+    if not df_meta.empty and "did" in df_meta.columns:
+        df_meta = df_meta.drop_duplicates(
+            subset=["did"],
+            keep="last"
+        )
+
+    return performances_df, df_meta
+
+
+def filter_resolved_error_logs(error_logs, performances_df):
     errors_df = pd.DataFrame(error_logs)
+
+    if errors_df.empty or performances_df.empty:
+        return errors_df
+
+    required_cols = {"did", "stage", "classifier"}
+    if not required_cols.issubset(errors_df.columns):
+        return errors_df
+
+    completed_keys = get_completed_performance_keys(performances_df)
+
+    def is_resolved_classifier_error(row):
+        stage = str(row.get("stage", ""))
+        if stage not in {"classifier_skipped", "classifier_evaluation"}:
+            return False
+
+        did = pd.to_numeric(row.get("did"), errors="coerce")
+        classifier = row.get("classifier")
+
+        if pd.isna(did) or pd.isna(classifier):
+            return False
+
+        return (int(did), str(classifier)) in completed_keys
+
+    resolved_mask = errors_df.apply(is_resolved_classifier_error, axis=1)
+    return errors_df.loc[~resolved_mask].copy()
+
+
+def save_partial_outputs(performance_results, metafeature_results, error_logs):
+    performances_df, df_meta = prepare_output_frames(
+        performance_results,
+        metafeature_results,
+    )
+    errors_df = filter_resolved_error_logs(error_logs, performances_df)
 
     if not performances_df.empty:
         performances_df.to_csv(OUTPUT_PERFORMANCES, index=False)
@@ -277,12 +328,15 @@ def save_partial_outputs(performance_results, metafeature_results, error_logs):
         ]
 
         if existing_classifier_cols:
-            performance_matrix["best_classifier"] = (
-                performance_matrix[existing_classifier_cols].idxmax(axis=1)
+            # Create a mask to only select rows that have at least one non-NaN value
+            valid_mask = performance_matrix[existing_classifier_cols].notna().any(axis=1)
+
+            performance_matrix.loc[valid_mask, "best_classifier"] = (
+                performance_matrix.loc[valid_mask, existing_classifier_cols].idxmax(axis=1)
             )
 
-            performance_matrix["best_accuracy"] = (
-                performance_matrix[existing_classifier_cols].max(axis=1)
+            performance_matrix.loc[valid_mask, "best_accuracy"] = (
+                performance_matrix.loc[valid_mask, existing_classifier_cols].max(axis=1)
             )
 
             performance_matrix.to_csv(OUTPUT_MATRIX, index=False)
@@ -337,22 +391,41 @@ def main():
     if not old_metafeatures_df.empty and "did" in old_metafeatures_df.columns:
         processed_meta_dids = set(old_metafeatures_df["did"].dropna().astype(int))
 
-    processed_perf_dids = set()
-
-    if not old_performances_df.empty and "did" in old_performances_df.columns:
-        processed_perf_dids = set(old_performances_df["did"].dropna().astype(int))
-
-    # Dataset só é considerado completo se tiver meta-features E pelo menos uma performance
-    processed_complete_dids = processed_meta_dids.intersection(processed_perf_dids)
+    expected_classifiers = list(classifiers.keys())
+    completed_performance_keys = get_completed_performance_keys(old_performances_df)
+    processed_perf_dids = {did for did, _ in completed_performance_keys}
 
     all_selected_dids = set(final_domain_selection["did"].dropna().astype(int))
 
-    pending_dids = all_selected_dids - processed_complete_dids
+    missing_classifiers_by_did = {}
+    for did in all_selected_dids:
+        missing_classifiers = [
+            clf_name
+            for clf_name in expected_classifiers
+            if (did, clf_name) not in completed_performance_keys
+        ]
+
+        if missing_classifiers:
+            missing_classifiers_by_did[did] = missing_classifiers
+
+    processed_complete_dids = {
+        did
+        for did in all_selected_dids
+        if did in processed_meta_dids and did not in missing_classifiers_by_did
+    }
+
+    pending_dids = {
+        did
+        for did in all_selected_dids
+        if did not in processed_meta_dids or did in missing_classifiers_by_did
+    }
 
     print("\nResumo inicial:")
     print(f"Datasets selecionados: {len(all_selected_dids)}")
+    print(f"Algoritmos esperados por dataset: {', '.join(expected_classifiers)}")
     print(f"Datasets com meta-features: {len(processed_meta_dids)}")
-    print(f"Datasets com performance: {len(processed_perf_dids)}")
+    print(f"Datasets com alguma performance valida: {len(processed_perf_dids)}")
+    print(f"Datasets com classificadores faltantes: {len(missing_classifiers_by_did)}")
     print(f"Datasets completos: {len(processed_complete_dids)}")
     print(f"Datasets pendentes: {len(pending_dids)}")
 
@@ -364,8 +437,21 @@ def main():
         final_domain_selection["did"].astype(int).isin(pending_dids)
     ].copy()
 
+    def pending_reason(did):
+        reasons = []
+
+        if did not in processed_meta_dids:
+            reasons.append("meta-features")
+
+        reasons.extend(missing_classifiers_by_did.get(did, []))
+        return ", ".join(reasons)
+
+    final_domain_selection["pendente"] = (
+        final_domain_selection["did"].astype(int).apply(pending_reason)
+    )
+
     print("\nRodando apenas datasets pendentes:")
-    print(final_domain_selection[["did", "name", "predicted_domain"]])
+    print(final_domain_selection[["did", "name", "predicted_domain", "pendente"]])
 
     # ============================================================
     # 3. PROCESSAR APENAS DATASETS PENDENTES
@@ -374,6 +460,8 @@ def main():
     for idx, row in final_domain_selection.reset_index(drop=True).iterrows():
         did = int(row["did"])
         dataset_name = row["name"]
+        needs_metafeatures = did not in processed_meta_dids
+        missing_classifiers = missing_classifiers_by_did.get(did, [])
 
         print(f"\n[{idx + 1}/{len(final_domain_selection)}] Dataset pendente: {dataset_name} | DID={did}")
 
@@ -426,47 +514,40 @@ def main():
 
                 continue
 
-            print("  Extraindo meta-features estatísticas...")
+            if needs_metafeatures:
+                print("  Extraindo meta-features estatisticas...")
 
-            meta_feats, mfe_error = extract_statistical_metafeatures(X, y_encoded)
+                meta_feats, mfe_error = extract_statistical_metafeatures(X, y_encoded)
 
-            if meta_feats is not None:
-                meta_feats["did"] = did
-                meta_feats["name"] = dataset_name
-                meta_feats["predicted_domain"] = row["predicted_domain"]
-                meta_feats["domain_score"] = row["domain_score"]
-                meta_feats["semantic_text"] = row.get("semantic_text", "")
+                if meta_feats is not None:
+                    meta_feats["did"] = did
+                    meta_feats["name"] = dataset_name
+                    meta_feats["predicted_domain"] = row["predicted_domain"]
+                    meta_feats["domain_score"] = row["domain_score"]
+                    meta_feats["semantic_text"] = row.get("semantic_text", "")
 
-                metafeature_results.append(meta_feats)
+                    metafeature_results.append(meta_feats)
 
-            if mfe_error is not None:
-                print(f"    PyMFE falhou, usando fallback manual. Erro: {mfe_error}")
-
-                error_logs.append({
-                    "did": did,
-                    "dataset": dataset_name,
-                    "stage": "metafeature_extraction",
-                    "classifier": None,
-                    "error": mfe_error
-                })
-
-            preprocessor = build_preprocessor(X)
-
-            for clf_name, clf in classifiers.items():
-                if should_skip_heavy_classifier(clf_name, X):
-                    print(f"  Pulando {clf_name}: dataset grande demais para esse modelo.")
+                if mfe_error is not None:
+                    print(f"    PyMFE falhou, usando fallback manual. Erro: {mfe_error}")
 
                     error_logs.append({
                         "did": did,
                         "dataset": dataset_name,
-                        "stage": "classifier_skipped",
-                        "classifier": clf_name,
-                        "error": (
-                            f"Dataset grande demais para {clf_name}: "
-                            f"{X.shape[0]} instâncias, {X.shape[1]} features"
-                        )
+                        "stage": "metafeature_extraction",
+                        "classifier": None,
+                        "error": mfe_error
                     })
+            else:
+                print("  Meta-features ja existem; reaproveitando.")
 
+            if not missing_classifiers:
+                print("  Nenhum classificador faltante para este dataset.")
+
+            preprocessor = build_preprocessor(X)
+
+            for clf_name, clf in classifiers.items():
+                if clf_name not in missing_classifiers:
                     continue
 
                 print(f"  Avaliando {clf_name}...", end=" ")
@@ -543,24 +624,13 @@ def main():
     # 4. SALVAR RESULTADOS FINAIS UNIFICADOS
     # ============================================================
 
-    performances_df = pd.DataFrame(performance_results)
-    df_meta = pd.DataFrame(metafeature_results)
+    performances_df, df_meta = prepare_output_frames(
+        performance_results,
+        metafeature_results,
+    )
 
     if performances_df.empty:
         raise RuntimeError("Nenhum resultado de performance foi gerado.")
-
-    # Remove duplicatas caso o mesmo DID/classificador tenha sido salvo mais de uma vez
-    performances_df = performances_df.drop_duplicates(
-        subset=["did", "Classifier"],
-        keep="last"
-    )
-
-    # Remove duplicatas de meta-features por DID
-    if not df_meta.empty and "did" in df_meta.columns:
-        df_meta = df_meta.drop_duplicates(
-            subset=["did"],
-            keep="last"
-        )
 
     performance_matrix = performances_df.pivot_table(
         index="did",
@@ -575,21 +645,23 @@ def main():
         if col in performance_matrix.columns
     ]
 
-    performance_matrix["best_classifier"] = (
-        performance_matrix[existing_classifier_cols].idxmax(axis=1, skipna=True)
+    valid_mask = performance_matrix[existing_classifier_cols].notna().any(axis=1)
+
+    performance_matrix.loc[valid_mask, "best_classifier"] = (
+        performance_matrix.loc[valid_mask, existing_classifier_cols].idxmax(axis=1)
     )
 
-    performance_matrix["best_accuracy"] = (
-        performance_matrix[existing_classifier_cols].max(axis=1, skipna=True)
+    performance_matrix.loc[valid_mask, "best_accuracy"] = (
+        performance_matrix.loc[valid_mask, existing_classifier_cols].max(axis=1)
     )
 
     performances_df.to_csv(OUTPUT_PERFORMANCES, index=False)
     df_meta.to_csv(OUTPUT_METAFEATURES, index=False)
     performance_matrix.to_csv(OUTPUT_MATRIX, index=False)
 
-    if error_logs:
-        errors_df = pd.DataFrame(error_logs)
+    errors_df = filter_resolved_error_logs(error_logs, performances_df)
 
+    if not errors_df.empty:
         errors_df = errors_df.drop_duplicates(
             subset=["did", "stage", "classifier", "error"],
             keep="last"
@@ -609,7 +681,7 @@ def main():
     print(f"- {OUTPUT_METAFEATURES}")
     print(f"- {OUTPUT_MATRIX}")
 
-    if error_logs:
+    if not errors_df.empty:
         print(f"- {OUTPUT_ERRORS}")
 
 if __name__ == "__main__":

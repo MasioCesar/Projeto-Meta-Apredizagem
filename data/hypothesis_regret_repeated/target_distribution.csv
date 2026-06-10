@@ -1,0 +1,16 @@
+target_scenario,classifier,count,share
+simple3_available,LogisticRegression,75,0.646551724137931
+simple3_available,DecisionTree,33,0.28448275862068967
+simple3_available,Perceptron,8,0.06896551724137931
+simple3_same107,LogisticRegression,67,0.6261682242990654
+simple3_same107,DecisionTree,32,0.29906542056074764
+simple3_same107,Perceptron,8,0.07476635514018691
+heavy3_same107,MLP,45,0.4205607476635514
+heavy3_same107,SVM,44,0.411214953271028
+heavy3_same107,KNN,18,0.16822429906542055
+all6_same107,LogisticRegression,32,0.29906542056074764
+all6_same107,SVM,22,0.205607476635514
+all6_same107,MLP,22,0.205607476635514
+all6_same107,DecisionTree,19,0.17757009345794392
+all6_same107,KNN,7,0.06542056074766354
+all6_same107,Perceptron,5,0.04672897196261682
