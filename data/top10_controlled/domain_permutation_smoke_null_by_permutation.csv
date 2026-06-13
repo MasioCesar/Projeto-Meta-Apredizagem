@@ -1,0 +1,2 @@
+permutation_id,accuracy,accuracy_effect_vs_baseline,f1_macro,f1_macro_effect_vs_baseline,top3_accuracy,top3_accuracy_effect_vs_baseline,mean_regret,mean_regret_effect_vs_baseline,zero_regret_rate,zero_regret_rate_effect_vs_baseline,within_1pp_rate,within_1pp_rate_effect_vs_baseline
+0,0.3180987202925046,-0.06215722120658135,0.258671321081688,-0.018694625659163244,0.7787934186471663,-0.001828153564899515,0.03288445802332476,-0.006276205051971791,0.3550185873605948,-0.05883909054202696,0.5074349442379182,-0.07308940033137012
